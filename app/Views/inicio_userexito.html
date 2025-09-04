@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>RENAP - Usuario Registrado</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+ 
+    .login-container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      width: 350px;
+      text-align: center;
+    }
+ 
+    .logo img {
+      width: 100px;
+      margin-bottom: 10px;
+    }
+ 
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+ 
+    .success-message {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+ 
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+ 
+    .btn-ingresar {
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+ 
+    a {
+      display: block;
+      margin-top: 10px;
+      color: #007BFF;
+      text-decoration: none;
+      font-size: 14px;
+    }
+ 
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="logo">
+      <img src="./img/Logorenap.png" width="40" height="50">
+    </div>
+   
+ 
+    <div class="success-message">USUARIO REGISTRADO CON ÉXITO</div>
+ 
+    <input type="text" placeholder="Usuario:" name="usuario">
+    <input type="password" placeholder="Contraseña:" name="contraseña">
+    <button class="btn-ingresar">Ingresar</button>
+ 
+    <a href="#">¿Olvidaste tu contraseña?</a>
+    <a href="#">Registrarse</a>
+  </div>
+</body>
+</html>

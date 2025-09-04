@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Recuperar Contraseña - RENAP</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+ 
+    .recuperar-container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      width: 350px;
+      text-align: center;
+    }
+ 
+    .logo img {
+      width: 100px;
+      margin-bottom: 10px;
+    }
+ 
+    h2 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+ 
+    .subtitulo {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+ 
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+ 
+    .btn-enviar {
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+ 
+    .regresar-bar {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px;
+      margin-top: 20px;
+      border-radius: 0 0 10px 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      cursor: pointer;
+    }
+ 
+    .regresar-bar:hover {
+      background-color: #45a049;
+    }
+ 
+    .regresar-bar span {
+      margin-left: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="recuperar-container">
+    <div class="logo">
+      <img src="./img/Logorenap.png" width="40" height="50">
+    </div>
+    <h2>Recuperar Contraseña</h2>
+    <div class="subtitulo">Ingrese su CUI y correo electrónico registrado</div>
+    <input type="text" placeholder="CUI del usuario" name="cui">
+    <input type="email" placeholder="Email" name="email">
+    <button class="btn-enviar">Enviar</button>
+    <div class="regresar-bar">
+      ← <span>Regresar</span>
+    </div>
+  </div>
+</body>
+</html>

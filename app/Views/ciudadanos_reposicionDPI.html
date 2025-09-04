@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Boleta de Banco - Reposición de DPI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      overflow-x: hidden;
+    }
+ 
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+ 
+    .sidebar {
+      height: 100vh;
+      width: 250px;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      background-color: #ffffff;
+      border-right: 1px solid #000000;
+      display: flex;
+      flex-direction: column;
+    }
+ 
+    .nav-title {
+      font-weight: bold;
+      font-size: 1.5rem;
+      padding: 1rem;
+      border-bottom: 1px solid #dee2e6;
+    }
+ 
+    .nav-link {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      color: #212529;
+      text-decoration: none;
+      font-style: italic;
+    }
+ 
+    .nav-link img {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+    }
+ 
+    .nav-link.active {
+      background-color: #08c615;
+      color: white !important;
+    }
+ 
+    .main {
+      margin-left: 250px;
+      padding: 30px;
+      margin-top: 100px;
+    }
+ 
+    .header {
+      background-color: #6a7f4e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+ 
+    .bank-logos {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #6a7f4e;
+      padding: 10px 0;
+    }
+ 
+    .bank-logos img {
+      height: 50px;
+    }
+ 
+    .form-container {
+      max-width: 900px;
+      margin: auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+ 
+    .form-section {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+ 
+    .section {
+      flex: 1;
+      min-width: 300px;
+    }
+ 
+    .section-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+      color: #444;
+    }
+ 
+    .form-group {
+      margin-bottom: 15px;
+    }
+ 
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #555;
+    }
+ 
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f0f0f0;
+    }
+ 
+    .readonly {
+      background-color: #e6e6e6;
+      font-weight: bold;
+      color: #333;
+    }
+ 
+    .submit-btn {
+      background-color: #6a7f4e;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 30px;
+      width: 100%;
+    }
+ 
+    .submit-btn:hover {
+      background-color: #5c6f42;
+    }
+ 
+    .popup {
+      position: fixed;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      border: 2px solid #ccc;
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      display: none;
+      z-index: 1050;
+    }
+ 
+    .popup h3 {
+      margin-bottom: 10px;
+      color: #c00;
+    }
+ 
+    .popup p {
+      margin-bottom: 20px;
+      color: #333;
+    }
+ 
+    .popup button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+ 
+    .popup button:hover {
+      background-color: #0056b3;
+    }
+
+    .submit-btn.bg-secondary {
+  background-color: #6c757d;
+}
+
+.submit-btn.bg-secondary:hover {
+  background-color: #5a6268;
+}
+
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand">
+        <img src="./img/Logorenap.png" alt="renap logo" width="200" height="60">
+      </a>
+      <form class="d-flex" role="search">
+        <button class="btn btn-outline-success" type="submit">
+          <img src="./img/usuario.jpg" alt="userlogo" width="40" height="40">
+        </button>
+      </form>
+    </div>
+  </nav>
+ 
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="nav-title">Navegación</div>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link" href="ciudadano_inicio.html"><img src="./img/inicio.png" alt="Inicio"> Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ciudadanos_misdatos.html"><img src="./img/usuario.jpg" alt="Usuarios"> Mis datos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ciudadanos_mistramites.html"><img src="./img/tramites.png" alt="Información DPI"> Mis trámites</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ciudadano_mediosinterac.html"><img src="./img/mediosinterac.png" alt="Reportes"> Medios Interactivos</a>
+      </li>
+    </ul>
+  </div>
+ 
+  <!-- Main content -->
+  <div class="main">
+    <div class="bank-logos">
+      <img src="./img/industrial.jpg" alt="Banco Industrial">
+      <img src="./img/gyt.png" alt="G&T Continental">
+      <img src="./img/banrural.avif" alt="Banrural">
+    </div>
+ 
+    <div class="header">BOLETA DE BANCO</div>
+ 
+    <div class="form-container">
+      <h2>Proceso de Reposición de DPI</h2>
+ 
+      <div class="form-section">
+        <div class="section">
+          <div class="section-title">Datos de solicitud de Reposición</div>
+ 
+          <div class="form-group">
+            <label for="motivo">Motivo de Reposición:</label>
+            <select id="motivo">
+              <option value="">Seleccione el motivo</option>
+              <option>Robo</option>
+              <option>Pérdida</option>
+              <option>Deterioro</option>
+              <option>Actualización de datos</option>
+            </select>
+          </div>
+ 
+          <div class="form-group">
+            <label for="entrega">Tipo de entrega:</label>
+            <input type="text" id="entrega" placeholder="Sede u oficina donde recogerá su DPI">
+          </div>
+ 
+          <div class="form-group">
+            <label for="departamento">Departamento:</label>
+            <select id="departamento">
+              <option value="">Seleccione departamento</option>
+              <option>Alta Verapaz</option>
+              <option>Baja Verapaz</option>
+              <option>Chimaltenango</option>
+              <option>Chiquimula</option>
+              <option>El Progreso</option>
+              <option>Escuintla</option>
+              <option>Guatemala</option>
+              <option>Huehuetenango</option>
+              <option>Izabal</option>
+              <option>Jalapa</option>
+              <option>Jutiapa</option>
+              <option>Petén</option>
+              <option>Quetzaltenango</option>
+              <option>Quiché</option>
+              <option>Retalhuleu</option>
+              <option>Sacatepéquez</option>
+              <option>San Marcos</option>
+              <option>Santa Rosa</option>
+              <option>Sololá</option>
+              <option>Suchitepéquez</option>
+              <option>Totonicapán</option>
+              <option>Zacapa</option>
+            </select>
+          </div>
+        </div>
+ 
+        <div class="section">
+          <div class="section-title">Pago DPI</div>
+ 
+          <div class="form-group">
+            <label for="recibo">Número de Recibo:</label>
+            <input type="text" id="recibo">
+          </div>
+ 
+          <div class="form-group">
+            <label for="nota">Número de nota:</label>
+            <input type="text" id="nota">
+          </div>
+ 
+          <div class="form-group">
+            <label for="total">TOTAL:</label>
+            <input type="text" id="total" value="Q. 100.00" class="readonly" readonly>
+          </div>
+        </div>
+      </div>
+ 
+     <div class="d-flex justify-content-center gap-3 mt-4">
+  <button class="submit-btn" onclick="validarFormulario()">Realizar Solicitud</button>
+  <button class="submit-btn bg-secondary" onclick="window.history.back()">Cancelar</button>
+</div>
+
+ 
+      <div class="popup" id="popupAdvertencia">
+        <h3>¡Advertencia!</h3>
+        <p>Debe ingresar todos los datos correctos solicitados</p>
+        <button onclick="cerrarPopup()">Aceptar</button>
+      </div>
+    </div>
+  </div>
+ 
+  <script>
+    function validarFormulario() {
+      const motivo = document.getElementById("motivo").value;
+      const entrega = document.getElementById("entrega").value.trim();
+      const departamento = document.getElementById("departamento").value;
+      const recibo = document.getElementById("recibo").value.trim();
+      const nota = document.getElementById("nota").value.trim();
+ 
+      if (!motivo || !entrega || !departamento || !recibo || !nota) {
+        document.getElementById("popupAdvertencia").style.display = "block";
+      } else {
+        alert("Solicitud enviada correctamente.");
+        window.location.href = 'ciudadanos_reposicionlista.html';
+        // Aquí podrías enviar los datos al servidor
+      }
+    }
+ 
+    function cerrarPopup() {
+      document.getElementById("popupAdvertencia").style.display = "none";
+    }
+  </script>
+</body>

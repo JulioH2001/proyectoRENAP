@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Historial de Mis Trámites - RENAP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      overflow-x: hidden;
+    }
+ 
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+ 
+    .sidebar {
+      height: 100vh;
+      width: 250px;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      background-color: #ffffff;
+      border-right: 1px solid #000000;
+      display: flex;
+      flex-direction: column;
+    }
+ 
+    .nav-title {
+      font-weight: bold;
+      font-size: 1.5rem;
+      padding: 1rem;
+      border-bottom: 1px solid #dee2e6;
+    }
+ 
+    .nav-link {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      color: #212529;
+      text-decoration: none;
+      font-style: italic;
+    }
+ 
+    .nav-link img {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+    }
+ 
+    .nav-link.active {
+      background-color: #08c615;
+      color: white !important;
+    }
+ 
+    .main-content {
+      margin-left: 250px;
+      padding: 30px;
+      margin-top: 100px;
+    }
+ 
+    .main-content h2 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+ 
+    .subtitle {
+      background-color: #6a7f4e;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+ 
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+ 
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ccc;
+    }
+ 
+    th {
+      background-color: #e6e6e6;
+      color: #333;
+    }
+ 
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+ 
+    tr:hover {
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+ 
+  <!-- Navbar institucional fijo -->
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand">
+        <img src="./img/Logorenap.png" alt="renap logo" width="200" height="60">
+      </a>
+      <form class="d-flex" role="search">
+        <button class="btn btn-outline-success" type="submit">
+          <img src="./img/usuario.jpg" alt="userlogo" width="40" height="40">
+        </button>
+      </form>
+    </div>
+  </nav>
+ 
+  <!-- Sidebar institucional -->
+  <div class="sidebar">
+    <div class="nav-title">Navegación</div>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link" href="ciudadano_inicio.html">
+          <img src="./img/inicio.png" alt="Inicio"> Inicio
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ciudadanos_misdatos.html">
+          <img src="./img/usuario.jpg" alt="Usuarios"> Mis datos
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ciudadanos_mistramites.html">
+          <img src="./img/tramites.png" alt="Información DPI"> Mis trámites
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ciudadano_mediosinterac.html">
+          <img src="./img/mediosinterac.png" alt="Reportes"> Medios Interactivos
+        </a>
+      </li>
+    </ul>
+  </div>
+ 
+  <!-- Contenido principal -->
+  <div class="main-content">
+    <h2>Historial de Mis Trámites</h2>
+    <div class="subtitle">Transacciones para el usuario con CUI</div>
+ 
+    <table>
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Solicitud</th>
+          <th>Nota Pago</th>
+          <th>CUI</th>
+          <th>Fecha</th>
+          <th>Tipo Gestión</th>
+          <th>Información</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>780047958</td>
+          <td>090578940438</td>
+          <td>0863722453671</td>
+          <td>14/07/2025</td>
+          <td>Certificado de Nacimiento</td>
+          <td>Compra de certificado</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>780047958</td>
+          <td>090578940438</td>
+          <td>0863722453671</td>
+          <td>14/07/2025</td>
+          <td>Certificado de Nacimiento</td>
+          <td>Compra de certificado</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>780047958</td>
+          <td>090578940438</td>
+          <td>0863722453671</td>
+          <td>14/07/2025</td>
+          <td>Certificado de Nacimiento</td>
+          <td>Compra de certificado</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>780047958</td>
+          <td>090578940438</td>
+          <td>0863722453671</td>
+          <td>14/07/2025</td>
+          <td>Certificado de Nacimiento</td>
+          <td>Compra de certificado</td>
+        </tr>
+      </tbody>
+    </table>
+ 
+    <h2>Estado de DPI</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>CUI</th>
+          <th>Fecha de vencimiento DPI</th>
+          <th>Vigente/Vencido</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>José López</td>
+          <td>956847134</td>
+          <td>12/09/2023</td>
+          <td style="color: red; font-weight: bold;">Vencido - Renueve su DPI</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+ 
+</body>
+</html>

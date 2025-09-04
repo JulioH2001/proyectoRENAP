@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>RENAP - Resumen de Solicitud</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      overflow-x: hidden;
+    }
+ 
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+ 
+    .sidebar {
+      height: 100vh;
+      width: 250px;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      background-color: #ffffff;
+      border-right: 1px solid #000000;
+      display: flex;
+      flex-direction: column;
+    }
+ 
+    .nav-title {
+      font-weight: bold;
+      font-size: 1.5rem;
+      padding: 1rem;
+      border-bottom: 1px solid #dee2e6;
+    }
+ 
+    .nav-link {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      color: #212529;
+      text-decoration: none;
+      font-style: italic;
+    }
+ 
+    .nav-link img {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+    }
+ 
+    .nav-link.active {
+      background-color: #08c615;
+      color: white !important;
+    }
+ 
+    .main {
+      margin-left: 250px;
+      padding: 30px;
+      margin-top: 100px;
+    }
+ 
+    .header {
+      background-color: #6a7f4e;
+      color: #c8f7c5;
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+ 
+    .form-container {
+      max-width: 900px;
+      margin: 30px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+ 
+    .form-section {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 20px;
+    }
+ 
+    .section {
+      flex: 1;
+    }
+ 
+    .section-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+      color: #444;
+    }
+ 
+    .form-group {
+      margin-bottom: 15px;
+    }
+ 
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #555;
+    }
+ 
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f0f0f0;
+    }
+ 
+    .readonly {
+      background-color: #e6e6e6;
+    }
+ 
+    .confirm-btn {
+      background-color: #6a7f4e;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: block;
+      margin: 40px auto 0;
+      width: 200px;
+      text-align: center;
+    }
+ 
+    .confirm-btn:hover {
+      background-color: #5c6f42;
+    }
+ 
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+    }
+ 
+    .modal-content {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 400px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+ 
+    .modal-content h3 {
+      margin-top: 0;
+      color: #333;
+    }
+ 
+    .modal-content p {
+      margin: 15px 0;
+      color: #c00;
+      font-weight: bold;
+    }
+ 
+    .modal-content button {
+      background-color: #6a7f4e;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 14px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+ 
+    .modal-content button:hover {
+      background-color: #5c6f42;
+    }
+
+    .confirm-btn.bg-secondary {
+  background-color: #6c757d;
+}
+
+.confirm-btn.bg-secondary:hover {
+  background-color: #5a6268;
+}
+
+  </style>
+</head>
+<body>
+ 
+  <!-- Navbar institucional fijo -->
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand">
+        <img src="./img/Logorenap.png" alt="renap logo" width="200" height="60">
+      </a>
+      <form class="d-flex" role="search">
+        <button class="btn btn-outline-success" type="submit">
+          <img src="./img/usuario.jpg" alt="userlogo" width="40" height="40">
+        </button>
+      </form>
+    </div>
+  </nav>
+ 
+  <!-- Sidebar institucional -->
+  <div class="sidebar">
+    <div class="nav-title">Navegación</div>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link" href="ciudadano_inicio.html">
+          <img src="./img/inicio.png" alt="Inicio"> Inicio
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ciudadanos_misdatos.html">
+          <img src="./img/usuario.jpg" alt="Usuarios"> Mis datos
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ciudadanos_mistramites.html">
+          <img src="./img/tramites.png" alt="Información DPI"> Mis trámites
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ciudadano_mediosinterac.html">
+          <img src="./img/mediosinterac.png" alt="Reportes"> Medios Interactivos
+        </a>
+      </li>
+    </ul>
+  </div>
+ 
+  <!-- Contenido principal -->
+  <div class="main">
+    <div class="header">RESUMEN DE SOLICITUD</div>
+ 
+    <div class="form-container">
+      <div class="form-section">
+        <div class="section">
+          <div class="section-title">Información solicitante</div>
+          <div class="form-group">
+            <label for="nombreSolicitante">Nombre solicitante:</label>
+            <input type="text" id="nombreSolicitante">
+          </div>
+          <div class="form-group">
+            <label for="cuiSolicitante">CUI Solicitante:</label>
+            <input type="text" id="cuiSolicitante">
+          </div>
+          <div class="form-group">
+            <label for="correo">Correo Electrónico:</label>
+            <input type="text" id="correo">
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono">
+          </div>
+        </div>
+ 
+        <div class="section">
+          <div class="section-title">Datos del certificado</div>
+          <div class="form-group">
+            <label for="nombreCertificado">Nombre y apellidos:</label>
+            <input type="text" id="nombreCertificado">
+          </div>
+          <div class="form-group">
+            <label for="cuiCertificado">CUI:</label>
+            <input type="text" id="cuiCertificado">
+          </div>
+          <div class="form-group">
+            <label for="tipoCertificacion">Tipo de Certificación:</label>
+            <input type="text" id="tipoCertificacion">
+          </div>
+          <div class="form-group">
+            <label for="costo">Costo:</label>
+            <input type="text" id="costo" value="Q. 15.00" class="readonly" readonly>
+          </div>
+        </div>
+      </div>
+
+<!-- Botones de acción -->
+<div class="d-flex justify-content-center gap-3 mt-4">
+  <button class="confirm-btn" onclick="validarFormulario()">CONFIRMAR</button>
+  <button class="confirm-btn bg-secondary" onclick="window.history.back()">CANCELAR</button>
+</div>
+
+ 
+  <!-- Modal de advertencia -->
+  <div id="modalAdvertencia" class="modal">
+    <div class="modal-content">
+      <h3>⚠️ Datos incompletos</h3>
+      <p>Por favor, llena todos los campos antes de confirmar.</p>
+      <button onclick="cerrarModal()">Cerrar</button>
+    </div>
+  </div>
+ 
+  <!-- Script de validación -->
+  <script>
+    function validarFormulario() {
+      const campos = [
+        'nombreSolicitante',
+        'cuiSolicitante',
+        'correo',
+        'telefono',
+        'nombreCertificado',
+        'cuiCertificado',
+        'tipoCertificacion'
+      ];
+ 
+      let incompleto = campos.some(id => {
+        const valor = document.getElementById(id).value.trim();
+        return valor === '';
+      });
+ 
+     if (incompleto) {
+  document.getElementById('modalAdvertencia').style.display = 'flex';
+} else {
+  // Redirección a la página de confirmación
+  alert('Formulario confirmado correctamente ✅');
+  window.location.href = 'ciudadanos_certificacion.html';
+}
+
+    }
+ 
+    function cerrarModal() {
+      document.getElementById('modalAdvertencia').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
