@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RENAP - Ciudadanos</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #d4af37;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .icons img {
+      width: 30px;
+      margin-left: 1290px;
+    }
+
+    /* Imagen debajo del encabezado */
+    .banner-img {
+      width: 900px;
+      margin-left: -280px;
+    }
+
+    .layout {
+      display: flex;
+      height: calc(100vh - 60px);
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #ffffff;
+      border-right: 1px solid #ccc;
+      padding: 20px;
+    }
+
+    .sidebar h2 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar li {
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #f0f0f0;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .sidebar li:hover {
+      background-color: #e0e0e0;
+    }
+
+    .sidebar a {
+      color: black;
+      text-decoration: none;
+      display: block;
+    }
+
+    .ciudadanos-dpi-container {
+      flex: 1;
+      padding: 2rem;
+      background-color: #fff;
+    }
+
+    .ciudadanos-dpi-container h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+
+    .formulario-dpi {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .formulario-dpi label {
+      font-weight: bold;
+      color: #555;
+    }
+
+    .formulario-dpi input,
+    .formulario-dpi select {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    .botones-dpi {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+      justify-content: center;
+    }
+
+    .botones-dpi button {
+      background-color: #007bff;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .botones-dpi button:hover {
+      background-color: #0056b3;
+    }
+
+    a.plano {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+    }
+  /* Área de contenido */
+    .content {
+      flex: 1;
+      padding: 40px;
+      background-color: #fff;
+    }
+
+    * Estilo base */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    /* Imagen que activa la mini vista */
+    .trigger-img {
+      width: 150px;
+      cursor: pointer;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+    }
+
+    /* Fondo oscuro semi-transparente */
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    /* Mini vista RENAP */
+    .mini-vista {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      position: relative;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Botón cerrar */
+    .cerrar {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      font-size: 18px;
+      cursor: pointer;
+      color: #333;
+    }
+/* Estilo RENAP mini */
+    .renap-mini h3 {
+      margin-top: 0;
+      font-size: 18px;
+      color: #b3a744;
+    }
+
+    .renap-mini input {
+      width: 100%;
+      padding: 6px;
+      margin-bottom: 10px;
+      font-size: 13px;
+    }
+
+    .renap-mini button {
+      width: 100%;
+      padding: 8px;
+      background: black;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .renap-mini a {
+      display: block;
+      margin-top: 8px;
+      font-size: 12px;
+      text-align: center;
+      color: #007bff;
+      text-decoration: none;
+    }
+.trigger-img {
+  width: 50px;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-left: auto; /* Empuja la imagen hacia la derecha */
+}
+  </style>
+</head>
+
+<body>
+  <header>
+    <!-- Imagen que activa la vista miniatura -->
+  <img src="images/LOGIN.png" alt="RENAP Login" class="trigger-img" onclick="mostrarMiniVista()">
+  <!-- Vista flotante -->
+  <div class="overlay" id="miniVista">
+    <div class="mini-vista">
+      <span class="cerrar" onclick="cerrarMiniVista()">×</span>
+      <div class="renap-mini">
+        <h3>RENAP</h3>
+        <label>Usuario:</label>
+        <input type="text" placeholder="Ingrese usuario">
+        <label>Contraseña:</label>
+        <input type="password" placeholder="Ingrese contraseña">
+        <button>Ingresar</button>
+        <a href="#">¿Olvidaste tu contraseña?</a>
+        <a href="#">Registrarse</a>
+      </div>
+    </div>
+  </div>
+<script>
+    function mostrarMiniVista() {
+      document.getElementById('miniVista').style.display = 'flex';
+    }
+
+    function cerrarMiniVista() {
+      document.getElementById('miniVista').style.display = 'none';
+    }
+  </script>
+
+
+
+  </header>
+
+  <!-- Imagen debajo del encabezado -->
+  <img class="banner-img" src="images/renap.webp" alt="Imagen debajo del encabezado">
+
+  <!-- Contenido principal -->
+  <div class="layout">
+    <!-- Menú lateral -->
+    <nav class="sidebar">
+      <h2>Navegación</h2>
+      <h3>Menú</h3>
+      <ul>
+        <li><a href="Index.html">INICIO</a></li>
+        <li><a href="ciudadanos.html">CIUDADANOS</a></li>
+        <li><a href="trámites.html">TRÁMITES</a></li>
+        <li><a href="constancias.html">CONSTANCIAS</a></li>
+      </ul>
+    </nav>
+
+    <main class="ciudadanos-dpi-container">
+      <h2>CIUDADANOS</h2>
+      <form class="formulario-dpi" id="formCiudadano">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" />
+
+        <label for="dpi">DPI:</label>
+        <input type="text" id="dpi" name="dpi" />
+
+        <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" />
+
+        <label for="estado-civil">Estado Civil:</label>
+        <select id="estado-civil" name="estado-civil">
+          <option value="soltero">Soltero/a</option>
+          <option value="casado">Casado/a</option>
+          <option value="divorciado">Divorciado/a</option>
+          <option value="viudo">Viudo/a</option>
+        </select>
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" />
+
+        <label for="defuncion">Defunción:</label>
+        <select id="defuncion" name="defuncion">
+          <option value="no">No</option>
+          <option value="si">Sí</option>
+        </select>
+        <input type="date" id="fecha-defuncion" name="fecha-defuncion" />
+      </form>
+
+      <div class="botones-dpi">
+        <button onclick="actualizarEstadoCivil()"><a href="actualizarec.html" class="plano">Actualizar estado civil</a></button>
+        <button onclick="registrarDefuncion()"><a href="registrardef.html" class="plano">Registrar defunción</a></button>
+        <button onclick="corregirDatos()"><a href="corregirdo.html" class="plano">Corregir datos oficiales</a></button>
+        <button type="button"><a href="ciudadanos.html" class="plano"> Regresar </a></button>
+      </div>
+    </main>
+  </div>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('actualizado') === 'true') {
+      const mensaje = document.createElement('div');
+      mensaje.textContent = "✅ Información actualizada correctamente.";
+      mensaje.style.background = "#d4edda";
+      mensaje.style.color = "#155724";
+      mensaje.style.padding = "10px";
+      mensaje.style.marginBottom = "20px";
+      mensaje.style.borderRadius = "5px";
+      document.body.prepend(mensaje);
+    }
+  });
+</script>
+</body>
+</html>
+

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Trámites</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #d4af37;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .icons img {
+      width: 30px;
+      margin-left: 1290px;
+    }
+
+    .banner-img {
+      width: 900px;
+      margin-left: -280px;
+    }
+
+    .layout {
+      display: flex;
+      height: calc(100vh - 60px);
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #ffffff;
+      border-right: 1px solid #ccc;
+      padding: 20px;
+    }
+
+    .sidebar h2, .sidebar h3 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar li {
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #f0f0f0;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .sidebar li:hover {
+      background-color: #e0e0e0;
+    }
+
+    .sidebar a {
+      color: black;
+      text-decoration: none;
+      display: block;
+    }
+
+    .tramites-container {
+      flex: 1;
+      padding: 2rem;
+      background-color: #fff;
+    }
+
+    .tramites-container h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+
+    .filtros {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .filtros label {
+      font-weight: bold;
+      color: #555;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .filtros-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .filtros select,
+    .filtros input[type="date"],
+    .filtros input[type="text"] {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      flex: 1;
+    }
+
+    .filtros button {
+      background-color: #007bff;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f0f0f0;
+    }
+
+
+    .acciones {
+  display: flex;
+  gap: 8px; /* Espacio entre botones */
+  justify-content: flex-start; /* Alineación a la izquierda */
+}
+
+.aprobar {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 50px;
+}
+
+.rechazar {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+    
+  /* Área de contenido */
+    .content {
+      flex: 1;
+      padding: 40px;
+      background-color: #fff;
+    }
+
+    * Estilo base */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    /* Imagen que activa la mini vista */
+    .trigger-img {
+      width: 150px;
+      cursor: pointer;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+    }
+
+    /* Fondo oscuro semi-transparente */
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    /* Mini vista RENAP */
+    .mini-vista {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      position: relative;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Botón cerrar */
+    .cerrar {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      font-size: 18px;
+      cursor: pointer;
+      color: #333;
+    }
+/* Estilo RENAP mini */
+    .renap-mini h3 {
+      margin-top: 0;
+      font-size: 18px;
+      color: #b3a744;
+    }
+
+    .renap-mini input {
+      width: 100%;
+      padding: 6px;
+      margin-bottom: 10px;
+      font-size: 13px;
+    }
+
+    .renap-mini button {
+      width: 100%;
+      padding: 8px;
+      background: black;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .renap-mini a {
+      display: block;
+      margin-top: 8px;
+      font-size: 12px;
+      text-align: center;
+      color: #007bff;
+      text-decoration: none;
+    }
+.trigger-img {
+  width: 50px;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-left: auto; /* Empuja la imagen hacia la derecha */
+}
+  </style>
+</head>
+
+<body>
+  <header>
+    <!-- Imagen que activa la vista miniatura -->
+  <img src="images/LOGIN.png" alt="RENAP Login" class="trigger-img" onclick="mostrarMiniVista()">
+  <!-- Vista flotante -->
+  <div class="overlay" id="miniVista">
+    <div class="mini-vista">
+      <span class="cerrar" onclick="cerrarMiniVista()">×</span>
+      <div class="renap-mini">
+        <h3>RENAP</h3>
+        <label>Usuario:</label>
+        <input type="text" placeholder="Ingrese usuario">
+        <label>Contraseña:</label>
+        <input type="password" placeholder="Ingrese contraseña">
+        <button>Ingresar</button>
+        <a href="#">¿Olvidaste tu contraseña?</a>
+        <a href="#">Registrarse</a>
+      </div>
+    </div>
+  </div>
+<script>
+    function mostrarMiniVista() {
+      document.getElementById('miniVista').style.display = 'flex';
+    }
+
+    function cerrarMiniVista() {
+      document.getElementById('miniVista').style.display = 'none';
+    }
+  </script>
+
+
+
+  </header>
+
+  <img class="banner-img" src="images/renap.webp" alt="Imagen debajo del encabezado">
+
+  <div class="layout">
+    <nav class="sidebar">
+      <h2>Navegación</h2>
+      <h3>Menú</h3>
+      <ul>
+        <li><a href="Index.html">INICIO</a></li>
+        <li><a href="ciudadanos.html">CIUDADANOS</a></li>
+        <li><a href="trámites.html">TRÁMITES</a></li>
+        <li><a href="constancias.html">CONSTANCIAS</a></li>
+      </ul>
+    </nav>
+
+    <main class="tramites-container">
+      <h2>TRÁMITES</h2>
+
+      <div class="filtros">
+        <div>
+          <label>Filtrar por estado:</label>
+          <select>
+            <option>Pendiente</option>
+            <option>Aprobado</option>
+            <option>Rechazado</option>
+          </select>
+        </div>
+
+
+        <div>
+          <label>Filtrar por tipo de trámite:</label>
+          <div class="filtros-row">
+            <input type="text" placeholder="Escribe: Matrimonio, Nacimiento, DPI, Defunción">
+            <button>Filtrar</button>
+          </div>
+        </div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Número de trámite</th>
+            <th>Ciudadano</th>
+            <th>Tipo de trámite</th>
+            <th>Fecha de solicitud</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>000125</td>
+            <td>José Luis González</td>
+            <td>DPI</td>
+            <td>11/08/2025</td>
+            <td>
+  <div class="acciones">
+    <button class="aprobar">Aprobar</button>
+    <button class="rechazar">Rechazar</button>
+  </div>
+</td>
+    
+          <tr>
+            <td>000126</td>
+            <td>María Rosa López</td>
+            <td>Maternidad</td>
+            <td>20/08/2025</td>
+           <td>
+  <div class="acciones">
+    <button class="aprobar">Aprobar</button>
+    <button class="rechazar">Rechazar</button>
+  </div>
+</td>
+          </tr>
+          <tr>
+            <td>000127</td>
+            <td>Juan Roberto Pérez</td>
+            <td>Nacimiento</td>
+            <td>10/08/2025</td>
+            <td>
+  <div class="acciones">
+    <button class="aprobar">Aprobar</button>
+    <button class="rechazar">Rechazar</button>
+  </div>
+</td>
+          <tr>
+            <td>000128</td>
+            <td>Ana Elisa Martínez</td>
+            <td>Nacimiento</td>
+            <td>12/08/2025</td>
+            <td>
+  <div class="acciones">
+    <button class="aprobar">Aprobar</button>
+    <button class="rechazar">Rechazar</button>
+  </div>
+</td>
+        </tbody>
+      </table>
+    </main>
+  </div>
+
+</body>
+</html>

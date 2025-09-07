@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>RENAP - Registro Nacional de las Personas</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    /* Encabezado dorado */
+    header {
+      background-color: #d4af37;
+      /* dorado */
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .icons img {
+      width: 30px;
+      margin-left: 1290px;
+    }
+
+    /* Header2 */
+
+    .banner-img {
+      width: 900px;
+      margin-left: -280px;
+    }
+
+    /* Layout principal */
+    main {
+      display: flex;
+      height: calc(100vh - 60px);
+      /* ajusta según el alto del header */
+    }
+
+    .servicios {
+      width: 750px;
+      margin-left: 240px;
+      border-radius: 10px;
+    }
+
+    .requisitos {
+      width: 750px;
+      margin-left: 240px;
+      border-radius: 10px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .sidebar a {
+      color: black;
+      text-decoration: none;
+    }
+
+    /* Menú lateral */
+    .sidebar {
+      width: 250px;
+      background-color: #ffffff;
+      border-right: 1px solid #ccc;
+      padding: 20px;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .sidebar h3 {
+      margin-bottom: 10px;
+      font-size: 15px;
+      color: #333;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar li {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #f0f0f0;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .sidebar li:hover {
+      background-color: #e0e0e0;
+    }
+
+    .sidebar li img {
+      width: 20px;
+      margin-right: 10px;
+    }
+
+    /* Área de contenido */
+    .content {
+      flex: 1;
+      padding: 40px;
+      background-color: #fff;
+    }
+
+    * Estilo base */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    /* Imagen que activa la mini vista */
+    .trigger-img {
+      width: 150px;
+      cursor: pointer;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+    }
+
+    /* Fondo oscuro semi-transparente */
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    /* Mini vista RENAP */
+    .mini-vista {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      position: relative;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Botón cerrar */
+    .cerrar {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      font-size: 18px;
+      cursor: pointer;
+      color: #333;
+    }
+/* Estilo RENAP mini */
+    .renap-mini h3 {
+      margin-top: 0;
+      font-size: 18px;
+      color: #b3a744;
+    }
+
+    .renap-mini input {
+      width: 100%;
+      padding: 6px;
+      margin-bottom: 10px;
+      font-size: 13px;
+    }
+
+    .renap-mini button {
+      width: 100%;
+      padding: 8px;
+      background: black;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .renap-mini a {
+      display: block;
+      margin-top: 8px;
+      font-size: 12px;
+      text-align: center;
+      color: #007bff;
+      text-decoration: none;
+    }
+.trigger-img {
+  width: 50px;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-left: auto; /* Empuja la imagen hacia la derecha */
+}
+  </style>
+</head>
+
+<body>
+  <header>
+    <!-- Imagen que activa la vista miniatura -->
+  <img src="img/LOGIN.png" alt="RENAP Login" class="trigger-img" onclick="mostrarMiniVista()">
+  <!-- Vista flotante -->
+  <div class="overlay" id="miniVista">
+    <div class="mini-vista">
+      <span class="cerrar" onclick="cerrarMiniVista()">×</span>
+      <div class="renap-mini">
+        <h3>RENAP</h3>
+        <label>Usuario:</label>
+        <input type="text" placeholder="Ingrese usuario">
+        <label>Contraseña:</label>
+        <input type="password" placeholder="Ingrese contraseña">
+        <button>Ingresar</button>
+        <a href="#">¿Olvidaste tu contraseña?</a>
+        <a href="#">Registrarse</a>
+      </div>
+    </div>
+  </div>
+<script>
+    function mostrarMiniVista() {
+      document.getElementById('miniVista').style.display = 'flex';
+    }
+
+    function cerrarMiniVista() {
+      document.getElementById('miniVista').style.display = 'none';
+    }
+  </script>
+
+
+
+  </header>
+  <img class="banner-img" src="img/renap.webp" alt="Imagen debajo del encabezado">
+  <main>
+    <nav class="sidebar">
+      <h2>Navegación</h2>
+      <h3>Menú</h3>
+      <ul>
+        <li><a href="Index.html">INICIO</a></li>
+        <li><a href="ciudadanos.html">CIUDADANOS</a></li>
+        <li><a href="trámites.html">TRÁMITES</a></li>
+        <li><a href="constancias.html">CONSTANCIAS</a></li>
+      </ul>
+    </nav>
+    <nav class="main">
+      <img class="servicios" src="img/servicios.webp" alt="requisitos para servicios">
+      <img class="requisitos" src="img/requisitos.webp" alt="requisitos para tramites">
+    </nav>
