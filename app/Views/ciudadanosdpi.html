@@ -2,128 +2,116 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RENAP - Ciudadanos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RENAP - Registro Nacional de las Personas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
-    * {
+      body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #f4f4f4;
     }
 
-    header {
-      background-color: #d4af37;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-    }
-
-    .icons img {
-      width: 30px;
-      margin-left: 1290px;
-    }
-
-    /* Imagen debajo del encabezado */
-    .banner-img {
-      width: 900px;
-      margin-left: -280px;
-    }
-
-    .layout {
-      display: flex;
-      height: calc(100vh - 60px);
-    }
-
     .sidebar {
+      height: 100vh;
       width: 250px;
+      position: fixed;
+      top: 0;
+      left: 0;
       background-color: #ffffff;
-      border-right: 1px solid #ccc;
-      padding: 20px;
+      border-right: 1px solid #000000;
+      padding-top: 70px;
     }
 
-    .sidebar h2 {
-      color: #333;
-      margin-bottom: 10px;
+    .nav-title {
+      font-weight: bold;
+      font-size: 1.5rem;
+      padding: 1rem;
+      border-bottom: 1px solid #dee2e6;
     }
 
-    .sidebar ul {
-      list-style: none;
-    }
-
-    .sidebar li {
-      padding: 10px;
-      margin-bottom: 10px;
-      background-color: #f0f0f0;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .sidebar li:hover {
-      background-color: #e0e0e0;
-    }
-
-    .sidebar a {
-      color: black;
+    .nav-link {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      color: #212529;
       text-decoration: none;
-      display: block;
+      font-style: italic;
     }
+
+    .nav-link img {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+    }
+
+    .nav-link.active {
+      background-color: #08c615;
+      color: white !important;
+    }
+
 
     .ciudadanos-dpi-container {
-      flex: 1;
-      padding: 2rem;
+      margin-left: 250px;
+      padding: 120px 40px 40px;
       background-color: #fff;
+      min-height: calc(100vh - 70px);
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    .ciudadanos-dpi-container h2 {
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 30px;
       text-align: center;
-      margin-bottom: 2rem;
-      color: #333;
     }
 
     .formulario-dpi {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      max-width: 600px;
-      margin: auto;
+      width: 100%;
+      max-width: 700px;
+      background-color: #f9f9f9;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
 
     .formulario-dpi label {
       font-weight: bold;
-      color: #555;
+      margin-bottom: 6px;
+      display: block;
+      color: #333;
     }
 
     .formulario-dpi input,
     .formulario-dpi select {
-      padding: 0.75rem;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
       border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 1rem;
+      border-radius: 6px;
+      font-size: 14px;
     }
 
     .botones-dpi {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 2rem;
+      gap: 15px;
+      margin-top: 20px;
       justify-content: center;
     }
 
     .botones-dpi button {
       background-color: #007bff;
-      color: white;
-      padding: 0.75rem 1.5rem;
       border: none;
       border-radius: 6px;
+      padding: 10px 20px;
+      font-size: 14px;
       font-weight: bold;
+      color: white;
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
@@ -132,216 +120,117 @@
       background-color: #0056b3;
     }
 
-    a.plano {
-  color: inherit;
-  text-decoration: none;
-  cursor: pointer;
-    }
-  /* Área de contenido */
-    .content {
-      flex: 1;
-      padding: 40px;
-      background-color: #fff;
-    }
-
-    * Estilo base */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-    }
-
-    /* Imagen que activa la mini vista */
-    .trigger-img {
-      width: 150px;
-      cursor: pointer;
-      border: 2px solid #ccc;
-      border-radius: 5px;
-    }
-
-    /* Fondo oscuro semi-transparente */
-    .overlay {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 999;
-    }
-
-    /* Mini vista RENAP */
-    .mini-vista {
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      width: 300px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      position: relative;
-      animation: fadeIn 0.3s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.95); }
-      to { opacity: 1; transform: scale(1); }
-    }
-
-    /* Botón cerrar */
-    .cerrar {
-      position: absolute;
-      top: 8px;
-      right: 12px;
-      font-size: 18px;
-      cursor: pointer;
-      color: #333;
-    }
-/* Estilo RENAP mini */
-    .renap-mini h3 {
-      margin-top: 0;
-      font-size: 18px;
-      color: #b3a744;
-    }
-
-    .renap-mini input {
-      width: 100%;
-      padding: 6px;
-      margin-bottom: 10px;
-      font-size: 13px;
-    }
-
-    .renap-mini button {
-      width: 100%;
-      padding: 8px;
-      background: black;
+    .botones-dpi a {
       color: white;
-      border: none;
-      cursor: pointer;
-    }
-
-    .renap-mini a {
-      display: block;
-      margin-top: 8px;
-      font-size: 12px;
-      text-align: center;
-      color: #007bff;
       text-decoration: none;
     }
-.trigger-img {
-  width: 50px;
-  cursor: pointer;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  margin-left: auto; /* Empuja la imagen hacia la derecha */
-}
   </style>
 </head>
 
 <body>
-  <header>
-    <!-- Imagen que activa la vista miniatura -->
-  <img src="images/LOGIN.png" alt="RENAP Login" class="trigger-img" onclick="mostrarMiniVista()">
-  <!-- Vista flotante -->
-  <div class="overlay" id="miniVista">
-    <div class="mini-vista">
-      <span class="cerrar" onclick="cerrarMiniVista()">×</span>
-      <div class="renap-mini">
-        <h3>RENAP</h3>
-        <label>Usuario:</label>
-        <input type="text" placeholder="Ingrese usuario">
-        <label>Contraseña:</label>
-        <input type="password" placeholder="Ingrese contraseña">
-        <button>Ingresar</button>
-        <a href="#">¿Olvidaste tu contraseña?</a>
-        <a href="#">Registrarse</a>
+ <!-- Encabezado -->
+  <nav class="navbar bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand">
+        <img src="./img/renaplogo.png" alt="renap logo" width="200" height="60">
+      </a>
+      <div class="dropdown">
+        <button class="btn btn-outline-success dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="./img/userinicio.png" alt="userlogo" width="40" height="40">
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+          <li><a class="dropdown-item" href="editarperfil_op.html">Editar perfil</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+        </ul>
       </div>
     </div>
-  </div>
-<script>
-    function mostrarMiniVista() {
-      document.getElementById('miniVista').style.display = 'flex';
-    }
+  </nav>
 
-    function cerrarMiniVista() {
-      document.getElementById('miniVista').style.display = 'none';
-    }
+  <!-- Barra lateral -->
+  <div class="sidebar">
+    <div class="nav-title">Navegación</div>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link" href="Index.html">
+          <img src="./img/inicio.png" alt="Inicio" /> Inicio
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ciudadanos_op.html">
+          <img src="./img/ciudadanos.png" alt="Usuarios" /> Ciudadanos
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="trámites.html">
+          <img src="./img/tramites.png" alt="Información DPI" /> Trámites
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="constancias.html">
+          <img src="./img/constancias.jpg" alt="Reportes" /> Constancias
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Formulario -->
+  <main class="ciudadanos-dpi-container">
+    <h2>CIUDADANOS</h2>
+    <form class="formulario-dpi" id="formCiudadano">
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" />
+
+      <label for="dpi">DPI:</label>
+      <input type="text" id="dpi" name="dpi" />
+
+      <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+      <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" placeholder="dd / mm / aaaa" />
+
+      <label for="estado-civil">Estado Civil:</label>
+      <select id="estado-civil" name="estado-civil">
+        <option value="soltero">Soltería</option>
+        <option value="casado">Casado/a</option>
+        <option value="divorciado">Divorciado/a</option>
+        <option value="viudo">Viudo/a</option>
+      </select>
+
+      <label for="direccion">Dirección:</label>
+      <input type="text" id="direccion" name="direccion" />
+
+      <label for="defuncion">Defunción:</label>
+      <select id="defuncion" name="defuncion">
+        <option value="no">No</option>
+        <option value="si">Sí</option>
+      </select>
+
+      <label for="fecha-defuncion">No:</label>
+      <input type="date" id="fecha-defuncion" name="fecha-defuncion" placeholder="dd / mm / aaaa" />
+    </form>
+
+    <div class="botones-dpi">
+      <button onclick="location.href='actualizarec.html'">Actualizar estado civil</button>
+      <button onclick="location.href='registrardef.html'">Registrar defunción</button>
+      <button onclick="location.href='corregirdo.html'">Corregir datos ciudadanos</button>
+      <button onclick="location.href='ciudadanos_op.html'">Regresar</button>
+    </div>
+  </main>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('actualizado') === 'true') {
+        const mensaje = document.createElement('div');
+        mensaje.textContent = "✅ Información actualizada correctamente.";
+        mensaje.style.background = "#d4edda";
+        mensaje.style.color = "#155724";
+        mensaje.style.padding = "10px";
+        mensaje.style.marginBottom = "20px";
+        mensaje.style.borderRadius = "5px";
+        document.body.prepend(mensaje);
+      }
+    });
   </script>
-
-
-
-  </header>
-
-  <!-- Imagen debajo del encabezado -->
-  <img class="banner-img" src="images/renap.webp" alt="Imagen debajo del encabezado">
-
-  <!-- Contenido principal -->
-  <div class="layout">
-    <!-- Menú lateral -->
-    <nav class="sidebar">
-      <h2>Navegación</h2>
-      <h3>Menú</h3>
-      <ul>
-        <li><a href="Index.html">INICIO</a></li>
-        <li><a href="ciudadanos.html">CIUDADANOS</a></li>
-        <li><a href="trámites.html">TRÁMITES</a></li>
-        <li><a href="constancias.html">CONSTANCIAS</a></li>
-      </ul>
-    </nav>
-
-    <main class="ciudadanos-dpi-container">
-      <h2>CIUDADANOS</h2>
-      <form class="formulario-dpi" id="formCiudadano">
-        <label for="nombre">Nombre completo:</label>
-        <input type="text" id="nombre" name="nombre" />
-
-        <label for="dpi">DPI:</label>
-        <input type="text" id="dpi" name="dpi" />
-
-        <label for="fecha-nacimiento">Fecha de nacimiento:</label>
-        <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" />
-
-        <label for="estado-civil">Estado Civil:</label>
-        <select id="estado-civil" name="estado-civil">
-          <option value="soltero">Soltero/a</option>
-          <option value="casado">Casado/a</option>
-          <option value="divorciado">Divorciado/a</option>
-          <option value="viudo">Viudo/a</option>
-        </select>
-
-        <label for="direccion">Dirección:</label>
-        <input type="text" id="direccion" name="direccion" />
-
-        <label for="defuncion">Defunción:</label>
-        <select id="defuncion" name="defuncion">
-          <option value="no">No</option>
-          <option value="si">Sí</option>
-        </select>
-        <input type="date" id="fecha-defuncion" name="fecha-defuncion" />
-      </form>
-
-      <div class="botones-dpi">
-        <button onclick="actualizarEstadoCivil()"><a href="actualizarec.html" class="plano">Actualizar estado civil</a></button>
-        <button onclick="registrarDefuncion()"><a href="registrardef.html" class="plano">Registrar defunción</a></button>
-        <button onclick="corregirDatos()"><a href="corregirdo.html" class="plano">Corregir datos oficiales</a></button>
-        <button type="button"><a href="ciudadanos.html" class="plano"> Regresar </a></button>
-      </div>
-    </main>
-  </div>
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get('actualizado') === 'true') {
-      const mensaje = document.createElement('div');
-      mensaje.textContent = "✅ Información actualizada correctamente.";
-      mensaje.style.background = "#d4edda";
-      mensaje.style.color = "#155724";
-      mensaje.style.padding = "10px";
-      mensaje.style.marginBottom = "20px";
-      mensaje.style.borderRadius = "5px";
-      document.body.prepend(mensaje);
-    }
-  });
-</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-

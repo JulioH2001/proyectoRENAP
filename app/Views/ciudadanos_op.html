@@ -1,359 +1,207 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Ciudadanos</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RENAP - Registro Nacional de las Personas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
-    /* Reset básico */
-    * {
+      body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #f4f4f4;
     }
 
-    /* Encabezado dorado */
-    header {
-      background-color: #d4af37;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-    }
-
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    .icons img {
-      width: 30px;
-      margin-left: 1290px;
-    }
-
-    /* Imagen debajo del encabezado */
-    .banner-img {
-      width: 900px;
-      margin-left: -280px;
-    }
-
-    /* Layout principal */
-    .layout {
-      display: flex;
-      height: calc(100vh - 60px);
-    }
-
-    /* Menú lateral */
     .sidebar {
+      height: 100vh;
       width: 250px;
+      position: fixed;
+      top: 0;
+      left: 0;
       background-color: #ffffff;
-      border-right: 1px solid #ccc;
-      padding: 20px;
+      border-right: 1px solid #000000;
+      padding-top: 70px;
     }
 
-    .sidebar h2 {
-      margin-bottom: 20px;
-      font-size: 18px;
-      color: #333;
+    .nav-title {
+      font-weight: bold;
+      font-size: 1.5rem;
+      padding: 1rem;
+      border-bottom: 1px solid #dee2e6;
     }
 
-    .sidebar h3 {
-      margin-bottom: 10px;
-      font-size: 15px;
-      color: #333;
-    }
-
-    .sidebar ul {
-      list-style: none;
-    }
-
-    .sidebar li {
+    .nav-link {
       display: flex;
       align-items: center;
-      padding: 10px;
-      margin-bottom: 10px;
-      background-color: #f0f0f0;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .sidebar li:hover {
-      background-color: #e0e0e0;
-    }
-
-    .sidebar li img {
-      width: 20px;
-      margin-right: 10px;
-    }
-
-    .sidebar a {
-      color: black;
+      padding: 0.5rem 1rem;
+      color: #212529;
       text-decoration: none;
+      font-style: italic;
     }
 
-    /* Área de contenido */
+    .nav-link img {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+    }
+
+    .nav-link.active {
+      background-color: #08c615;
+      color: white !important;
+    }
+
+
     .ciudadanos-container {
-      background-color: #f9f9f9;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      max-width: 500px;
-      width: 100%;
-      margin: auto;
-      align-self: center;
+      margin-left: 250px;
+      padding: 120px 40px 40px;
+      background-color: #fff;
+      min-height: calc(100vh - 70px);
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    .ciudadanos-container h2 {
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 30px;
       text-align: center;
-      margin-bottom: 1.5rem;
-      color: #333;
     }
 
     .ciudadano-form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
+      width: 100%;
+      max-width: 600px;
+      background-color: #f9f9f9;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
 
     .ciudadano-form label {
       font-weight: bold;
-      color: #555;
+      margin-bottom: 6px;
+      display: block;
+      color: #333;
     }
 
     .ciudadano-form input {
-      padding: 0.75rem;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
       border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 1rem;
+      border-radius: 6px;
+      font-size: 14px;
     }
 
     .ciudadano-form button {
-      background-color: #0040f1;
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
       color: white;
-      padding: 0.75rem;
       border: none;
-      border-radius: 4px;
-      cursor: pointer;
+      border-radius: 6px;
       font-weight: bold;
-      transition: background-color 0.3s ease;
+      font-size: 16px;
+      cursor: pointer;
     }
 
     .ciudadano-form button:hover {
-      background-color: #0004d6;
+      background-color: #0056b3;
     }
-
-    a.plano {
-  color: inherit;
-  text-decoration: none;
-  cursor: pointer;
-}
-/* Área de contenido */
-    .content {
-      flex: 1;
-      padding: 40px;
-      background-color: #fff;
-    }
-
-    * Estilo base */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-    }
-
-    /* Imagen que activa la mini vista */
-    .trigger-img {
-      width: 150px;
-      cursor: pointer;
-      border: 2px solid #ccc;
-      border-radius: 5px;
-    }
-
-    /* Fondo oscuro semi-transparente */
-    .overlay {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 999;
-    }
-
-    /* Mini vista RENAP */
-    .mini-vista {
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      width: 300px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      position: relative;
-      animation: fadeIn 0.3s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.95); }
-      to { opacity: 1; transform: scale(1); }
-    }
-
-    /* Botón cerrar */
-    .cerrar {
-      position: absolute;
-      top: 8px;
-      right: 12px;
-      font-size: 18px;
-      cursor: pointer;
-      color: #333;
-    }
-/* Estilo RENAP mini */
-    .renap-mini h3 {
-      margin-top: 0;
-      font-size: 18px;
-      color: #b3a744;
-    }
-
-    .renap-mini input {
-      width: 100%;
-      padding: 6px;
-      margin-bottom: 10px;
-      font-size: 13px;
-    }
-
-    .renap-mini button {
-      width: 100%;
-      padding: 8px;
-      background: black;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-
-    .renap-mini a {
-      display: block;
-      margin-top: 8px;
-      font-size: 12px;
-      text-align: center;
-      color: #007bff;
-      text-decoration: none;
-    }
-.trigger-img {
-  width: 50px;
-  cursor: pointer;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  margin-left: auto; /* Empuja la imagen hacia la derecha */
-}
   </style>
 </head>
 
 <body>
-  <header>
-    <!-- Imagen que activa la vista miniatura -->
-  <img src="images/LOGIN.png" alt="RENAP Login" class="trigger-img" onclick="mostrarMiniVista()">
-  <!-- Vista flotante -->
-  <div class="overlay" id="miniVista">
-    <div class="mini-vista">
-      <span class="cerrar" onclick="cerrarMiniVista()">×</span>
-      <div class="renap-mini">
-        <h3>RENAP</h3>
-        <label>Usuario:</label>
-        <input type="text" placeholder="Ingrese usuario">
-        <label>Contraseña:</label>
-        <input type="password" placeholder="Ingrese contraseña">
-        <button>Ingresar</button>
-        <a href="#">¿Olvidaste tu contraseña?</a>
-        <a href="#">Registrarse</a>
+ <!-- Encabezado -->
+  <nav class="navbar bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand">
+        <img src="./img/renaplogo.png" alt="renap logo" width="200" height="60">
+      </a>
+      <div class="dropdown">
+        <button class="btn btn-outline-success dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="./img/userinicio.png" alt="userlogo" width="40" height="40">
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+          <li><a class="dropdown-item" href="editarperfil_op.html">Editar perfil</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+        </ul>
       </div>
     </div>
-  </div>
-<script>
-    function mostrarMiniVista() {
-      document.getElementById('miniVista').style.display = 'flex';
-    }
+  </nav>
 
-    function cerrarMiniVista() {
-      document.getElementById('miniVista').style.display = 'none';
-    }
+  <!-- Barra lateral -->
+  <div class="sidebar">
+    <div class="nav-title">Navegación</div>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link" href="Index.html">
+          <img src="./img/inicio.png" alt="Inicio" /> Inicio
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ciudadanos_op.html">
+          <img src="./img/ciudadanos.png" alt="Usuarios" /> Ciudadanos
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="trámites.html">
+          <img src="./img/tramites.png" alt="Información DPI" /> Trámites
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="constancias.html">
+          <img src="./img/constancias.jpg" alt="Reportes" /> Constancias
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Formulario de ciudadanos -->
+  <main class="ciudadanos-container">
+    <h2>CIUDADANOS</h2>
+    <form id="formBuscarCiudadano" class="ciudadano-form" novalidate>
+      <label for="dpi">DPI:</label>
+      <input type="text" id="dpi" name="dpi" required />
+
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" name="correo" required />
+
+      <button type="submit">Buscar ciudadano</button>
+    </form>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('formBuscarCiudadano');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const dpi = document.getElementById('dpi').value.trim();
+        const nombre = document.getElementById('nombre').value.trim();
+        const correo = document.getElementById('correo').value.trim();
+
+        if (!dpi || !nombre || !correo) {
+          alert('Por favor, completa todos los campos obligatorios.');
+          return;
+        }
+
+        localStorage.setItem('dpi', dpi);
+        localStorage.setItem('nombre', nombre);
+        localStorage.setItem('correo', correo);
+
+        window.location.href = 'ciudadanosdpi.html';
+      });
+    });
   </script>
 
-
-
-  </header>
-</head>
-<body>
-
-  <!-- Imagen debajo del encabezado -->
-  <img class="banner-img" src="images/renap.webp" alt="Imagen debajo del encabezado">
-
-  <!-- Contenido principal -->
-  <div class="layout">
-    <!-- Menú lateral -->
-    <nav class="sidebar">
-      <h2>Navegación</h2>
-      <h3>Menú</h3>
-      <ul>
-        <li><a href="Index.html">INICIO</a></li>
-        <li><a href="ciudadanos.html">CIUDADANOS</a></li>
-        <li><a href="trámites.html">TRÁMITES</a></li>
-        <li><a href="constancias.html">CONSTANCIAS</a></li>
-      </ul>
-    </nav>
-
-    <!-- Formulario de ciudadanos -->
-    <main class="ciudadanos-container">
-      <h2>CIUDADANOS</h2>
-      <div class="ciudadanos-container">
-  <h2>Buscar ciudadano</h2>
-  <form id="formBuscarCiudadano" class="ciudadano-form" novalidate>
-    <label for="dpi">DPI:</label>
-    <input type="text" id="dpi" name="dpi" required />
-
-    <label for="nombre">Nombre completo:</label>
-    <input type="text" id="nombre" name="nombre" required />
-
-    <label for="correo">Correo electrónico:</label>
-    <input type="email" id="correo" name="correo" required />
-
-    <button type="submit">Buscar ciudadano</button>
-  </form>
-</div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('formBuscarCiudadano');
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault(); // Bloquea el envío automático
-
-      const dpi = document.getElementById('dpi').value.trim();
-      const nombre = document.getElementById('nombre').value.trim();
-      const correo = document.getElementById('correo').value.trim();
-
-      if (!dpi || !nombre || !correo) {
-        alert('Por favor, completa todos los campos obligatorios.');
-        return;
-      }
-
-      // Si todo está bien, guardamos y redirigimos
-      localStorage.setItem('dpi', dpi);
-      localStorage.setItem('nombre', nombre);
-      localStorage.setItem('correo', correo);
-
-      window.location.href = 'ciudadanosdpi.html';
-    });
-  });
-</script>
-
-      </form>
-    </main>
-  </div>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
