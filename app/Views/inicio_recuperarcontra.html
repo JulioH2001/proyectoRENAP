@@ -1,99 +1,168 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Recuperar Contraseña - RENAP</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e0e0e0 60%, #dcdcdc 40%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
- 
-    .recuperar-container {
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
       background-color: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
-      width: 350px;
-      text-align: center;
+      border-bottom: 1px solid #ccc;
     }
- 
-    .logo img {
-      width: 100px;
-      margin-bottom: 10px;
+
+    .header img {
+      height: 60px;
     }
- 
-    h2 {
-      margin-bottom: 10px;
+
+    .header h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 0;
       color: #333;
     }
- 
-    .subtitulo {
-      font-size: 14px;
-      color: #666;
-      margin-bottom: 20px;
-    }
- 
-    input[type="text"],
-    input[type="email"] {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
- 
-    .btn-enviar {
-      background-color: black;
-      color: white;
-      border: none;
-      padding: 10px;
-      width: 100%;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-    }
- 
-    .regresar-bar {
-      background-color: #4CAF50;
-      color: white;
-      padding: 12px;
-      margin-top: 20px;
-      border-radius: 0 0 10px 10px;
+
+    .form-container {
+      flex: 1;
       display: flex;
       justify-content: center;
       align-items: center;
+      padding: 40px;
+    }
+
+    .form-box {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .form-box h2 {
+      text-align: center;
+      font-size: 1.4rem;
+      margin-bottom: 30px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .form-box label {
+      font-weight: bold;
+      margin-bottom: 6px;
+      display: block;
+      color: #444;
+    }
+
+    .form-box input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .btn-enviar {
+      width: 100%;
+      padding: 10px;
+      background-color: #000000;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
       font-size: 16px;
       cursor: pointer;
     }
- 
-    .regresar-bar:hover {
-      background-color: #45a049;
+
+    .btn-enviar:hover {
+      background-color: #e65100;
     }
- 
-    .regresar-bar span {
-      margin-left: 8px;
+
+    .form-links {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .form-links a {
+      display: block;
+      color: #007bff;
+      text-decoration: none;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    .form-links a:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      color: #666;
     }
   </style>
 </head>
+
 <body>
-  <div class="recuperar-container">
-    <div class="logo">
-      <img src="./img/Logorenap.png" width="40" height="50">
-    </div>
-    <h2>Recuperar Contraseña</h2>
-    <div class="subtitulo">Ingrese su CUI y correo electrónico registrado</div>
-    <input type="text" placeholder="CUI del usuario" name="cui">
-    <input type="email" placeholder="Email" name="email">
-    <button class="btn-enviar">Enviar</button>
-    <div class="regresar-bar">
-      ← <span>Regresar</span>
+  <div class="header">
+    <img src="./img/renaplogo.png" alt="RENAP Logo" />
+    <h1>Servicios Electrónicos RENAP</h1>
+  </div>
+
+  <div class="form-container">
+    <div class="form-box">
+      <h2>Recuperar Contraseña</h2>
+      <p class="mb-4 text-center">Ingresa su CUI y correo electrónico registrado</p>
+      <form id="recuperarForm">
+        <label for="cui">CUI del usuario:</label>
+        <input type="text" id="cui" name="cui" placeholder="Ingrese su CUI" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Correo registrado" required />
+
+        <button type="submit" class="btn-enviar">Enviar</button>
+      </form>
+
+      <div class="form-links">
+        <a href="iniciarsesion.html">Regresar</a>
+      </div>
     </div>
   </div>
+
+  <div class="footer">
+    © 2025 RENAP Guatemala — Todos los derechos reservados
+  </div>
+
+  <script>
+    document.getElementById('recuperarForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const cui = document.getElementById('cui').value.trim();
+      const email = document.getElementById('email').value.trim();
+
+      if (!cui || !email) {
+        alert("Por favor complete todos los campos.");
+        return;
+      }
+
+      alert("Se ha enviado el enlace de recuperación al correo registrado.");
+      window.location.href = "iniciarsesion.html";
+    });
+  </script>
 </body>
 </html>

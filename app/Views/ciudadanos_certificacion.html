@@ -124,19 +124,23 @@
 </head>
 <body>
  
-  <!-- Navbar institucional fijo -->
-  <nav class="navbar">
-    <div class="container-fluid d-flex justify-content-between align-items-center px-4">
-      <div>
-        <img src="./img/Logorenap.png" alt="RENAP logo" width="200" height="60">
-      </div>
-      <div>
-        <button class="btn btn-outline-success">
-          <img src="./img/usuario.jpg" alt="Usuario" width="40" height="40">
+  <!-- Navbar superior -->
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand">
+        <img src="./img/renaplogo.png" alt="renap logo" width="200" height="60">
+      </a>
+      <div class="dropdown">
+        <button class="btn btn-outline-success dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="./img/userinicio.png" alt="userlogo" width="40" height="40">
         </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+          <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+        </ul>
       </div>
     </div>
   </nav>
+ 
  
   <!-- Sidebar institucional -->
   <div class="sidebar">

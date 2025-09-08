@@ -1,97 +1,267 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Registro de Nuevo Usuario - RENAP</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e0e0e0 60%, #dcdcdc 40%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
- 
-    .registro-container {
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
       background-color: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
-      width: 350px;
-      text-align: center;
+      border-bottom: 1px solid #ccc;
     }
- 
-    .logo img {
-      width: 100px;
-      margin-bottom: 10px;
+
+    .header img {
+      height: 60px;
     }
- 
-    h2 {
-      margin-bottom: 10px;
+
+    .header h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 0;
       color: #333;
     }
- 
-    .subtitulo {
-      font-size: 14px;
-      color: #666;
-      margin-bottom: 20px;
-    }
- 
-    input[type="text"] {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
- 
-    .btn-enviar {
-      background-color: black;
-      color: white;
-      border: none;
-      padding: 10px;
-      width: 100%;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-    }
- 
-    .regresar-bar {
-      background-color: #4CAF50;
-      color: white;
-      padding: 12px;
-      margin-top: 20px;
-      border-radius: 0 0 10px 10px;
+
+    .form-container {
+      flex: 1;
       display: flex;
       justify-content: center;
-      align-items: center;
-      font-size: 16px;
-      cursor: pointer;
+      align-items: flex-start;
+      padding: 40px;
     }
- 
-    .regresar-bar:hover {
-      background-color: #45a049;
+
+    .form-box {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 600px;
+      border: 1px solid #ddd;
     }
- 
-    .regresar-bar span {
-      margin-left: 8px;
+
+    .form-box h2 {
+      text-align: center;
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .form-box label {
+      font-weight: bold;
+      margin-bottom: 6px;
+      display: block;
+      color: #444;
+    }
+
+    .form-box input,
+    .form-box select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .form-check-label strong {
+      color: #333;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    .btn-primary {
+      background-color: #f57c00;
+      border: none;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #e65100;
+    }
+
+    .btn-secondary {
+      background-color: #ccc;
+      border: none;
+      color: #333;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      color: #666;
+    }
+
+    #extraFields {
+      display: none;
     }
   </style>
 </head>
+
 <body>
-  <div class="registro-container">
-    <div class="logo">
-      <img src="./img/Logorenap.png" width="40" height="50">
-    </div>
-    <h2>Registro de Nuevo Usuario</h2>
-    <div class="subtitulo">Ingrese la información requerida</div>
-    <input type="text" placeholder="CUI USUARIO" name="cui">
-    <button class="btn-enviar">Enviar</button>
-    <div class="regresar-bar">
-      ← <span>Regresar</span>
+  <div class="header">
+    <img src="./img/renaplogo.png" alt="RENAP Logo" />
+    <h1>Servicios Electrónicos RENAP</h1>
+  </div>
+
+  <div class="form-container">
+    <div class="form-box">
+      <h2>Registro de Nuevo Usuario</h2>
+      <p class="mb-4 text-center">Ingrese la información requerida</p>
+
+      <form id="registroForm">
+        <label for="cui">CUI Usuario:</label>
+        <input type="text" id="cui" name="cui" placeholder="Ingrese su CUI" required />
+
+        <div class="text-center mb-4">
+          <button type="button" class="btn btn-primary" id="verificarBtn">Verificar CUI</button>
+        </div>
+
+        <div id="extraFields">
+          <label for="nombres">Nombres:</label>
+          <input type="text" id="nombres" name="nombres" required />
+
+          <label for="apellido1">Primer Apellido:</label>
+          <input type="text" id="apellido1" name="apellido1" required />
+
+          <label for="apellido2">Segundo Apellido:</label>
+          <input type="text" id="apellido2" name="apellido2" />
+
+          <label for="fecha">Fecha de Nacimiento:</label>
+          <input type="date" id="fecha" name="fecha" required />
+
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="departamento">Departamento:</label>
+          <select id="departamento" name="departamento" required>
+            <option value="">Seleccione su departamento</option>
+            <option value="Alta Verapaz">Alta Verapaz</option>
+            <option value="Baja Verapaz">Baja Verapaz</option>
+            <option value="Chimaltenango">Chimaltenango</option>
+            <option value="Chiquimula">Chiquimula</option>
+            <option value="El Progreso">El Progreso</option>
+            <option value="Escuintla">Escuintla</option>
+            <option value="Guatemala">Guatemala</option>
+            <option value="Huehuetenango">Huehuetenango</option>
+            <option value="Izabal">Izabal</option>
+            <option value="Jalapa">Jalapa</option>
+            <option value="Jutiapa">Jutiapa</option>
+            <option value="Petén">Petén</option>
+            <option value="Quetzaltenango">Quetzaltenango</option>
+            <option value="Quiché">Quiché</option>
+            <option value="Retalhuleu">Retalhuleu</option>
+            <option value="Sacatepéquez">Sacatepéquez</option>
+            <option value="San Marcos">San Marcos</option>
+            <option value="Santa Rosa">Santa Rosa</option>
+            <option value="Sololá">Sololá</option>
+            <option value="Suchitepéquez">Suchitepéquez</option>
+            <option value="Totonicapán">Totonicapán</option>
+            <option value="Zacapa">Zacapa</option>
+          </select>
+
+          <label for="telefono">Teléfono:</label>
+          <input type="tel" id="telefono" name="telefono" required />
+
+          <label for="direccion">Dirección:</label>
+          <input type="text" id="direccion" name="direccion" required />
+
+          <label for="clave">Contraseña:</label>
+          <input type="password" id="clave" name="clave" required />
+
+          <label for="confirmar">Confirmar Contraseña:</label>
+          <input type="password" id="confirmar" name="confirmar" required />
+
+          <div class="form-check d-flex align-items-center mb-3">
+            <input class="form-check-input me-2" type="checkbox" id="terminos" required />
+            <label class="form-check-label" for="terminos">
+              <strong>Acepto Términos y Condiciones</strong>
+            </label>
+          </div>
+
+          <label for="captcha">Ingrese código Captcha:</label>
+          <div class="mb-2 text-center">
+            <img src="./img/prueba.png" alt="Captcha" style="max-width: 200px; border: 1px solid #ccc; border-radius: 4px;" />
+          </div>
+          <input type="text" id="captcha" name="captcha" placeholder="Escriba el código de la imagen" required />
+
+          <div class="d-flex justify-content-between">
+            <button type="reset" class="btn btn-secondary">Limpiar</button>
+            <button type="submit" class="btn btn-primary">Registrar</button>
+          </div>
+        </div>
+
+        <div class="mt-4 text-center">
+          <a href="iniciarsesion.html">Regresar</a>
+        </div>
+      </form>
     </div>
   </div>
-</body>
-</html>
+
+  <div class="footer">
+    © 2025 RENAP Guatemala — Todos los derechos reservados
+  </div>
+  
+<script>
+  const verificarBtn = document.getElementById('verificarBtn');
+  const cuiInput = document.getElementById('cui');
+  const extraFields = document.getElementById('extraFields');
+  const registroForm = document.getElementById('registroForm');
+
+  verificarBtn.addEventListener('click', () => {
+    const cui = cuiInput.value.trim();
+    const cuiValido = /^[0-9]{13}$/.test(cui);
+
+    if (!cuiValido) {
+      alert("❌ CUI inválido. Debe contener exactamente 13 dígitos numéricos.");
+      extraFields.style.display = "none";
+      return;
+    }
+
+    // Aquí podrías agregar una verificación real contra base de datos o API
+    extraFields.style.display = "block";
+  });
+
+  registroForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const clave = document.getElementById('clave').value;
+    const confirmar = document.getElementById('confirmar').value;
+
+    if (clave !== confirmar) {
+      alert("⚠️ Las contraseñas no coinciden.");
+      return;
+    }
+
+    if (!document.getElementById('terminos').checked) {
+      alert("⚠️ Debe aceptar los Términos y Condiciones para continuar.");
+      return;
+    }
+
+    // Simulación de envío exitoso
+    alert("✅ Usuario registrado exitosamente.");
+    window.location.href = "iniciarsesion.html";
+  });
+</script>
