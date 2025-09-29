@@ -1,129 +1,115 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RENAP</title>
 
-  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar fijo arriba */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1030; /* siempre encima */
+    }
+
+    /* Sidebar fija a la izquierda, debajo del navbar */
+    .sidebar {
+      position: fixed;
+      top: 70px; /* altura aproximada del navbar */
+      left: 0;
+      width: 250px;
+      height: calc(100vh - 70px); /* ocupa todo el alto menos el navbar */
+      background-color: #ffffff;
+      border-right: 1px solid #000000;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto; /* si la sidebar crece, tendrá scroll propio */
+    }
+
+    .nav-title {
+      font-weight: bold;
+      font-size: 1.5rem;
+      padding: 1rem;
+      border-bottom: 1px solid #dee2e6;
+    }
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      color: #212529;
+      text-decoration: none;
+      font-style: italic;
+    }
+
+    .nav-link img {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+    }
+
+    .nav-link.active {
+      background-color: #08c615;
+      color: white !important;
+    }
+
+    /* Contenido principal con scroll */
+    .content {
+      margin-left: 250px; /* deja espacio para la sidebar */
+      margin-top: 80px;   /* deja espacio para el navbar */
+      padding: 2rem;
+      height: calc(100vh - 80px); /* ocupa el resto de la pantalla */
+      overflow-y: auto; /* scroll vertical solo en el contenido */
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
 <nav class="navbar bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand">
-      <img src="./img/renaplogo.png" alt="renap logo" width="200" height="60">
+      <img src="/img/renaplogo.png" alt="renap logo" width="200" height="60">
     </a>
-
     <div class="dropdown">
       <button class="btn btn-outline-success dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-        <img src="./img/userinicio.png" alt="userlogo" width="40" height="40">
+        <img src="/img/userinicio.png" alt="userlogo" width="40" height="40">
       </button>
       <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
         <li><a class="dropdown-item" href="editarPerfil.html">Editar perfil</a></li>
         <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+        <li><a href="<?= site_url('logout') ?>" class="btn">Cerrar sesión</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RENAP</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-  body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    overflow: hidden;
-  }
-
-  .sidebar {
-    height: 100vh;
-    width: 250px;
-    position: fixed;
-    top: 50;
-    left: 0;
-    background-color: #ffffff;
-    border-right: 1px solid #000000;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .company-header {
-    padding: 1rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    border-bottom: 1px solid #ffffff;
-    background-color: #ffffff;
-  }
-
-  .nav-title {
-    font-weight: bold;
-    font-size: 1.5rem;
-    padding: 1rem;
-    border-bottom: 1px solid #dee2e6;
-  }
-
-  .nav-link {
-    display: flex;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    color: #212529;
-    text-decoration: none;
-    font-style: italic;
-  }
-
-  .nav-link img {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-  }
-
-  .nav-link.active {
-    background-color: #08c615;
-    color: white !important;
-  }
-
-  .content {
-    margin-left: 250px;
-    padding: 2rem;
-  }
-</style>
-</head>
-
-<body>
-
+  <!-- Sidebar -->
   <div class="sidebar">
-  <div class="nav-title">Navegación</div>
-  <ul class="nav flex-column">
-    <li class="nav-item">
-      <a class="nav-link" href="inicio.html">
-        <img src="./img/inicio.png" alt="Inicio"> Inicio
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="usuariosinicio.html">
-        <img src="./img/user.jpeg" alt="Usuarios"> Usuarios
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="inicioDPI.html">
-        <img src="./img/lupa.png" alt="Información DPI"> Información DPI
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="Reportes.html">
-        <img src="./img/reportes.png" alt="Reportes"> Reportes
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="Ciudadanos.html">
-        <img src="./img/ciudadanos.png" alt="Seguridad"> Ciudadanos
-      </a>
-    </li>
-  </ul>
-</div>
+    <div class="nav-title">Navegación</div>
+    <ul class="nav flex-column">
+      <li class="nav-item"><a class="nav-link" href="inicio.html"><img src="./img/inicio.png" alt="Inicio"> Inicio</a></li>
+      <li class="nav-item"><a class="nav-link" href="usuariosinicio.html"><img src="./img/user.jpeg" alt="Usuarios"> Usuarios</a></li>
+      <li class="nav-item"><a class="nav-link" href="inicioDPI.html"><img src="./img/lupa.png" alt="Información DPI"> Información DPI</a></li>
+      <li class="nav-item"><a class="nav-link" href="Reportes.html"><img src="./img/reportes.png" alt="Reportes"> Reportes</a></li>
+      <li class="nav-item"><a class="nav-link" href="Ciudadanos.html"><img src="./img/ciudadanos.png" alt="Seguridad"> Ciudadanos</a></li>
+    </ul>
+  </div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
@@ -147,7 +133,14 @@
 </div>
 
 <div class="content p-4">
-  <h2 class="mb-4 text-start">Usuarios</h2>
+  <h2 class="mb-4 text-start">Empleados</h2>
+
+  <div class="d-flex justify-content-between align-items-center mb-3">
+  <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalNuevoEmpleado">
+    ➕ Nuevo Empleado
+  </button>
+</div>
+
 
   <div class="table-responsive d-flex justify-content-center">
     <table class="table table-bordered align-middle text-center" style="min-width: 1200px;">
@@ -159,32 +152,8 @@
           <th style="width: 100px;">Eliminar</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td><em id="nombreUsuario">Pedro Pérez</em></td>
-          <td>
-            <select class="form-select form-select-sm">
-              <option selected>Operador</option>
-              <option>Administrador</option>
-            </select>
-          </td>
-          <td class="text-start">
-            <div class="row row-cols-2 g-2">
-              <div class="col"><div class="form-check"><input class="form-check-input" type="checkbox" id="perm1"><label class="form-check-label" for="perm1">Gestionar usuarios</label></div></div>
-              <div class="col"><div class="form-check"><input class="form-check-input" type="checkbox" id="perm2"><label class="form-check-label" for="perm2">Gestionar registros civiles</label></div></div>
-              <div class="col"><div class="form-check"><input class="form-check-input" type="checkbox" id="perm3"><label class="form-check-label" for="perm3">Generar certificados</label></div></div>
-              <div class="col"><div class="form-check"><input class="form-check-input" type="checkbox" id="perm4"><label class="form-check-label" for="perm4">Generar reportes</label></div></div>
-              <div class="col"><div class="form-check"><input class="form-check-input" type="checkbox" id="perm5"><label class="form-check-label" for="perm5">Exportar reportes</label></div></div>
-              <div class="col"><div class="form-check"><input class="form-check-input" type="checkbox" id="perm6"><label class="form-check-label" for="perm6">Configurar sistema</label></div></div>
-              <div class="col"><div class="form-check"><input class="form-check-input" type="checkbox" id="perm7"><label class="form-check-label" for="perm7">Realizar búsquedas</label></div></div>
-            </div>
-          </td>
-          <td>
-            <button class="btn btn-sm btn-danger" onclick="abrirModal('Pedro Pérez')">
-              <i class="bi bi-x-lg"></i>
-            </button>
-          </td>
-        </tr>
+      <tbody id="tabla-empleados">
+        <!-- Se llenará dinámicamente -->
       </tbody>
     </table>
   </div>
@@ -202,29 +171,282 @@
 </div>
 
 
+<div class="modal fade" id="modalNuevoEmpleado" tabindex="-1" aria-labelledby="modalNuevoEmpleadoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content border-primary">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="modalNuevoEmpleadoLabel">➕ Registrar Nuevo Empleado</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <form id="formNuevoEmpleado">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="cuiNuevo" class="form-label">CUI</label>
+              <input type="text" class="form-control" id="cuiNuevo" name="cui" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="nombreNuevo" class="form-label">Nombres</label>
+              <input type="text" class="form-control" id="nombreNuevo" name="nombre" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="apellido1Nuevo" class="form-label">Primer Apellido</label>
+              <input type="text" class="form-control" id="apellido1Nuevo" name="primer_apellido" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="apellido2Nuevo" class="form-label">Segundo Apellido</label>
+              <input type="text" class="form-control" id="apellido2Nuevo" name="segundo_apellido">
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="fechaNuevo" class="form-label">Fecha de Nacimiento</label>
+              <input type="date" class="form-control" id="fechaNuevo" name="fecha_nacimiento" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="generoNuevo" class="form-label">Género</label>
+              <select class="form-select" id="generoNuevo" name="genero" required>
+                <option value="">Seleccione</option>
+                <option value="M">Masculino</option>
+                <option value="F">Femenino</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="lugarNuevo" class="form-label">Lugar de Nacimiento</label>
+              <input type="text" class="form-control" id="lugarNuevo" name="lugar_nacimiento" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="departamentoNuevo" class="form-label">Departamento</label>
+              <select class="form-select" id="departamentoNuevo" name="departamento" required>
+                <option value="">Seleccione</option>
+                <option value="Guatemala">Guatemala</option>
+                <option value="Quetzaltenango">Quetzaltenango</option>
+                <option value="Huehuetenango">Huehuetenango</option>
+                <!-- agrega todos los departamentos -->
+              </select>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="telefonoNuevo" class="form-label">Teléfono</label>
+              <input type="tel" class="form-control" id="telefonoNuevo" name="telefono">
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="direccionNuevo" class="form-label">Dirección</label>
+              <input type="text" class="form-control" id="direccionNuevo" name="direccion">
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="correoNuevo" class="form-label">Correo</label>
+              <input type="email" class="form-control" id="correoNuevo" name="correo" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="claveNuevo" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="claveNuevo" name="clave" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="rolNuevo" class="form-label">Rol</label>
+              <select class="form-select" id="rolNuevo" name="rol" required>
+                <option value="operador">Operador</option>
+                <option value="admin">Administrador</option>
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" onclick="registrarEmpleado()">Registrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
 <!-- Script -->
 <script>
-  // Mostrar mensaje al guardar
-  document.getElementById('guardarBtn').addEventListener('click', function () {
+  function registrarEmpleado() {
+  const data = {
+    cui: document.getElementById('cuiNuevo').value,
+    nombre: document.getElementById('nombreNuevo').value,
+    primer_apellido: document.getElementById('apellido1Nuevo').value,
+    segundo_apellido: document.getElementById('apellido2Nuevo').value,
+    fecha_nacimiento: document.getElementById('fechaNuevo').value,
+    genero: document.getElementById('generoNuevo').value,
+    lugar_nacimiento: document.getElementById('lugarNuevo').value,
+    departamento: document.getElementById('departamentoNuevo').value,
+    telefono: document.getElementById('telefonoNuevo').value,
+    direccion: document.getElementById('direccionNuevo').value,
+    correo: document.getElementById('correoNuevo').value,
+    clave: document.getElementById('claveNuevo').value,
+    rol: document.getElementById('rolNuevo').value
+  };
+
+  fetch('/api/empleados', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(data)
+})
+.then(r => r.text()) // 👀 primero como texto
+.then(text => {
+  console.log("Respuesta cruda:", text); // revisa en consola
+  let res;
+  try {
+    res = JSON.parse(text);
+  } catch (e) {
+    alert("❌ El servidor no devolvió JSON válido:\n" + text);
+    throw e;
+  }
+  return res;
+})
+.then(res => {
+  if (res.status === 'ok') {
+    const modalEl = document.getElementById('modalNuevoEmpleado');
+    const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+    modal.hide();
+
+    // Limpieza de seguridad
+    document.querySelectorAll('.modal-backdrop').forEach(el => el.remove());
+    document.body.classList.remove('modal-open');
+    document.body.style.removeProperty('overflow');
+
+    document.getElementById('formNuevoEmpleado').reset();
+
     const mensaje = document.getElementById('mensajeGuardado');
-    mensaje.classList.remove('d-none');
-    setTimeout(() => mensaje.classList.add('d-none'), 4000);
+    if (mensaje) {
+      mensaje.textContent = "✅ Usuario registrado correctamente.";
+      mensaje.classList.remove('d-none');
+      setTimeout(() => mensaje.classList.add('d-none'), 4000);
+    }
+
+    if (typeof cargarEmpleados === 'function') cargarEmpleados();
+  } else {
+    alert("❌ Error al registrar: " + (res.message || 'Intente de nuevo'));
+  }
+})
+
+.catch(err => {
+  console.error("Error en fetch:", err);
+  alert("❌ Error en la comunicación con el servidor.");
+});
+
+}
+let empleadoAEliminar = null;
+
+// Cargar empleados desde la API
+function cargarEmpleados() {
+  fetch('/api/empleados')
+    .then(r => r.json())
+    .then(data => {
+      const tbody = document.getElementById('tabla-empleados');
+      tbody.innerHTML = '';
+      data.data.forEach(u => {
+        tbody.innerHTML += `
+          <tr>
+            <td><em>${u.nombre} ${u.primer_apellido ?? ''}</em></td>
+            <td>
+              <select class="form-select form-select-sm" id="rol-${u.id_usuario}">
+                <option value="operador" ${u.rol==='operador'?'selected':''}>Operador</option>
+                <option value="admin" ${u.rol==='admin'?'selected':''}>Administrador</option>
+              </select>
+            </td>
+            <td class="text-start">
+              ${renderPermisos(u)}
+            </td>
+            <td>
+              <button class="btn btn-sm btn-danger" onclick="abrirModal('${u.nombre}', ${u.id_usuario})">Eliminar</button>
+            </td>
+          </tr>
+        `;
+      });
+    });
+}
+
+// Renderizar checkboxes de permisos
+function toBool(v) {
+  // Convierte '0'/'1', 0/1, true/false a boolean real
+  return v === true || v === 1 || v === '1';
+}
+
+function renderPermisos(u) {
+  const p = u.permisos || {};
+
+  return `
+    <div class="form-check"><input type="checkbox" id="p1-${u.id_usuario}" ${toBool(p.gestionar_usuarios) ? 'checked' : ''}> Gestionar usuarios</div>
+    <div class="form-check"><input type="checkbox" id="p2-${u.id_usuario}" ${toBool(p.gestionar_registros) ? 'checked' : ''}> Gestionar registros</div>
+    <div class="form-check"><input type="checkbox" id="p3-${u.id_usuario}" ${toBool(p.generar_certificados) ? 'checked' : ''}> Generar certificados</div>
+    <div class="form-check"><input type="checkbox" id="p4-${u.id_usuario}" ${toBool(p.generar_reportes) ? 'checked' : ''}> Generar reportes</div>
+    <div class="form-check"><input type="checkbox" id="p5-${u.id_usuario}" ${toBool(p.exportar_reportes) ? 'checked' : ''}> Exportar reportes</div>
+    <div class="form-check"><input type="checkbox" id="p6-${u.id_usuario}" ${toBool(p.configurar_sistema) ? 'checked' : ''}> Configurar sistema</div>
+    <div class="form-check"><input type="checkbox" id="p7-${u.id_usuario}" ${toBool(p.realizar_busqueda) ? 'checked' : ''}> Realizar búsquedas</div>
+  `;
+}
+
+
+// Guardar cambios de todos los empleados
+document.getElementById('guardarBtn').addEventListener('click', function () {
+  document.querySelectorAll('#tabla-empleados tr').forEach(tr => {
+    const idUsuario = tr.querySelector('select').id.split('-')[1];
+    const rol = document.getElementById(`rol-${idUsuario}`).value;
+
+    const permisos = {
+      gestionar_usuarios: document.getElementById(`p1-${idUsuario}`).checked,
+      gestionar_registros: document.getElementById(`p2-${idUsuario}`).checked,
+      generar_certificados: document.getElementById(`p3-${idUsuario}`).checked,
+      generar_reportes: document.getElementById(`p4-${idUsuario}`).checked,
+      exportar_reportes: document.getElementById(`p5-${idUsuario}`).checked,
+      configurar_sistema: document.getElementById(`p6-${idUsuario}`).checked,
+      realizar_busqueda: document.getElementById(`p7-${idUsuario}`).checked
+    };
+
+    fetch(`/api/empleados/${idUsuario}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ rol, permisos })
+    })
+    .then(r => r.json())
+    .then(res => {
+      if(res.status === 'ok') {
+        const mensaje = document.getElementById('mensajeGuardado');
+        mensaje.classList.remove('d-none');
+        setTimeout(() => mensaje.classList.add('d-none'), 4000);
+      }
+    });
   });
+});
 
-  // Abrir modal con nombre dinámico
-  function abrirModal(nombre) {
-    document.getElementById('usuarioAEliminar').textContent = nombre;
-    const modal = new bootstrap.Modal(document.getElementById('modalAdvertencia'));
-    modal.show();
-  }
+// Abrir modal de confirmación
+function abrirModal(nombre, id) {
+  empleadoAEliminar = id;
+  document.getElementById('usuarioAEliminar').textContent = nombre;
+  const modal = new bootstrap.Modal(document.getElementById('modalAdvertencia'));
+  modal.show();
+}
 
-  // Confirmar eliminación
-  function confirmarEliminacion() {
-    const modal = bootstrap.Modal.getInstance(document.getElementById('modalAdvertencia'));
-    if (modal) modal.hide();
+// Confirmar eliminación
+function confirmarEliminacion() {
+  if (!empleadoAEliminar) return;
+  fetch(`/api/empleados/${empleadoAEliminar}`, { method: 'DELETE' })
+    .then(r => r.json())
+    .then(res => {
+      if(res.status === 'ok') {
+        const modal = bootstrap.Modal.getInstance(document.getElementById('modalAdvertencia'));
+        if (modal) modal.hide();
+        const mensaje = document.getElementById('mensajeEliminado');
+        mensaje.classList.remove('d-none');
+        setTimeout(() => mensaje.classList.add('d-none'), 4000);
+        cargarEmpleados();
+      }
+    });
 
-    const mensaje = document.getElementById('mensajeEliminado');
-    mensaje.classList.remove('d-none');
-    setTimeout(() => mensaje.classList.add('d-none'), 4000);
-  }
+    
+
+
+}
+
+// Cargar empleados al inicio
+cargarEmpleados();
 </script>
+</body>
+</html>

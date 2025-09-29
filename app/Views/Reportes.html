@@ -17,7 +17,7 @@
       <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
         <li><a class="dropdown-item" href="editarPerfil.html">Editar perfil</a></li>
         <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+        <li><a href="<?= site_url('logout') ?>" class="btn">Cerrar sesión</a></li>
       </ul>
     </div>
   </div>
@@ -126,11 +126,11 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  <div class="content">
-  <h2 class="mb-4">Reportes</h2>
-  <h5 class="mb-3">Estadísticas por semana</h5>
+<div class="content">
+  <h2 class="mb-4">Estadísticas por semana</h2>
+
   <div class="table-responsive">
-    <table id="tablaReporte" class="table table-bordered text-center align-middle">
+    <table class="table table-bordered text-center align-middle">
       <thead class="table-dark">
         <tr>
           <th>Nacimientos</th>
@@ -138,31 +138,61 @@
           <th>Día</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td><em>3</em></td>
-          <td>2</td>
-          <td><em>Lunes (Fecha)</em></td>
-        </tr>
-        <!-- Puedes duplicar esta fila para más días -->
+      <tbody id="tabla-reportes">
+        <!-- Se llenará dinámicamente -->
       </tbody>
-      <tfoot class="table-secondary fw-bold">
-        <tr>
-          <td><em>3</em></td>
-          <td>2</td>
-          <td>TOTAL</td>
-        </tr>
-      </tfoot>
     </table>
   </div>
 
-  <!-- Botón exportar PDF -->
-  <div class="mt-4 text-end">
-    <button class="btn btn-dark" onclick="exportarReportePDF()">
-      <i class="bi bi-file-earmark-pdf"></i> Exportar reporte PDF
-    </button>
-  </div>
 </div>
+
+<script>
+function cargarReportes() {
+  fetch('/api/reportes')
+    .then(r => r.json())
+    .then(data => {
+      const tbody = document.getElementById('tabla-reportes');
+      tbody.innerHTML = '';
+      const registros = data.data || [];
+
+      let totalNacimientos = 0;
+      let totalDPI = 0;
+
+      registros.forEach(r => {
+        totalNacimientos += parseInt(r.nacimientos);
+        totalDPI += parseInt(r.dpi_emitidos);
+
+        tbody.innerHTML += `
+          <tr>
+            <td>${r.nacimientos}</td>
+            <td>${r.dpi_emitidos}</td>
+            <td>${formatearFecha(r.fecha)}</td>
+          </tr>
+        `;
+      });
+
+      // Fila de totales
+      tbody.innerHTML += `
+        <tr class="table-secondary fw-bold">
+          <td>${totalNacimientos}</td>
+          <td>${totalDPI}</td>
+          <td>TOTAL</td>
+        </tr>
+      `;
+    });
+}
+
+function formatearFecha(fecha) {
+  const dias = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
+  const f = new Date(fecha);
+  return dias[f.getDay()] + ' (' + fecha + ')';
+}
+
+
+// Cargar al inicio
+cargarReportes();
+</script>
+
 
 
 

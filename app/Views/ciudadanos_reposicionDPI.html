@@ -220,7 +220,7 @@
           <img src="./img/userinicio.png" alt="userlogo" width="40" height="40">
         </button>
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-          <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+          <li><a href="<?= site_url('logout') ?>" class="btn">Cerrar sesión</a></li>
         </ul>
       </div>
     </div>
@@ -253,16 +253,38 @@
       <img src="./img/gyt.png" alt="G&T Continental">
       <img src="./img/banrural.avif" alt="Banrural">
     </div>
- 
+
     <div class="header">BOLETA DE BANCO</div>
- 
+
     <div class="form-container">
       <h2>Proceso de Reposición de DPI</h2>
- 
+
       <div class="form-section">
         <div class="section">
           <div class="section-title">Datos de solicitud de Reposición</div>
- 
+
+          <!-- Nombre y CUI desde sesión -->
+          <div class="form-group">
+            <label>Nombre completo:</label>
+            <input type="text" value="<?= session()->get('nombre').' '.session()->get('primer_apellido').' '.session()->get('segundo_apellido') ?>" readonly class="readonly">
+          </div>
+
+          <div class="form-group">
+  <label>CUI:</label>
+  <input type="text" value="<?= session()->get('cui') ?>" readonly class="readonly">
+</div>
+
+<div class="form-group">
+            <label>Correo electrónico:</label>
+            <input type="text" value="<?= session()->get('correo') ?>" readonly class="readonly">
+          </div>
+
+          <div class="form-group">
+            <label>Teléfono:</label>
+            <input type="text" value="<?= session()->get('telefono') ?>" readonly class="readonly">
+          </div>
+
+          
           <div class="form-group">
             <label for="motivo">Motivo de Reposición:</label>
             <select id="motivo">
@@ -273,12 +295,14 @@
               <option>Actualización de datos</option>
             </select>
           </div>
- 
+
           <div class="form-group">
             <label for="entrega">Tipo de entrega:</label>
-            <input type="text" id="entrega" placeholder="Sede u oficina donde recogerá su DPI">
+            <select id="entrega">
+              <option value="sede_central">Sede Central</option>
+            </select>
           </div>
- 
+
           <div class="form-group">
             <label for="departamento">Departamento:</label>
             <select id="departamento">
@@ -307,34 +331,41 @@
               <option>Zacapa</option>
             </select>
           </div>
+
+          <div class="form-group">
+            <label for="fechaTramite">Fecha del trámite:</label>
+            <input type="date" id="fechaTramite">
+          </div>
         </div>
- 
+
         <div class="section">
           <div class="section-title">Pago DPI</div>
- 
+
+          <p><strong>Número de cuenta:</strong> 123-456789-0 (Banco de Ejemplo)</p>
+          <p class="text-muted">Después de haber depositado, llene los siguientes datos:</p>
+
           <div class="form-group">
             <label for="recibo">Número de Recibo:</label>
             <input type="text" id="recibo">
           </div>
- 
+
           <div class="form-group">
             <label for="nota">Número de nota:</label>
             <input type="text" id="nota">
           </div>
- 
+
           <div class="form-group">
             <label for="total">TOTAL:</label>
             <input type="text" id="total" value="Q. 100.00" class="readonly" readonly>
           </div>
         </div>
       </div>
- 
-     <div class="d-flex justify-content-center gap-3 mt-4">
-  <button class="submit-btn" onclick="validarFormulario()">Realizar Solicitud</button>
-  <button class="submit-btn bg-secondary" onclick="window.history.back()">Cancelar</button>
-</div>
 
- 
+      <div class="d-flex justify-content-center gap-3 mt-4">
+        <button class="submit-btn" onclick="validarFormulario()">Realizar Solicitud</button>
+        <button class="submit-btn bg-secondary" onclick="window.history.back()">Cancelar</button>
+      </div>
+
       <div class="popup" id="popupAdvertencia">
         <h3>¡Advertencia!</h3>
         <p>Debe ingresar todos los datos correctos solicitados</p>
@@ -342,26 +373,71 @@
       </div>
     </div>
   </div>
- 
-  <script>
-    function validarFormulario() {
-      const motivo = document.getElementById("motivo").value;
-      const entrega = document.getElementById("entrega").value.trim();
-      const departamento = document.getElementById("departamento").value;
-      const recibo = document.getElementById("recibo").value.trim();
-      const nota = document.getElementById("nota").value.trim();
- 
-      if (!motivo || !entrega || !departamento || !recibo || !nota) {
-        document.getElementById("popupAdvertencia").style.display = "block";
+
+
+<script>
+  async function validarFormulario() {
+    const motivo = document.getElementById("motivo").value;
+    const entrega = document.getElementById("entrega").value;
+    const departamento = document.getElementById("departamento").value;
+    const fechaTramite = document.getElementById("fechaTramite").value;
+    const recibo = document.getElementById("recibo").value.trim();
+    const nota = document.getElementById("nota").value.trim();
+
+    if (!motivo || !entrega || !departamento || !fechaTramite || !recibo || !nota) {
+      document.getElementById("popupAdvertencia").style.display = "block";
+      return;
+    }
+
+    // Construir objeto con los datos
+    const payload = {
+      motivo: motivo,
+      entrega: entrega,
+      departamento: departamento,
+      fecha: fechaTramite,
+      recibo: recibo,
+      nota: nota
+    };
+
+    try {
+      // 👇 Aquí llamamos al backend
+      const res = await fetch('/api/reposicion/solicitar', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+
+      const data = await res.json();
+      console.log("Respuesta del servidor:", data);
+
+      if (data.status === 'ok') {
+        // Guardar en localStorage solo para mostrar en comprobante
+        localStorage.setItem("reposicionData", JSON.stringify({
+          nombre: "<?= session()->get('nombre').' '.session()->get('primer_apellido').' '.session()->get('segundo_apellido') ?>",
+          cui: "<?= session()->get('cui') ?>",
+          correo: "<?= session()->get('correo') ?>",
+          telefono: "<?= session()->get('telefono') ?>",
+          motivo: motivo,
+          departamento: departamento,
+          sede: entrega,
+          fechaSolicitud: fechaTramite,
+          recibo: recibo,
+          nota: nota
+        }));
+
+        // Redirigir a la vista de confirmación
+        window.location.href = "ciudadanos_reposicionlista.html";
       } else {
-        alert("Solicitud enviada correctamente.");
-        window.location.href = 'ciudadanos_reposicionlista.html';
-        // Aquí podrías enviar los datos al servidor
+        alert("Error: " + data.message);
       }
+    } catch (err) {
+      console.error("Error al enviar solicitud:", err);
+      alert("No se pudo enviar la solicitud al servidor.");
     }
- 
-    function cerrarPopup() {
-      document.getElementById("popupAdvertencia").style.display = "none";
-    }
-  </script>
-</body>
+  }
+
+  function cerrarPopup() {
+    document.getElementById("popupAdvertencia").style.display = "none";
+  }
+</script>
+

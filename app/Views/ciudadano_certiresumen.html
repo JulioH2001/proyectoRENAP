@@ -13,14 +13,14 @@
       background-color: #f9f9f9;
       overflow-x: hidden;
     }
- 
+
     .navbar {
       position: fixed;
       top: 0;
       width: 100%;
       z-index: 1000;
     }
- 
+
     .sidebar {
       height: 100vh;
       width: 250px;
@@ -32,14 +32,14 @@
       display: flex;
       flex-direction: column;
     }
- 
+
     .nav-title {
       font-weight: bold;
       font-size: 1.5rem;
       padding: 1rem;
       border-bottom: 1px solid #dee2e6;
     }
- 
+
     .nav-link {
       display: flex;
       align-items: center;
@@ -48,24 +48,24 @@
       text-decoration: none;
       font-style: italic;
     }
- 
+
     .nav-link img {
       width: 20px;
       height: 20px;
       margin-right: 8px;
     }
- 
+
     .nav-link.active {
       background-color: #08c615;
       color: white !important;
     }
- 
+
     .main {
       margin-left: 250px;
       padding: 30px;
       margin-top: 100px;
     }
- 
+
     .header {
       background-color: #6a7f4e;
       color: #c8f7c5;
@@ -75,7 +75,7 @@
       font-weight: bold;
       border-radius: 8px;
     }
- 
+
     .form-container {
       max-width: 900px;
       margin: 30px auto;
@@ -84,18 +84,18 @@
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
- 
+
     .form-section {
       display: flex;
       justify-content: space-between;
       gap: 40px;
       margin-bottom: 20px;
     }
- 
+
     .section {
       flex: 1;
     }
- 
+
     .section-title {
       font-size: 18px;
       font-weight: bold;
@@ -104,18 +104,18 @@
       padding-bottom: 5px;
       color: #444;
     }
- 
+
     .form-group {
       margin-bottom: 15px;
     }
- 
+
     label {
       display: block;
       margin-bottom: 5px;
       font-weight: bold;
       color: #555;
     }
- 
+
     input[type="text"] {
       width: 100%;
       padding: 10px;
@@ -123,11 +123,11 @@
       border-radius: 5px;
       background-color: #f0f0f0;
     }
- 
+
     .readonly {
       background-color: #e6e6e6;
     }
- 
+
     .confirm-btn {
       background-color: #6a7f4e;
       color: white;
@@ -141,11 +141,11 @@
       width: 200px;
       text-align: center;
     }
- 
+
     .confirm-btn:hover {
       background-color: #5c6f42;
     }
- 
+
     .modal {
       display: none;
       position: fixed;
@@ -158,7 +158,7 @@
       justify-content: center;
       align-items: center;
     }
- 
+
     .modal-content {
       background-color: white;
       padding: 30px;
@@ -167,18 +167,18 @@
       max-width: 400px;
       box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
- 
+
     .modal-content h3 {
       margin-top: 0;
       color: #333;
     }
- 
+
     .modal-content p {
       margin: 15px 0;
       color: #c00;
       font-weight: bold;
     }
- 
+
     .modal-content button {
       background-color: #6a7f4e;
       color: white;
@@ -188,23 +188,22 @@
       border-radius: 5px;
       cursor: pointer;
     }
- 
+
     .modal-content button:hover {
       background-color: #5c6f42;
     }
 
     .confirm-btn.bg-secondary {
-  background-color: #6c757d;
-}
+      background-color: #6c757d;
+    }
 
-.confirm-btn.bg-secondary:hover {
-  background-color: #5a6268;
-}
-
+    .confirm-btn.bg-secondary:hover {
+      background-color: #5a6268;
+    }
   </style>
 </head>
 <body>
- 
+
   <!-- Navbar superior -->
   <nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
@@ -216,13 +215,12 @@
           <img src="./img/userinicio.png" alt="userlogo" width="40" height="40">
         </button>
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-          <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+          <li><a href="<?= site_url('logout') ?>" class="btn">Cerrar sesión</a></li>
         </ul>
       </div>
     </div>
   </nav>
- 
- 
+
   <!-- Sidebar institucional -->
   <div class="sidebar">
     <div class="nav-title">Navegación</div>
@@ -249,11 +247,11 @@
       </li>
     </ul>
   </div>
- 
+
   <!-- Contenido principal -->
   <div class="main">
     <div class="header">RESUMEN DE SOLICITUD</div>
- 
+
     <div class="form-container">
       <div class="form-section">
         <div class="section">
@@ -275,7 +273,7 @@
             <input type="text" id="telefono">
           </div>
         </div>
- 
+
         <div class="section">
           <div class="section-title">Datos del certificado</div>
           <div class="form-group">
@@ -288,7 +286,12 @@
           </div>
           <div class="form-group">
             <label for="tipoCertificacion">Tipo de Certificación:</label>
-            <input type="text" id="tipoCertificacion">
+            <select id="tipoCertificacion" class="form-select">
+              <option value="">Seleccione...</option>
+              <option value="nacimiento">Nacimiento</option>
+              <option value="matrimonio">Matrimonio</option>
+              <option value="defuncion">Defunción</option>
+            </select>
           </div>
           <div class="form-group">
             <label for="costo">Costo:</label>
@@ -297,13 +300,14 @@
         </div>
       </div>
 
-<!-- Botones de acción -->
-<div class="d-flex justify-content-center gap-3 mt-4">
-  <button class="confirm-btn" onclick="validarFormulario()">CONFIRMAR</button>
-  <button class="confirm-btn bg-secondary" onclick="window.history.back()">CANCELAR</button>
-</div>
+      <!-- Botones de acción -->
+      <div class="d-flex justify-content-center gap-3 mt-4">
+        <button class="confirm-btn" onclick="validarFormulario()">CONFIRMAR</button>
+        <button class="confirm-btn bg-secondary" onclick="window.history.back()">CANCELAR</button>
+      </div>
+    </div>
+  </div>
 
- 
   <!-- Modal de advertencia -->
   <div id="modalAdvertencia" class="modal">
     <div class="modal-content">
@@ -312,38 +316,171 @@
       <button onclick="cerrarModal()">Cerrar</button>
     </div>
   </div>
- 
-  <!-- Script de validación -->
-  <script>
-    function validarFormulario() {
-      const campos = [
-        'nombreSolicitante',
-        'cuiSolicitante',
-        'correo',
-        'telefono',
-        'nombreCertificado',
-        'cuiCertificado',
-        'tipoCertificacion'
-      ];
- 
-      let incompleto = campos.some(id => {
-        const valor = document.getElementById(id).value.trim();
-        return valor === '';
-      });
- 
-     if (incompleto) {
-  document.getElementById('modalAdvertencia').style.display = 'flex';
-} else {
-  // Redirección a la página de confirmación
-  alert('Formulario confirmado correctamente ✅');
-  window.location.href = 'ciudadanos_certificacion.html';
-}
 
+<script>
+  // Utilidad para leer valores
+  const getV = id => document.getElementById(id).value.trim();
+
+  // Bloquear/desbloquear botones durante la petición
+  function setLoading(loading) {
+    const confirmBtn = document.querySelector('.confirm-btn:not(.bg-secondary)');
+    const cancelBtn  = document.querySelector('.confirm-btn.bg-secondary');
+    if (confirmBtn) {
+      confirmBtn.disabled = loading;
+      confirmBtn.textContent = loading ? 'PROCESANDO...' : 'DESCARGAR';
     }
+    if (cancelBtn) cancelBtn.disabled = loading;
+  }
+
+  // Limpiar campos del formulario
+  function limpiarFormulario() {
+    const ids = [
+      'nombreSolicitante','cuiSolicitante','correo','telefono',
+      'nombreCertificado','cuiCertificado','tipoCertificacion','costo'
+    ];
+    ids.forEach(id => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      if (el.tagName === 'SELECT') el.selectedIndex = 0;
+      else el.value = (id === 'costo') ? 'Q. 15.00' : '';
+    });
+  }
+
+  // Estado visual de éxito (sin cambiar tu tema)
+  function mostrarExito(pdfUrl) {
+    const cont = document.querySelector('.form-container');
+    if (!cont) return;
+    cont.innerHTML = `
+      <div class="text-center">
+        <div class="header" style="margin-bottom:20px;">SOLICITUD COMPLETADA</div>
+        <p class="mb-3">Tu certificación fue generada correctamente.</p>
+        <div class="d-flex justify-content-center gap-3 mt-4">
+          <a class="confirm-btn" href="${pdfUrl}" target="_blank">DESCARGAR PDF</a>
+          <button class="confirm-btn bg-secondary" onclick="irInicio()">IR AL INICIO</button>
+        </div>
+      </div>
+    `;
+  }
+
+  // Navegación segura para Cancelar/Inicio
+  function irInicio() {
+    if (document.referrer && document.referrer !== window.location.href) {
+      window.history.back();
+    } else {
+      window.location.href = "<?= site_url('ciudadano_inicio') ?>"; // ajusta si tu ruta es distinta
+    }
+  }
+
+  // Tu función original, ampliada
+  function validarFormulario() {
+    const campos = [
+      'nombreSolicitante',
+      'cuiSolicitante',
+      'correo',
+      'telefono',
+      'nombreCertificado',
+      'cuiCertificado',
+      'tipoCertificacion'
+    ];
+
+    const incompleto = campos.some(id => getV(id) === '');
+    if (incompleto) {
+      document.getElementById('modalAdvertencia').style.display = 'flex';
+      return;
+    }
+
+    const solicitud = {
+      nombreSolicitante: getV('nombreSolicitante'),
+      cuiSolicitante: getV('cuiSolicitante'),
+      correo: getV('correo'),
+      telefono: getV('telefono'),
+      nombreCertificado: getV('nombreCertificado'),
+      cuiCertificado: getV('cuiCertificado'),
+      tipoCertificacion: getV('tipoCertificacion'),
+      costo: getV('costo')
+    };
+
+    setLoading(true);
+
+    fetch("<?= base_url('api/certificados/solicitar') ?>", {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(solicitud)
+    })
+    .then(r => r.json())
+    .then(res => {
+      if (res.status === 'ok') {
+        // Abrir PDF y actualizar UI
+        window.open(res.pdf_url, '_blank');
+        limpiarFormulario();
+        mostrarExito(res.pdf_url);
+      } else {
+        alert("❌ " + (res.message || 'Error en la respuesta del servidor'));
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      alert("❌ Error en la comunicación con el servidor.");
+    })
+    .finally(() => {
+      setLoading(false);
+    });
+  }
+
+  function cerrarModal() {
+    document.getElementById('modalAdvertencia').style.display = 'none';
+  }
+
+  // Arreglar el botón Cancelar sin inline onclick
+  document.addEventListener('DOMContentLoaded', () => {
+    const cancelBtn = document.querySelector('.confirm-btn.bg-secondary');
+    if (cancelBtn) cancelBtn.onclick = irInicio;
+  });
+
  
-    function cerrarModal() {
-      document.getElementById('modalAdvertencia').style.display = 'none';
+  // Ruta segura de fallback (ajusta si tu ruta de inicio es otra)
+  const RUTA_INICIO = "<?= site_url('ciudadano_inicio') ?>";
+
+  function cancelarSeguro() {
+    try {
+      // Si hay referrer y es de la misma origin, usar history.back()
+      const ref = document.referrer;
+      if (ref && new URL(ref).origin === window.location.origin) {
+        // Intentar volver en el historial; si no funciona, redirigir al fallback en 300ms
+        window.history.back();
+        setTimeout(() => {
+          // Si no se cambió la URL en 300ms, forzar redirección
+          if (window.location.href === location.href) {
+            window.location.href = RUTA_INICIO;
+          }
+        }, 300);
+        return;
+      }
+
+      // Si no hay referrer o es de otro origen, ir al inicio seguro
+      window.location.href = RUTA_INICIO;
+    } catch (e) {
+      // Fallback definitivo
+      window.location.href = RUTA_INICIO;
     }
-  </script>
+  }
+
+  // Reemplaza el comportamiento del botón Cancelar en carga
+  document.addEventListener('DOMContentLoaded', () => {
+    const cancelBtn = document.querySelector('.confirm-btn.bg-secondary');
+    if (cancelBtn) {
+      // quitar cualquier onclick inline peligroso y asignar la función segura
+      cancelBtn.removeAttribute('onclick');
+      cancelBtn.addEventListener('click', (ev) => {
+        ev.preventDefault();
+        cancelarSeguro();
+      });
+    }
+  });
+</script>
+
+
+
+</script>
 </body>
 </html>

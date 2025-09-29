@@ -1,0 +1,762 @@
+CRITICAL - 2025-09-23 01:54:44 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "SolicitudesDPI.php"
+[Method: GET, Route: SolicitudesDPI.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('SolicitudesDPI.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('SolicitudesDPI', [], true)
+ 3 APPPATH\Config\Routes.php(67): view('SolicitudesDPI')
+ 4 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('SolicitudesDPI')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-23 01:56:21 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "SolicitudesDPI.php"
+[Method: GET, Route: SolicitudesDPI.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('SolicitudesDPI.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('SolicitudesDPI', [], true)
+ 3 APPPATH\Config\Routes.php(67): view('SolicitudesDPI')
+ 4 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-23 01:56:22 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "SolicitudesDPI.php"
+[Method: GET, Route: SolicitudesDPI.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('SolicitudesDPI.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('SolicitudesDPI', [], true)
+ 3 APPPATH\Config\Routes.php(67): view('SolicitudesDPI')
+ 4 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-23 01:57:32 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "SolicitudesDPI.php"
+[Method: GET, Route: SolicitudesDPI.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('SolicitudesDPI.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('SolicitudesDPI', [], true)
+ 3 APPPATH\Config\Routes.php(67): view('SolicitudesDPI')
+ 4 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('SolicitudesDPI')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+ERROR - 2025-09-23 03:19:55 --> mysqli_sql_exception: Table 'renap.solicitudes_dpi' doesn't exist in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `solicit...', 0)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicit...')
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicit...')
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#4 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyectos\RENAP\app\Models\SolicitudModel.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+#10 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-09-23 03:19:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'renap.solicitudes_dpi' doesn't exist
+[Method: GET, Route: api/solicitudes]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicitudes_dpi`.`id_solicitud`, `usuarios`.`nombre`, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\SolicitudModel.php(16): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-23 03:19:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'renap.solicitudes_dpi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitudes_dpi`.`id_solicitud`, `usuarios`.`nombre`, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitudes_dpi`.`id_solicitud`, `usuarios`.`nombre`, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicitudes_dpi`.`id_solicitud`, `usuarios`.`nombre`, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\SolicitudModel.php(16): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-23 03:19:55 --> [Caused by] mysqli_sql_exception: Table 'renap.solicitudes_dpi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `solicitudes_dpi`.`id_solicitud`, `usuarios`.`nombre`, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitudes_dpi`.`id_solicitud`, `usuarios`.`nombre`, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitudes_dpi`.`id_solicitud`, `usuarios`.`nombre`, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicitudes_dpi`.`id_solicitud`, `usuarios`.`nombre`, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SolicitudModel.php(16): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+ERROR - 2025-09-23 03:19:56 --> mysqli_sql_exception: Table 'renap.solicitudes_dpi' doesn't exist in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `solicit...', 0)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicit...')
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicit...')
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#4 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyectos\RENAP\app\Models\SolicitudModel.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+#10 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-09-23 03:19:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'renap.solicitudes_dpi' doesn't exist
+[Method: GET, Route: api/solicitudes]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicitudes_dpi`.`id_solicitud`, `usuarios`.`nombre`, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\SolicitudModel.php(16): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-23 03:19:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'renap.solicitudes_dpi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitudes_dpi`.`id_solicitud`, `usuarios`.`nombre`, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitudes_dpi`.`id_solicitud`, `usuarios`.`nombre`, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicitudes_dpi`.`id_solicitud`, `usuarios`.`nombre`, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\SolicitudModel.php(16): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-23 03:19:56 --> [Caused by] mysqli_sql_exception: Table 'renap.solicitudes_dpi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `solicitudes_dpi`.`id_solicitud`, `usuarios`.`nombre`, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitudes_dpi`.`id_solicitud`, `usuarios`.`nombre`, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitudes_dpi`.`id_solicitud`, `usuarios`.`nombre`, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicitudes_dpi`.`id_solicitud`, `usuarios`.`nombre`, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SolicitudModel.php(16): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-23 03:57:25 --> ParseError: syntax error, unexpected token "public", expecting end of file
+[Method: GET, Route: api/solicitudes]
+in APPPATH\Models\SolicitudModel.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Models\\SolicitudModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\SolicitudModel')
+ 3 APPPATH\Controllers\Api\SolicitudController.php(10): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\SolicitudModel')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-23 03:57:26 --> ParseError: syntax error, unexpected token "public", expecting end of file
+[Method: GET, Route: api/solicitudes]
+in APPPATH\Models\SolicitudModel.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Models\\SolicitudModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\SolicitudModel')
+ 3 APPPATH\Controllers\Api\SolicitudController.php(10): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\SolicitudModel')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+ERROR - 2025-09-23 03:57:59 --> mysqli_sql_exception: Unknown column 'usuarios.primer_nombre' in 'field list' in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `solicit...', 0)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicit...')
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicit...')
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#4 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyectos\RENAP\app\Models\SolicitudModel.php(22): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+#10 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-09-23 03:57:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuarios.primer_nombre' in 'field list'
+[Method: GET, Route: api/solicitudes]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\SolicitudModel.php(22): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-23 03:57:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuarios.primer_nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\SolicitudModel.php(22): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-23 03:57:59 --> [Caused by] mysqli_sql_exception: Unknown column 'usuarios.primer_nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SolicitudModel.php(22): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+ERROR - 2025-09-23 03:58:00 --> mysqli_sql_exception: Unknown column 'usuarios.primer_nombre' in 'field list' in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `solicit...', 0)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicit...')
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicit...')
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#4 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyectos\RENAP\app\Models\SolicitudModel.php(22): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+#10 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-09-23 03:58:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuarios.primer_nombre' in 'field list'
+[Method: GET, Route: api/solicitudes]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\SolicitudModel.php(22): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-23 03:58:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuarios.primer_nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\SolicitudModel.php(22): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-23 03:58:00 --> [Caused by] mysqli_sql_exception: Unknown column 'usuarios.primer_nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SolicitudModel.php(22): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+ERROR - 2025-09-23 03:58:00 --> mysqli_sql_exception: Unknown column 'usuarios.primer_nombre' in 'field list' in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `solicit...', 0)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicit...')
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicit...')
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#4 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyectos\RENAP\app\Models\SolicitudModel.php(22): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+#10 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-09-23 03:58:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuarios.primer_nombre' in 'field list'
+[Method: GET, Route: api/solicitudes]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\SolicitudModel.php(22): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-23 03:58:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuarios.primer_nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\SolicitudModel.php(22): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-23 03:58:00 --> [Caused by] mysqli_sql_exception: Unknown column 'usuarios.primer_nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SolicitudModel.php(22): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-23 03:58:06 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\SolicitudModel::getSolicitudesConUsuario
+[Method: GET, Route: api/solicitudes]
+in SYSTEMPATH\Model.php on line 927.
+ 1 APPPATH\Controllers\Api\SolicitudController.php(11): CodeIgniter\Model->__call('getSolicitudesConUsuario', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-23 03:58:06 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\SolicitudModel::getSolicitudesConUsuario
+[Method: GET, Route: api/solicitudes]
+in SYSTEMPATH\Model.php on line 927.
+ 1 APPPATH\Controllers\Api\SolicitudController.php(11): CodeIgniter\Model->__call('getSolicitudesConUsuario', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-23 03:58:10 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\SolicitudModel::getSolicitudesConUsuario
+[Method: GET, Route: api/solicitudes]
+in SYSTEMPATH\Model.php on line 927.
+ 1 APPPATH\Controllers\Api\SolicitudController.php(11): CodeIgniter\Model->__call('getSolicitudesConUsuario', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-23 03:58:10 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\SolicitudModel::getSolicitudesConUsuario
+[Method: GET, Route: api/solicitudes]
+in SYSTEMPATH\Model.php on line 927.
+ 1 APPPATH\Controllers\Api\SolicitudController.php(11): CodeIgniter\Model->__call('getSolicitudesConUsuario', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-23 03:58:11 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\SolicitudModel::getSolicitudesConUsuario
+[Method: GET, Route: api/solicitudes]
+in SYSTEMPATH\Model.php on line 927.
+ 1 APPPATH\Controllers\Api\SolicitudController.php(11): CodeIgniter\Model->__call('getSolicitudesConUsuario', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-23 03:58:16 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\SolicitudModel::getSolicitudesConUsuario
+[Method: GET, Route: api/solicitudes]
+in SYSTEMPATH\Model.php on line 927.
+ 1 APPPATH\Controllers\Api\SolicitudController.php(11): CodeIgniter\Model->__call('getSolicitudesConUsuario', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-23 03:58:16 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\SolicitudModel::getSolicitudesConUsuario
+[Method: GET, Route: api/solicitudes]
+in SYSTEMPATH\Model.php on line 927.
+ 1 APPPATH\Controllers\Api\SolicitudController.php(11): CodeIgniter\Model->__call('getSolicitudesConUsuario', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-23 03:58:16 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\SolicitudModel::getSolicitudesConUsuario
+[Method: GET, Route: api/solicitudes]
+in SYSTEMPATH\Model.php on line 927.
+ 1 APPPATH\Controllers\Api\SolicitudController.php(11): CodeIgniter\Model->__call('getSolicitudesConUsuario', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-23 03:58:17 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\SolicitudModel::getSolicitudesConUsuario
+[Method: GET, Route: api/solicitudes]
+in SYSTEMPATH\Model.php on line 927.
+ 1 APPPATH\Controllers\Api\SolicitudController.php(11): CodeIgniter\Model->__call('getSolicitudesConUsuario', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-23 03:58:18 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\SolicitudModel::getSolicitudesConUsuario
+[Method: GET, Route: api/solicitudes]
+in SYSTEMPATH\Model.php on line 927.
+ 1 APPPATH\Controllers\Api\SolicitudController.php(11): CodeIgniter\Model->__call('getSolicitudesConUsuario', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+ERROR - 2025-09-23 03:58:27 --> mysqli_sql_exception: Unknown column 'usuarios.primer_nombre' in 'field list' in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `solicit...', 0)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicit...')
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicit...')
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#4 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyectos\RENAP\app\Models\SolicitudModel.php(22): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+#10 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-09-23 03:58:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuarios.primer_nombre' in 'field list'
+[Method: GET, Route: api/solicitudes]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\SolicitudModel.php(22): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-23 03:58:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuarios.primer_nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\SolicitudModel.php(22): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-23 03:58:27 --> [Caused by] mysqli_sql_exception: Unknown column 'usuarios.primer_nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SolicitudModel.php(22): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+ERROR - 2025-09-23 03:58:28 --> mysqli_sql_exception: Unknown column 'usuarios.primer_nombre' in 'field list' in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `solicit...', 0)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicit...')
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicit...')
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#4 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyectos\RENAP\app\Models\SolicitudModel.php(22): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+#10 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-09-23 03:58:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuarios.primer_nombre' in 'field list'
+[Method: GET, Route: api/solicitudes]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\SolicitudModel.php(22): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-23 03:58:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuarios.primer_nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\SolicitudModel.php(22): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-23 03:58:28 --> [Caused by] mysqli_sql_exception: Unknown column 'usuarios.primer_nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicitudes_dpi`.`id_solicitud`, CONCAT(usuarios.primer_nombre, " ", usuarios.primer_apellido) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SolicitudModel.php(22): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')

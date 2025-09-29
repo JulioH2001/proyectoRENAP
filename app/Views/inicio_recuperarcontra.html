@@ -15,7 +15,6 @@
       display: flex;
       flex-direction: column;
     }
-
     .header {
       display: flex;
       justify-content: space-between;
@@ -24,18 +23,8 @@
       background-color: #fff;
       border-bottom: 1px solid #ccc;
     }
-
-    .header img {
-      height: 60px;
-    }
-
-    .header h1 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin: 0;
-      color: #333;
-    }
-
+    .header img { height: 60px; }
+    .header h1 { font-size: 1.5rem; font-weight: 600; margin: 0; color: #333; }
     .form-container {
       flex: 1;
       display: flex;
@@ -43,7 +32,6 @@
       align-items: center;
       padding: 40px;
     }
-
     .form-box {
       background-color: #fff;
       padding: 40px;
@@ -52,73 +40,32 @@
       width: 100%;
       max-width: 400px;
     }
-
     .form-box h2 {
       text-align: center;
       font-size: 1.4rem;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       font-weight: 600;
       color: #333;
     }
-
-    .form-box label {
-      font-weight: bold;
-      margin-bottom: 6px;
-      display: block;
-      color: #444;
-    }
-
+    .form-box p { text-align: center; margin-bottom: 20px; color: #555; }
+    .form-box label { font-weight: bold; margin-bottom: 6px; display: block; color: #444; }
     .form-box input {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 14px;
+      width: 100%; padding: 10px; margin-bottom: 20px;
+      border: 1px solid #ccc; border-radius: 6px; font-size: 14px;
     }
-
     .btn-enviar {
-      width: 100%;
-      padding: 10px;
-      background-color: #000000;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-weight: bold;
-      font-size: 16px;
-      cursor: pointer;
+      width: 100%; padding: 10px;
+      background-color: #000000; color: white;
+      border: none; border-radius: 6px;
+      font-weight: bold; font-size: 16px; cursor: pointer;
     }
-
-    .btn-enviar:hover {
-      background-color: #e65100;
-    }
-
-    .form-links {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .form-links a {
-      display: block;
-      color: #007bff;
-      text-decoration: none;
-      margin-bottom: 8px;
-      font-size: 14px;
-    }
-
-    .form-links a:hover {
-      text-decoration: underline;
-    }
-
-    .footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 13px;
-      color: #666;
-    }
+    .btn-enviar:hover { background-color: #e65100; }
+    .form-links { text-align: center; margin-top: 20px; }
+    .form-links a { color: #007bff; text-decoration: none; font-size: 14px; }
+    .form-links a:hover { text-decoration: underline; }
+    .footer { text-align: center; padding: 20px; font-size: 13px; color: #666; }
   </style>
 </head>
-
 <body>
   <div class="header">
     <img src="./img/renaplogo.png" alt="RENAP Logo" />
@@ -128,19 +75,19 @@
   <div class="form-container">
     <div class="form-box">
       <h2>Recuperar Contraseña</h2>
-      <p class="mb-4 text-center">Ingresa su CUI y correo electrónico registrado</p>
+      <p>Ingrese su CUI y correo electrónico registrado</p>
       <form id="recuperarForm">
         <label for="cui">CUI del usuario:</label>
         <input type="text" id="cui" name="cui" placeholder="Ingrese su CUI" required />
 
-        <label for="email">Email:</label>
+        <label for="email">Correo electrónico:</label>
         <input type="email" id="email" name="email" placeholder="Correo registrado" required />
 
         <button type="submit" class="btn-enviar">Enviar</button>
       </form>
 
       <div class="form-links">
-        <a href="iniciarsesion.html">Regresar</a>
+        <a href="iniciarsesion.html">Regresar al inicio de sesión</a>
       </div>
     </div>
   </div>
@@ -156,12 +103,28 @@
       const email = document.getElementById('email').value.trim();
 
       if (!cui || !email) {
-        alert("Por favor complete todos los campos.");
+        alert("❌ Por favor complete todos los campos.");
         return;
       }
 
-      alert("Se ha enviado el enlace de recuperación al correo registrado.");
-      window.location.href = "iniciarsesion.html";
+      fetch('/api/recuperar', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ cui, email })
+      })
+      .then(r => r.json())
+      .then(res => {
+        if (res.status === 'ok') {
+          alert("✅ " + res.message);
+          window.location.href = "iniciarsesion.html";
+        } else {
+          alert("❌ " + res.message);
+        }
+      })
+      .catch(err => {
+        console.error(err);
+        alert("❌ Error en la comunicación con el servidor.");
+      });
     });
   </script>
 </body>

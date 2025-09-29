@@ -1,0 +1,622 @@
+ERROR - 2025-09-24 00:01:43 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'renap', NULL, '', 0)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#4 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyectos\RENAP\app\Models\SolicitudModel.php(28): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+#10 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\proyectos\RENAP\app\Models\SolicitudModel.php(28): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+#7 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-09-24 00:01:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+[Method: GET, Route: api/solicitudes]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicitudes_dpi`.`id_solicitud`, TRIM(CONCAT(
+                        COALESCE(usuarios.nombre, ""), " ", COALESCE(usuarios.primer_apellido, ""), " ", COALESCE(usuarios.segundo_apellido, "")
+                    )) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+LEFT JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\SolicitudModel.php(28): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+ERROR - 2025-09-24 00:01:59 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'renap', NULL, '', 0)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#4 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyectos\RENAP\app\Models\SolicitudModel.php(28): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+#10 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\proyectos\RENAP\app\Models\SolicitudModel.php(28): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+#7 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-09-24 00:01:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+[Method: GET, Route: api/solicitudes]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicitudes_dpi`.`id_solicitud`, TRIM(CONCAT(
+                        COALESCE(usuarios.nombre, ""), " ", COALESCE(usuarios.primer_apellido, ""), " ", COALESCE(usuarios.segundo_apellido, "")
+                    )) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+LEFT JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\SolicitudModel.php(28): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+ERROR - 2025-09-24 00:02:06 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'renap', NULL, '', 0)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#4 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyectos\RENAP\app\Models\SolicitudModel.php(28): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+#10 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\proyectos\RENAP\app\Models\SolicitudModel.php(28): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+#7 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-09-24 00:02:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+[Method: GET, Route: api/solicitudes]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicitudes_dpi`.`id_solicitud`, TRIM(CONCAT(
+                        COALESCE(usuarios.nombre, ""), " ", COALESCE(usuarios.primer_apellido, ""), " ", COALESCE(usuarios.segundo_apellido, "")
+                    )) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+LEFT JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\SolicitudModel.php(28): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+ERROR - 2025-09-24 00:02:11 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'renap', NULL, '', 0)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\UsuarioController.php(9): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\UsuarioController->index()
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\UsuarioController))
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\UsuarioController.php(9): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\UsuarioController->index()
+#7 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\UsuarioController))
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-09-24 00:02:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+[Method: GET, Route: api/usuarios]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Api\UsuarioController.php(9): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\UsuarioController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\UsuarioController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+ERROR - 2025-09-24 00:02:16 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'renap', NULL, '', 0)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\UsuarioController.php(9): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\UsuarioController->index()
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\UsuarioController))
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\UsuarioController.php(9): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\UsuarioController->index()
+#7 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\UsuarioController))
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-09-24 00:02:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+[Method: GET, Route: api/usuarios]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Api\UsuarioController.php(9): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\UsuarioController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\UsuarioController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+ERROR - 2025-09-24 00:02:48 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'renap', NULL, '', 0)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#4 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyectos\RENAP\app\Models\SolicitudModel.php(28): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+#10 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\proyectos\RENAP\app\Models\SolicitudModel.php(28): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+#7 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-09-24 00:02:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+[Method: GET, Route: api/solicitudes]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicitudes_dpi`.`id_solicitud`, TRIM(CONCAT(
+                        COALESCE(usuarios.nombre, ""), " ", COALESCE(usuarios.primer_apellido, ""), " ", COALESCE(usuarios.segundo_apellido, "")
+                    )) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+LEFT JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\SolicitudModel.php(28): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+ERROR - 2025-09-24 00:03:16 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'renap', NULL, '', 0)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#4 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyectos\RENAP\app\Models\SolicitudModel.php(28): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+#10 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\proyectos\RENAP\app\Models\SolicitudModel.php(28): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+#7 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-09-24 00:03:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+[Method: GET, Route: api/solicitudes]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicitudes_dpi`.`id_solicitud`, TRIM(CONCAT(
+                        COALESCE(usuarios.nombre, ""), " ", COALESCE(usuarios.primer_apellido, ""), " ", COALESCE(usuarios.segundo_apellido, "")
+                    )) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+LEFT JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\SolicitudModel.php(28): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+ERROR - 2025-09-24 00:03:30 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'renap', NULL, '', 0)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#4 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyectos\RENAP\app\Models\SolicitudModel.php(28): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+#10 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\proyectos\RENAP\app\Models\SolicitudModel.php(28): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+#7 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-09-24 00:03:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+[Method: GET, Route: api/solicitudes]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicitudes_dpi`.`id_solicitud`, TRIM(CONCAT(
+                        COALESCE(usuarios.nombre, ""), " ", COALESCE(usuarios.primer_apellido, ""), " ", COALESCE(usuarios.segundo_apellido, "")
+                    )) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+LEFT JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\SolicitudModel.php(28): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+ERROR - 2025-09-24 00:03:37 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'renap', NULL, '', 0)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#4 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyectos\RENAP\app\Models\SolicitudModel.php(28): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+#10 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\proyectos\RENAP\app\Models\SolicitudModel.php(28): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+#7 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-09-24 00:03:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+[Method: GET, Route: api/solicitudes]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicitudes_dpi`.`id_solicitud`, TRIM(CONCAT(
+                        COALESCE(usuarios.nombre, ""), " ", COALESCE(usuarios.primer_apellido, ""), " ", COALESCE(usuarios.segundo_apellido, "")
+                    )) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+LEFT JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\SolicitudModel.php(28): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+ERROR - 2025-09-24 00:03:43 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'renap', NULL, '', 0)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\UsuarioController.php(9): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\UsuarioController->index()
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\UsuarioController))
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\UsuarioController.php(9): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\UsuarioController->index()
+#7 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\UsuarioController))
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-09-24 00:03:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+[Method: GET, Route: api/usuarios]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Api\UsuarioController.php(9): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\UsuarioController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\UsuarioController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+ERROR - 2025-09-24 05:02:32 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'renap', NULL, '', 0)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#4 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyectos\RENAP\app\Models\SolicitudModel.php(28): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+#10 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\proyectos\RENAP\app\Models\SolicitudModel.php(28): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+#7 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-09-24 05:02:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+[Method: GET, Route: api/solicitudes]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `solicitudes_dpi`.`id_solicitud`, TRIM(CONCAT(
+                        COALESCE(usuarios.nombre, ""), " ", COALESCE(usuarios.primer_apellido, ""), " ", COALESCE(usuarios.segundo_apellido, "")
+                    )) AS nombre, `usuarios`.`cui`, `solicitudes_dpi`.`fecha_solicitud`, `solicitudes_dpi`.`estado`
+FROM `solicitudes_dpi`
+LEFT JOIN `usuarios` ON `usuarios`.`id_usuario` = `solicitudes_dpi`.`id_usuario`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\SolicitudModel.php(28): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Api\SolicitudController.php(11): App\Models\SolicitudModel->getSolicitudesConUsuario()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\SolicitudController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\SolicitudController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-24 13:41:46 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "ciudadanos_inicio.html"
+[Method: GET, Route: ciudadanos_inicio.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ciudadanos_inicio.html')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_inicio.html', [], true)
+ 3 APPPATH\Config\Routes.php(65): view('ciudadanos_inicio.html')
+ 4 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_inicio')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')

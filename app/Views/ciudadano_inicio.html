@@ -157,7 +157,7 @@
           <img src="./img/userinicio.png" alt="userlogo" width="40" height="40">
         </button>
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-          <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+          <li><a href="<?= site_url('logout') ?>" class="btn">Cerrar sesión</a></li>
         </ul>
       </div>
     </div>
@@ -201,29 +201,8 @@
 </div>
 
  
-    <div class="notifications">
-      <h2>Notificaciones</h2>
-      <div class="notification-item">SU DPI ESTÁ LISTO PARA RECOGER</div>
-      <div class="notification-item">SU SOLICITUD ESTÁ SIENDO PROCESADA</div>
-      <div class="notification-item">SU SOLICITUD FUE APROBADA</div>
- 
-      <div class="notification-buttons">
-        <button class="mute">Silenciar notificaciones</button>
-        <button class="activate">Activar notificaciones</button>
-      </div>
-    </div>
-  </div>
- 
 
-  <script>
-  document.querySelector('.mute').addEventListener('click', function () {
-    alert('🔕 Notificaciones silenciadas correctamente.');
-  });
-
-  document.querySelector('.activate').addEventListener('click', function () {
-    alert('🔔 Notificaciones activadas correctamente.');
-  });
-</script>
+ 
 
 </body>
 </html>

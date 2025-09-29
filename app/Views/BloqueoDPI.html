@@ -1,15 +1,85 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RENAP - Bloqueo DPI</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar fijo */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1030;
+    }
+
+    /* Sidebar fija */
+    .sidebar {
+      position: fixed;
+      top: 70px; /* debajo del navbar */
+      left: 0;
+      width: 250px;
+      height: calc(100vh - 70px);
+      background-color: #ffffff;
+      border-right: 1px solid #000000;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .nav-title {
+      font-weight: bold;
+      font-size: 1.5rem;
+      padding: 1rem;
+      border-bottom: 1px solid #dee2e6;
+    }
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      color: #212529;
+      text-decoration: none;
+      font-style: italic;
+    }
+
+    .nav-link img {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+    }
+
+    .nav-link.active {
+      background-color: #08c615;
+      color: white !important;
+    }
+
+    /* Contenido con scroll */
+    .content {
+      margin-left: 250px;
+      margin-top: 80px;
+      padding: 2rem;
+      height: calc(100vh - 80px);
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
 <nav class="navbar bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand">
       <img src="./img/renaplogo.png" alt="renap logo" width="200" height="60">
     </a>
-
     <div class="dropdown">
       <button class="btn btn-outline-success dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
         <img src="./img/userinicio.png" alt="userlogo" width="40" height="40">
@@ -17,232 +87,117 @@
       <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
         <li><a class="dropdown-item" href="editarPerfil.html">Editar perfil</a></li>
         <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+        <li><a href="<?= site_url('logout') ?>" class="btn">Cerrar sesión</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RENAP</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-  body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    overflow: hidden;
-  }
-
-  .sidebar {
-    height: 100vh;
-    width: 250px;
-    position: fixed;
-    top: 50;
-    left: 0;
-    background-color: #ffffff;
-    border-right: 1px solid #000000;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .company-header {
-    padding: 1rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    border-bottom: 1px solid #ffffff;
-    background-color: #ffffff;
-  }
-
-  .nav-title {
-    font-weight: bold;
-    font-size: 1.5rem;
-    padding: 1rem;
-    border-bottom: 1px solid #dee2e6;
-  }
-
-  .nav-link {
-    display: flex;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    color: #212529;
-    text-decoration: none;
-    font-style: italic;
-  }
-
-  .nav-link img {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-  }
-
-  .nav-link.active {
-    background-color: #08c615;
-    color: white !important;
-  }
-
-  .content {
-    margin-left: 250px;
-    padding: 2rem;
-  }
-</style>
-</head>
-
-<body>
-
-  <div class="sidebar">
+<!-- Sidebar -->
+<div class="sidebar">
   <div class="nav-title">Navegación</div>
   <ul class="nav flex-column">
-    <li class="nav-item">
-      <a class="nav-link" href="inicio.html">
-        <img src="./img/inicio.png" alt="Inicio"> Inicio
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="usuariosinicio.html">
-        <img src="./img/user.jpeg" alt="Usuarios"> Usuarios
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="inicioDPI.html">
-        <img src="./img/lupa.png" alt="Información DPI"> Información DPI
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="Reportes.html">
-        <img src="./img/reportes.png" alt="Reportes"> Reportes
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="Ciudadanos.html">
-        <img src="./img/ciudadanos.png" alt="Seguridad"> Ciudadanos
-      </a>
-    </li>
+    <li class="nav-item"><a class="nav-link" href="inicio.html"><img src="./img/inicio.png" alt=""> Inicio</a></li>
+    <li class="nav-item"><a class="nav-link" href="usuariosinicio.html"><img src="./img/user.jpeg" alt=""> Usuarios</a></li>
+    <li class="nav-item"><a class="nav-link" href="inicioDPI.html"><img src="./img/lupa.png" alt=""> Información DPI</a></li>
+    <li class="nav-item"><a class="nav-link" href="Reportes.html"><img src="./img/reportes.png" alt=""> Reportes</a></li>
+    <li class="nav-item"><a class="nav-link" href="Ciudadanos.html"><img src="./img/ciudadanos.png" alt=""> Ciudadanos</a></li>
   </ul>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
+<!-- Contenido -->
 <div class="content">
   <h2 class="mb-4">Bloqueo DPI</h2>
+
   <div class="table-responsive">
     <table class="table table-bordered text-center align-middle">
       <thead class="table-dark">
         <tr>
+          <th>ID</th>
           <th>Nombre</th>
           <th>CUI</th>
           <th>Bloquear DPI</th>
-          <th>Eliminar</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td><em>Pedrito Pérez</em></td>
-          <td>121341314451</td>
-          <td>
-            <button class="btn btn-sm btn-success" onclick="abrirModalBloqueo('Pedrito Pérez')">
-              <i class="bi bi-check-lg"></i>
-            </button>
-          </td>
-          <td>
-            <button class="btn btn-sm btn-danger" onclick="abrirModalEliminar('Pedrito Pérez')">
-              <i class="bi bi-x-lg"></i>
-            </button>
-          </td>
-        </tr>
+      <tbody id="tabla-usuarios">
+        <!-- Aquí se llenarán los usuarios -->
       </tbody>
     </table>
   </div>
 
+  <div id="mensajeBloqueado" class="alert alert-info mt-3 d-none"></div>
+</div>
+
+
+
+  <!-- Formulario oculto -->
+  <div id="formularioBloqueo" class="card p-3 d-none">
+    <h5>Nuevo Bloqueo</h5>
+    <input type="number" id="id_usuario" class="form-control mb-2" placeholder="ID Usuario">
+    <input type="text" id="motivo" class="form-control mb-2" placeholder="Motivo">
+    <button class="btn btn-success" onclick="crearBloqueo()">Guardar</button>
+    <button class="btn btn-secondary" onclick="ocultarFormulario()">Cancelar</button>
+  </div>
+
   <!-- Mensajes -->
-  <div id="mensajeBloqueado" class="alert alert-info mt-3 d-none" role="alert"></div>
-  <div id="mensajeEliminado" class="alert alert-success mt-3 d-none" role="alert">
-    ✅ Registro eliminado correctamente.
-  </div>
+  <div id="mensajeBloqueado" class="alert alert-info mt-3 d-none"></div>
+  <div id="mensajeEliminado" class="alert alert-success mt-3 d-none"></div>
 </div>
 
-<!-- Modal de bloqueo -->
-<div class="modal fade" id="modalBloqueo" tabindex="-1" aria-labelledby="modalBloqueoLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content border-primary">
-      <div class="modal-header bg-info text-white">
-        <h5 class="modal-title" id="modalBloqueoLabel">🔒 Confirmar bloqueo</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        ¿Está seguro que desea <strong>bloquear el DPI de <span id="usuarioBloqueo">este usuario</span></strong>? Esta acción puede afectar su acceso.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary" onclick="confirmarBloqueo()">Bloquear</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal de eliminación -->
-<div class="modal fade" id="modalEliminar" tabindex="-1" aria-labelledby="modalEliminarLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content border-danger">
-      <div class="modal-header bg-warning text-dark">
-        <h5 class="modal-title" id="modalEliminarLabel">⚠️ Confirmar eliminación</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        ¿Desea eliminar el registro de <strong><span id="usuarioEliminar">este usuario</span></strong>? Esta acción no se puede deshacer.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-danger" onclick="confirmarEliminacion()">Eliminar</button>
-      </div>
-    </div>
-  </div>
-</div>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- Script -->
 <script>
-  let usuarioBloqueoActual = '';
-  let usuarioEliminarActual = '';
+function cargarUsuarios() {
+  fetch('/api/usuarios')
+    .then(r => r.json())
+    .then(data => {
+      const tbody = document.getElementById('tabla-usuarios');
+      tbody.innerHTML = '';
+      const registros = data.data || [];
+      registros.forEach(u => {
+        tbody.innerHTML += `
+          <tr>
+            <td>${u.id_usuario}</td>
+            <td>${u.nombre} ${u.primer_apellido ?? ''} ${u.segundo_apellido ?? ''}</td>
+            <td>${u.cui}</td>
+            <td>
+              <button class="btn btn-sm btn-success" onclick="bloquearDPI(${u.id_usuario}, '${u.nombre}')">
+                🔒 Bloquear
+              </button>
+            </td>
+          </tr>
+        `;
+      });
+    });
+}
 
-  function abrirModalBloqueo(nombre) {
-    usuarioBloqueoActual = nombre;
-    document.getElementById('usuarioBloqueo').textContent = nombre;
-    const modal = new bootstrap.Modal(document.getElementById('modalBloqueo'));
-    modal.show();
-  }
+function bloquearDPI(id_usuario, nombre) {
+  if (!confirm(`¿Desea bloquear el DPI de ${nombre}?`)) return;
 
-  function confirmarBloqueo() {
-    const modal = bootstrap.Modal.getInstance(document.getElementById('modalBloqueo'));
-    if (modal) modal.hide();
+  fetch('/api/bloqueos/crear', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({ id_usuario, motivo: 'Bloqueo manual' })
+  })
+  .then(r => r.json())
+  .then(res => {
+    if (res.status === 'ok') {
+      const mensaje = document.getElementById('mensajeBloqueado');
+      mensaje.textContent = `🔒 DPI de ${nombre} bloqueado correctamente.`;
+      mensaje.classList.remove('d-none');
+      setTimeout(() => mensaje.classList.add('d-none'), 3000);
+    } else {
+      alert("Error al bloquear DPI");
+    }
+  });
+}
 
-    const mensaje = document.getElementById('mensajeBloqueado');
-    mensaje.textContent = `🔒 DPI de ${usuarioBloqueoActual} bloqueado correctamente.`;
-    mensaje.classList.remove('d-none');
-    setTimeout(() => mensaje.classList.add('d-none'), 4000);
-  }
-
-  function abrirModalEliminar(nombre) {
-    usuarioEliminarActual = nombre;
-    document.getElementById('usuarioEliminar').textContent = nombre;
-    const modal = new bootstrap.Modal(document.getElementById('modalEliminar'));
-    modal.show();
-  }
-
-  function confirmarEliminacion() {
-    const modal = bootstrap.Modal.getInstance(document.getElementById('modalEliminar'));
-    if (modal) modal.hide();
-
-    const mensaje = document.getElementById('mensajeEliminado');
-    mensaje.classList.remove('d-none');
-    setTimeout(() => mensaje.classList.add('d-none'), 4000);
-  }
+// Cargar usuarios al inicio
+cargarUsuarios();
 </script>
 
-<div class="mt-5 text-center">
-  <button class="btn btn-dark" onclick="window.location.href='inicioDPI.html'">
-    ← Regresar al inicio
-  </button>
-</div>
+
+</body>
+</html>

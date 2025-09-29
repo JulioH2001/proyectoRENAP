@@ -1,0 +1,1152 @@
+CRITICAL - 2025-09-29 00:27:15 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "ciudadanos_reposicion_confirmacion.html"
+[Method: GET, Route: ciudadanos_reposicion_confirmacion.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ciudadanos_reposicion_confirmacion.html')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicion_confirmacion.html', [], true)
+ 3 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicion_confirmacion.html')
+ 4 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicion_confirmacion')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 00:27:20 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "ciudadanos_reposicion_confirmacion.html"
+[Method: GET, Route: ciudadanos_reposicion_confirmacion.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ciudadanos_reposicion_confirmacion.html')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicion_confirmacion.html', [], true)
+ 3 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicion_confirmacion.html')
+ 4 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicion_confirmacion')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 00:28:34 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "ciudadanos_reposicion_confirmacion.html"
+[Method: GET, Route: ciudadanos_reposicion_confirmacion.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ciudadanos_reposicion_confirmacion.html')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicion_confirmacion.html', [], true)
+ 3 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicion_confirmacion.html')
+ 4 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicion_confirmacion')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 00:28:40 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "ciudadanos_reposicion_confirmacion.html"
+[Method: GET, Route: ciudadanos_reposicion_confirmacion.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ciudadanos_reposicion_confirmacion.html')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicion_confirmacion.html', [], true)
+ 3 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicion_confirmacion.html')
+ 4 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicion_confirmacion')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 00:28:45 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "ciudadanos_reposicion_confirmacion.html"
+[Method: GET, Route: ciudadanos_reposicion_confirmacion.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ciudadanos_reposicion_confirmacion.html')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicion_confirmacion.html', [], true)
+ 3 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicion_confirmacion.html')
+ 4 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicion_confirmacion')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 00:28:45 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "ciudadanos_reposicion_confirmacion.html"
+[Method: GET, Route: ciudadanos_reposicion_confirmacion.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ciudadanos_reposicion_confirmacion.html')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicion_confirmacion.html', [], true)
+ 3 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicion_confirmacion.html')
+ 4 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicion_confirmacion')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 00:29:08 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "ciudadanos_reposicion_confirmacion.html"
+[Method: GET, Route: ciudadanos_reposicion_confirmacion.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ciudadanos_reposicion_confirmacion.html')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicion_confirmacion.html', [], true)
+ 3 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicion_confirmacion.html')
+ 4 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicion_confirmacion')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 00:29:11 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "ciudadanos_reposicion_confirmacion.html"
+[Method: GET, Route: ciudadanos_reposicion_confirmacion.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ciudadanos_reposicion_confirmacion.html')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicion_confirmacion.html', [], true)
+ 3 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicion_confirmacion.html')
+ 4 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicion_confirmacion')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 00:29:11 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "ciudadanos_reposicion_confirmacion.html"
+[Method: GET, Route: ciudadanos_reposicion_confirmacion.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ciudadanos_reposicion_confirmacion.html')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicion_confirmacion.html', [], true)
+ 3 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicion_confirmacion.html')
+ 4 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicion_confirmacion')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 00:29:11 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "ciudadanos_reposicion_confirmacion.html"
+[Method: GET, Route: ciudadanos_reposicion_confirmacion.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ciudadanos_reposicion_confirmacion.html')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicion_confirmacion.html', [], true)
+ 3 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicion_confirmacion.html')
+ 4 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicion_confirmacion')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 00:29:12 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "ciudadanos_reposicion_confirmacion.html"
+[Method: GET, Route: ciudadanos_reposicion_confirmacion.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ciudadanos_reposicion_confirmacion.html')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicion_confirmacion.html', [], true)
+ 3 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicion_confirmacion.html')
+ 4 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicion_confirmacion')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 00:43:23 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "ciudadanos_reposicion_confirmacion.html"
+[Method: GET, Route: ciudadanos_reposicion_confirmacion.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ciudadanos_reposicion_confirmacion.html')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicion_confirmacion.html', [], true)
+ 3 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicion_confirmacion.html')
+ 4 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicion_confirmacion')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 00:46:23 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "ciudadanos_reposicion_confirmacion.html"
+[Method: GET, Route: ciudadanos_reposicion_confirmacion.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ciudadanos_reposicion_confirmacion.html')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicion_confirmacion.html', [], true)
+ 3 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicion_confirmacion.html')
+ 4 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicion_confirmacion')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 00:46:37 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "ciudadanos_reposicion_confirmacion.html"
+[Method: GET, Route: ciudadanos_reposicion_confirmacion.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ciudadanos_reposicion_confirmacion.html')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicion_confirmacion.html', [], true)
+ 3 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicion_confirmacion.html')
+ 4 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicion_confirmacion')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 00:46:39 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "ciudadanos_reposicion_confirmacion.html"
+[Method: GET, Route: ciudadanos_reposicion_confirmacion.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ciudadanos_reposicion_confirmacion.html')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicion_confirmacion.html', [], true)
+ 3 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicion_confirmacion.html')
+ 4 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicion_confirmacion')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 00:47:03 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "ciudadano_reposicionlista.html"
+[Method: GET, Route: ciudadano_reposicionlista.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ciudadano_reposicionlista.html')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadano_reposicionlista.html', [], true)
+ 3 APPPATH\Config\Routes.php(65): view('ciudadano_reposicionlista.html')
+ 4 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadano_reposicionlista')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 00:47:40 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "ciudadanos_reposicion_confirmacion.html"
+[Method: GET, Route: ciudadanos_reposicion_confirmacion.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ciudadanos_reposicion_confirmacion.html')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicion_confirmacion.html', [], true)
+ 3 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicion_confirmacion.html')
+ 4 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicion_confirmacion')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 01:00:04 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "ciudadanos_reposicion_confirmacion.html"
+[Method: GET, Route: ciudadanos_reposicion_confirmacion.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ciudadanos_reposicion_confirmacion.html')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicion_confirmacion.html', [], true)
+ 3 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicion_confirmacion.html')
+ 4 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicion_confirmacion')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 01:09:17 --> ErrorException: Undefined variable $id_reposicion
+[Method: GET, Route: ciudadanos_reposicionDPI.html]
+in APPPATH\Views\ciudadanos_reposicionDPI.html on line 64.
+ 1 APPPATH\Views\ciudadanos_reposicionDPI.html(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_reposicion', 'C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html', 64)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicionDPI.html', [], true)
+ 5 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicionDPI.html')
+ 6 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicionDPI')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 01:09:26 --> ErrorException: Undefined variable $id_reposicion
+[Method: GET, Route: ciudadanos_reposicionDPI.html]
+in APPPATH\Views\ciudadanos_reposicionDPI.html on line 64.
+ 1 APPPATH\Views\ciudadanos_reposicionDPI.html(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_reposicion', 'C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html', 64)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicionDPI.html', [], true)
+ 5 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicionDPI.html')
+ 6 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicionDPI')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 01:10:28 --> ErrorException: Undefined variable $id_reposicion
+[Method: GET, Route: ciudadanos_reposicionDPI.html]
+in APPPATH\Views\ciudadanos_reposicionDPI.html on line 64.
+ 1 APPPATH\Views\ciudadanos_reposicionDPI.html(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_reposicion', 'C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html', 64)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicionDPI.html', [], true)
+ 5 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicionDPI.html')
+ 6 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicionDPI')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 01:10:29 --> ErrorException: Undefined variable $id_reposicion
+[Method: GET, Route: ciudadanos_reposicionDPI.html]
+in APPPATH\Views\ciudadanos_reposicionDPI.html on line 64.
+ 1 APPPATH\Views\ciudadanos_reposicionDPI.html(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_reposicion', 'C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html', 64)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicionDPI.html', [], true)
+ 5 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicionDPI.html')
+ 6 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicionDPI')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 01:13:24 --> ErrorException: Undefined variable $id_reposicion
+[Method: GET, Route: ciudadanos_reposicionDPI.html]
+in APPPATH\Views\ciudadanos_reposicionDPI.html on line 64.
+ 1 APPPATH\Views\ciudadanos_reposicionDPI.html(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_reposicion', 'C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html', 64)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicionDPI.html', [], true)
+ 5 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicionDPI.html')
+ 6 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicionDPI')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 01:13:25 --> ErrorException: Undefined variable $id_reposicion
+[Method: GET, Route: ciudadanos_reposicionDPI.html]
+in APPPATH\Views\ciudadanos_reposicionDPI.html on line 64.
+ 1 APPPATH\Views\ciudadanos_reposicionDPI.html(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_reposicion', 'C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html', 64)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicionDPI.html', [], true)
+ 5 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicionDPI.html')
+ 6 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicionDPI')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 01:13:27 --> ErrorException: Undefined variable $id_reposicion
+[Method: GET, Route: ciudadanos_reposicionDPI.html]
+in APPPATH\Views\ciudadanos_reposicionDPI.html on line 64.
+ 1 APPPATH\Views\ciudadanos_reposicionDPI.html(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_reposicion', 'C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html', 64)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicionDPI.html', [], true)
+ 5 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicionDPI.html')
+ 6 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicionDPI')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 01:13:28 --> ErrorException: Undefined variable $id_reposicion
+[Method: GET, Route: ciudadanos_reposicionDPI.html]
+in APPPATH\Views\ciudadanos_reposicionDPI.html on line 64.
+ 1 APPPATH\Views\ciudadanos_reposicionDPI.html(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_reposicion', 'C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html', 64)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicionDPI.html', [], true)
+ 5 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicionDPI.html')
+ 6 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicionDPI')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+DEBUG - 2025-09-29 01:13:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-09-29 01:13:34 --> ErrorException: Undefined variable $id_reposicion
+[Method: GET, Route: ciudadanos_reposicionDPI.html]
+in APPPATH\Views\ciudadanos_reposicionDPI.html on line 64.
+ 1 APPPATH\Views\ciudadanos_reposicionDPI.html(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_reposicion', 'C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html', 64)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicionDPI.html', [], true)
+ 5 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicionDPI.html')
+ 6 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicionDPI')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 01:14:50 --> ErrorException: Undefined variable $id_reposicion
+[Method: GET, Route: ciudadanos_reposicionDPI.html]
+in APPPATH\Views\ciudadanos_reposicionDPI.html on line 64.
+ 1 APPPATH\Views\ciudadanos_reposicionDPI.html(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_reposicion', 'C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html', 64)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicionDPI.html', [], true)
+ 5 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicionDPI.html')
+ 6 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicionDPI')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 01:19:38 --> ErrorException: Undefined variable $id_reposicion
+[Method: GET, Route: ciudadanos_reposicionDPI.html]
+in APPPATH\Views\ciudadanos_reposicionDPI.html on line 64.
+ 1 APPPATH\Views\ciudadanos_reposicionDPI.html(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_reposicion', 'C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html', 64)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicionDPI.html', [], true)
+ 5 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicionDPI.html')
+ 6 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicionDPI')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 01:19:39 --> ErrorException: Undefined variable $id_reposicion
+[Method: GET, Route: ciudadanos_reposicionDPI.html]
+in APPPATH\Views\ciudadanos_reposicionDPI.html on line 64.
+ 1 APPPATH\Views\ciudadanos_reposicionDPI.html(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_reposicion', 'C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html', 64)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicionDPI.html', [], true)
+ 5 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicionDPI.html')
+ 6 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicionDPI')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 01:19:56 --> ErrorException: Undefined variable $id_reposicion
+[Method: GET, Route: ciudadanos_reposicionDPI.html]
+in APPPATH\Views\ciudadanos_reposicionDPI.html on line 64.
+ 1 APPPATH\Views\ciudadanos_reposicionDPI.html(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_reposicion', 'C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html', 64)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicionDPI.html', [], true)
+ 5 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicionDPI.html')
+ 6 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicionDPI')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 01:19:59 --> ErrorException: Undefined variable $id_reposicion
+[Method: GET, Route: ciudadanos_reposicionDPI.html]
+in APPPATH\Views\ciudadanos_reposicionDPI.html on line 64.
+ 1 APPPATH\Views\ciudadanos_reposicionDPI.html(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_reposicion', 'C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html', 64)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicionDPI.html', [], true)
+ 5 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicionDPI.html')
+ 6 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicionDPI')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 01:21:16 --> ErrorException: Undefined variable $id_reposicion
+[Method: GET, Route: ciudadanos_reposicionDPI.html]
+in APPPATH\Views\ciudadanos_reposicionDPI.html on line 64.
+ 1 APPPATH\Views\ciudadanos_reposicionDPI.html(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_reposicion', 'C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html', 64)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicionDPI.html', [], true)
+ 5 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicionDPI.html')
+ 6 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicionDPI')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 01:21:19 --> ErrorException: Undefined variable $id_reposicion
+[Method: GET, Route: ciudadanos_reposicionDPI.html]
+in APPPATH\Views\ciudadanos_reposicionDPI.html on line 64.
+ 1 APPPATH\Views\ciudadanos_reposicionDPI.html(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_reposicion', 'C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html', 64)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\proyectos\\RENAP\\app\\Views\\ciudadanos_reposicionDPI.html')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicionDPI.html', [], true)
+ 5 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicionDPI.html')
+ 6 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicionDPI')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+DEBUG - 2025-09-29 01:22:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-09-29 01:22:17 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "ciudadanos_reposicion_confirmacion.html"
+[Method: GET, Route: ciudadanos_reposicion_confirmacion.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ciudadanos_reposicion_confirmacion.html')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicion_confirmacion.html', [], true)
+ 3 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicion_confirmacion.html')
+ 4 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicion_confirmacion')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 01:23:13 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "ciudadanos_reposicion_confirmacion.html"
+[Method: GET, Route: ciudadanos_reposicion_confirmacion.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ciudadanos_reposicion_confirmacion.html')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicion_confirmacion.html', [], true)
+ 3 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicion_confirmacion.html')
+ 4 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicion_confirmacion')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+DEBUG - 2025-09-29 01:23:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-09-29 01:23:20 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "ciudadanos_reposicion_confirmacion.html"
+[Method: GET, Route: ciudadanos_reposicion_confirmacion.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ciudadanos_reposicion_confirmacion.html')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicion_confirmacion.html', [], true)
+ 3 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicion_confirmacion.html')
+ 4 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicion_confirmacion')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+DEBUG - 2025-09-29 01:23:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-09-29 01:23:31 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "ciudadanos_reposicion_confirmacion.html"
+[Method: GET, Route: ciudadanos_reposicion_confirmacion.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ciudadanos_reposicion_confirmacion.html')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicion_confirmacion.html', [], true)
+ 3 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicion_confirmacion.html')
+ 4 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicion_confirmacion')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 01:25:18 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "ciudadanos_reposicion_confirmacion.html"
+[Method: GET, Route: ciudadanos_reposicion_confirmacion.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ciudadanos_reposicion_confirmacion.html')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicion_confirmacion.html', [], true)
+ 3 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicion_confirmacion.html')
+ 4 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicion_confirmacion')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+DEBUG - 2025-09-29 01:25:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-09-29 01:25:29 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "ciudadanos_reposicion_confirmacion.html"
+[Method: GET, Route: ciudadanos_reposicion_confirmacion.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ciudadanos_reposicion_confirmacion.html')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('ciudadanos_reposicion_confirmacion.html', [], true)
+ 3 APPPATH\Config\Routes.php(65): view('ciudadanos_reposicion_confirmacion.html')
+ 4 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}('ciudadanos_reposicion_confirmacion')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+DEBUG - 2025-09-29 01:27:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 01:28:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 01:29:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 01:31:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 01:31:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 01:33:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 01:36:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 01:37:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 01:39:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 01:39:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 01:42:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 01:45:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 01:45:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-09-29 01:45:50 --> mysqli_sql_exception: Unknown column 'estado' in 'field list' in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\ReposicionDpiController.php(24): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\ReposicionDpiController->solicitar()
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\ReposicionDpiController))
+#10 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-09-29 01:45:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'estado' in 'field list'
+[Method: POST, Route: api/reposicion/solicitar]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (:id_usuario:, :motivo:, :tipo_entrega:, :departamento:, :numero_recibo:, :numero_nota:, :total:, :estado:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Api\ReposicionDpiController.php(24): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\ReposicionDpiController->solicitar()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\ReposicionDpiController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 01:45:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'estado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (\'53\', \'Pérdida\', \'sede_central\', \'Sololá\', \'213213\', \'23123\', 100, \'pendiente\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (\'53\', \'Pérdida\', \'sede_central\', \'Sololá\', \'213213\', \'23123\', 100, \'pendiente\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (:id_usuario:, :motivo:, :tipo_entrega:, :departamento:, :numero_recibo:, :numero_nota:, :total:, :estado:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Api\ReposicionDpiController.php(24): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\ReposicionDpiController->solicitar()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\ReposicionDpiController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 01:45:50 --> [Caused by] mysqli_sql_exception: Unknown column 'estado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (\'53\', \'Pérdida\', \'sede_central\', \'Sololá\', \'213213\', \'23123\', 100, \'pendiente\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (\'53\', \'Pérdida\', \'sede_central\', \'Sololá\', \'213213\', \'23123\', 100, \'pendiente\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (\'53\', \'Pérdida\', \'sede_central\', \'Sololá\', \'213213\', \'23123\', 100, \'pendiente\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (:id_usuario:, :motivo:, :tipo_entrega:, :departamento:, :numero_recibo:, :numero_nota:, :total:, :estado:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Api\ReposicionDpiController.php(24): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\ReposicionDpiController->solicitar()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\ReposicionDpiController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+DEBUG - 2025-09-29 01:45:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-09-29 01:45:55 --> mysqli_sql_exception: Unknown column 'estado' in 'field list' in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\ReposicionDpiController.php(24): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\ReposicionDpiController->solicitar()
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\ReposicionDpiController))
+#10 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-09-29 01:45:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'estado' in 'field list'
+[Method: POST, Route: api/reposicion/solicitar]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (:id_usuario:, :motivo:, :tipo_entrega:, :departamento:, :numero_recibo:, :numero_nota:, :total:, :estado:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Api\ReposicionDpiController.php(24): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\ReposicionDpiController->solicitar()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\ReposicionDpiController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 01:45:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'estado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (\'53\', \'Pérdida\', \'sede_central\', \'Sololá\', \'213213\', \'23123\', 100, \'pendiente\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (\'53\', \'Pérdida\', \'sede_central\', \'Sololá\', \'213213\', \'23123\', 100, \'pendiente\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (:id_usuario:, :motivo:, :tipo_entrega:, :departamento:, :numero_recibo:, :numero_nota:, :total:, :estado:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Api\ReposicionDpiController.php(24): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\ReposicionDpiController->solicitar()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\ReposicionDpiController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 01:45:55 --> [Caused by] mysqli_sql_exception: Unknown column 'estado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (\'53\', \'Pérdida\', \'sede_central\', \'Sololá\', \'213213\', \'23123\', 100, \'pendiente\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (\'53\', \'Pérdida\', \'sede_central\', \'Sololá\', \'213213\', \'23123\', 100, \'pendiente\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (\'53\', \'Pérdida\', \'sede_central\', \'Sololá\', \'213213\', \'23123\', 100, \'pendiente\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (:id_usuario:, :motivo:, :tipo_entrega:, :departamento:, :numero_recibo:, :numero_nota:, :total:, :estado:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Api\ReposicionDpiController.php(24): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\ReposicionDpiController->solicitar()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\ReposicionDpiController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+DEBUG - 2025-09-29 01:46:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-09-29 01:46:06 --> mysqli_sql_exception: Unknown column 'estado' in 'field list' in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\ReposicionDpiController.php(24): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\ReposicionDpiController->solicitar()
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\ReposicionDpiController))
+#10 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-09-29 01:46:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'estado' in 'field list'
+[Method: POST, Route: api/reposicion/solicitar]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (:id_usuario:, :motivo:, :tipo_entrega:, :departamento:, :numero_recibo:, :numero_nota:, :total:, :estado:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Api\ReposicionDpiController.php(24): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\ReposicionDpiController->solicitar()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\ReposicionDpiController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 01:46:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'estado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (\'53\', \'Pérdida\', \'sede_central\', \'Santa Rosa\', \'213213\', \'23123\', 100, \'pendiente\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (\'53\', \'Pérdida\', \'sede_central\', \'Santa Rosa\', \'213213\', \'23123\', 100, \'pendiente\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (:id_usuario:, :motivo:, :tipo_entrega:, :departamento:, :numero_recibo:, :numero_nota:, :total:, :estado:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Api\ReposicionDpiController.php(24): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\ReposicionDpiController->solicitar()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\ReposicionDpiController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 01:46:06 --> [Caused by] mysqli_sql_exception: Unknown column 'estado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (\'53\', \'Pérdida\', \'sede_central\', \'Santa Rosa\', \'213213\', \'23123\', 100, \'pendiente\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (\'53\', \'Pérdida\', \'sede_central\', \'Santa Rosa\', \'213213\', \'23123\', 100, \'pendiente\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (\'53\', \'Pérdida\', \'sede_central\', \'Santa Rosa\', \'213213\', \'23123\', 100, \'pendiente\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (:id_usuario:, :motivo:, :tipo_entrega:, :departamento:, :numero_recibo:, :numero_nota:, :total:, :estado:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Api\ReposicionDpiController.php(24): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\ReposicionDpiController->solicitar()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\ReposicionDpiController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+DEBUG - 2025-09-29 01:47:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-09-29 01:47:36 --> mysqli_sql_exception: Unknown column 'estado' in 'field list' in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\ReposicionDpiController.php(24): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\ReposicionDpiController->solicitar()
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\ReposicionDpiController))
+#10 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-09-29 01:47:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'estado' in 'field list'
+[Method: POST, Route: api/reposicion/solicitar]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (:id_usuario:, :motivo:, :tipo_entrega:, :departamento:, :numero_recibo:, :numero_nota:, :total:, :estado:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Api\ReposicionDpiController.php(24): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\ReposicionDpiController->solicitar()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\ReposicionDpiController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 01:47:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'estado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (\'53\', \'Pérdida\', \'sede_central\', \'Santa Rosa\', \'213213\', \'23123\', 100, \'pendiente\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (\'53\', \'Pérdida\', \'sede_central\', \'Santa Rosa\', \'213213\', \'23123\', 100, \'pendiente\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (:id_usuario:, :motivo:, :tipo_entrega:, :departamento:, :numero_recibo:, :numero_nota:, :total:, :estado:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Api\ReposicionDpiController.php(24): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\ReposicionDpiController->solicitar()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\ReposicionDpiController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 01:47:36 --> [Caused by] mysqli_sql_exception: Unknown column 'estado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (\'53\', \'Pérdida\', \'sede_central\', \'Santa Rosa\', \'213213\', \'23123\', 100, \'pendiente\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (\'53\', \'Pérdida\', \'sede_central\', \'Santa Rosa\', \'213213\', \'23123\', 100, \'pendiente\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (\'53\', \'Pérdida\', \'sede_central\', \'Santa Rosa\', \'213213\', \'23123\', 100, \'pendiente\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`) VALUES (:id_usuario:, :motivo:, :tipo_entrega:, :departamento:, :numero_recibo:, :numero_nota:, :total:, :estado:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Api\ReposicionDpiController.php(24): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\ReposicionDpiController->solicitar()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\ReposicionDpiController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+DEBUG - 2025-09-29 01:47:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 01:54:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 01:55:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 01:57:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 01:57:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:04:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:04:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:04:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:05:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:05:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:05:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:05:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:06:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:06:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:06:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:11:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:11:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:11:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:11:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:12:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:12:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:12:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:14:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:14:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:17:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:17:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:19:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:19:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-09-29 02:19:25 --> mysqli_sql_exception: Unknown column 'estado' in 'field list' in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\ReposicionDpiController.php(25): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\ReposicionDpiController->solicitar()
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\ReposicionDpiController))
+#10 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-09-29 02:19:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'estado' in 'field list'
+[Method: POST, Route: api/reposicion/solicitar]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`, `fecha_solicitud`) VALUES (:id_usuario:, :motivo:, :tipo_entrega:, :departamento:, :numero_recibo:, :numero_nota:, :total:, :estado:, :fecha_solicitud:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Api\ReposicionDpiController.php(25): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\ReposicionDpiController->solicitar()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\ReposicionDpiController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 02:19:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'estado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`, `fecha_solicitud`) VALUES (\'53\', \'Pérdida\', \'sede_central\', \'Suchitepéquez\', \'231312312\', \'1221212121\', 100, \'pendiente\', \'2025-09-29 02:19:25\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`, `fecha_solicitud`) VALUES (\'53\', \'Pérdida\', \'sede_central\', \'Suchitepéquez\', \'231312312\', \'1221212121\', 100, \'pendiente\', \'2025-09-29 02:19:25\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`, `fecha_solicitud`) VALUES (:id_usuario:, :motivo:, :tipo_entrega:, :departamento:, :numero_recibo:, :numero_nota:, :total:, :estado:, :fecha_solicitud:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Api\ReposicionDpiController.php(25): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\ReposicionDpiController->solicitar()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\ReposicionDpiController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 02:19:25 --> [Caused by] mysqli_sql_exception: Unknown column 'estado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`, `fecha_solicitud`) VALUES (\'53\', \'Pérdida\', \'sede_central\', \'Suchitepéquez\', \'231312312\', \'1221212121\', 100, \'pendiente\', \'2025-09-29 02:19:25\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`, `fecha_solicitud`) VALUES (\'53\', \'Pérdida\', \'sede_central\', \'Suchitepéquez\', \'231312312\', \'1221212121\', 100, \'pendiente\', \'2025-09-29 02:19:25\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`, `fecha_solicitud`) VALUES (\'53\', \'Pérdida\', \'sede_central\', \'Suchitepéquez\', \'231312312\', \'1221212121\', 100, \'pendiente\', \'2025-09-29 02:19:25\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`, `fecha_solicitud`) VALUES (:id_usuario:, :motivo:, :tipo_entrega:, :departamento:, :numero_recibo:, :numero_nota:, :total:, :estado:, :fecha_solicitud:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Api\ReposicionDpiController.php(25): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\ReposicionDpiController->solicitar()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\ReposicionDpiController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+DEBUG - 2025-09-29 02:19:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-09-29 02:19:27 --> mysqli_sql_exception: Unknown column 'estado' in 'field list' in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\ReposicionDpiController.php(25): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\ReposicionDpiController->solicitar()
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\ReposicionDpiController))
+#10 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-09-29 02:19:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'estado' in 'field list'
+[Method: POST, Route: api/reposicion/solicitar]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`, `fecha_solicitud`) VALUES (:id_usuario:, :motivo:, :tipo_entrega:, :departamento:, :numero_recibo:, :numero_nota:, :total:, :estado:, :fecha_solicitud:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Api\ReposicionDpiController.php(25): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\ReposicionDpiController->solicitar()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\ReposicionDpiController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 02:19:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'estado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`, `fecha_solicitud`) VALUES (\'53\', \'Pérdida\', \'sede_central\', \'Suchitepéquez\', \'231312312\', \'1221212121\', 100, \'pendiente\', \'2025-09-29 02:19:27\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`, `fecha_solicitud`) VALUES (\'53\', \'Pérdida\', \'sede_central\', \'Suchitepéquez\', \'231312312\', \'1221212121\', 100, \'pendiente\', \'2025-09-29 02:19:27\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`, `fecha_solicitud`) VALUES (:id_usuario:, :motivo:, :tipo_entrega:, :departamento:, :numero_recibo:, :numero_nota:, :total:, :estado:, :fecha_solicitud:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Api\ReposicionDpiController.php(25): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\ReposicionDpiController->solicitar()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\ReposicionDpiController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+CRITICAL - 2025-09-29 02:19:27 --> [Caused by] mysqli_sql_exception: Unknown column 'estado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`, `fecha_solicitud`) VALUES (\'53\', \'Pérdida\', \'sede_central\', \'Suchitepéquez\', \'231312312\', \'1221212121\', 100, \'pendiente\', \'2025-09-29 02:19:27\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`, `fecha_solicitud`) VALUES (\'53\', \'Pérdida\', \'sede_central\', \'Suchitepéquez\', \'231312312\', \'1221212121\', 100, \'pendiente\', \'2025-09-29 02:19:27\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`, `fecha_solicitud`) VALUES (\'53\', \'Pérdida\', \'sede_central\', \'Suchitepéquez\', \'231312312\', \'1221212121\', 100, \'pendiente\', \'2025-09-29 02:19:27\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reposicion_dpi` (`id_usuario`, `motivo`, `tipo_entrega`, `departamento`, `numero_recibo`, `numero_nota`, `total`, `estado`, `fecha_solicitud`) VALUES (:id_usuario:, :motivo:, :tipo_entrega:, :departamento:, :numero_recibo:, :numero_nota:, :total:, :estado:, :fecha_solicitud:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Api\ReposicionDpiController.php(25): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\ReposicionDpiController->solicitar()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\ReposicionDpiController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+DEBUG - 2025-09-29 02:21:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-09-29 02:21:38 --> mysqli_sql_exception: Unknown column 'boleta_path' in 'field list' in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `reposic...', 0)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `reposic...')
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `reposic...')
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `reposic...', Array, false)
+#4 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(1025): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(860): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\ReposicionDpiController.php(87): CodeIgniter\Model->update(1, Array)
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\ReposicionDpiController->solicitar()
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\ReposicionDpiController))
+#10 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+ERROR - 2025-09-29 02:21:38 --> Error generar boleta: Unknown column 'boleta_path' in 'field list'
+DEBUG - 2025-09-29 02:21:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:21:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-09-29 02:21:55 --> mysqli_sql_exception: Unknown column 'boleta_path' in 'field list' in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `reposic...', 0)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `reposic...')
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `reposic...')
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `reposic...', Array, false)
+#4 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(1025): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(860): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\ReposicionDpiController.php(87): CodeIgniter\Model->update(2, Array)
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\ReposicionDpiController->solicitar()
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\ReposicionDpiController))
+#10 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+ERROR - 2025-09-29 02:21:55 --> Error generar boleta: Unknown column 'boleta_path' in 'field list'
+DEBUG - 2025-09-29 02:24:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:24:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:24:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:24:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:25:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:25:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:25:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:31:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:31:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:32:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:32:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:32:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:35:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:35:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:36:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:36:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:36:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:36:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:36:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:37:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:37:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:37:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:38:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:38:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:49:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:49:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:51:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:51:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:57:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 02:59:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 03:00:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 03:05:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 03:05:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 03:20:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 03:20:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 03:20:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 13:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 13:43:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 13:43:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 13:43:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 13:52:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 13:52:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 13:52:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 13:52:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 13:52:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 13:52:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 13:53:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 13:53:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 13:54:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 13:54:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 13:56:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 13:56:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 13:58:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 13:58:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 13:58:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 13:59:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 13:59:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 13:59:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 14:00:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 14:00:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 14:01:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 14:01:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 14:02:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 14:02:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 14:02:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 14:02:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 14:03:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 14:03:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 14:03:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 14:03:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-09-29 14:05:56 --> mysqli_sql_exception: Duplicate entry 'dmartinez@bilinguesanjuan.edu.gt' for key 'correo' in C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\proyectos\RENAP\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\proyectos\RENAP\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\proyectos\RENAP\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\proyectos\RENAP\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\proyectos\RENAP\app\Controllers\Api\EmpleadoController.php(97): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(933): App\Controllers\Api\EmpleadoController->create()
+#9 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\EmpleadoController))
+#10 C:\xampp\htdocs\proyectos\RENAP\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\proyectos\RENAP\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\proyectos\RENAP\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\proyectos\RENAP\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+DEBUG - 2025-09-29 14:06:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 14:06:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 14:06:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 14:06:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 14:06:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 14:06:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-09-29 14:06:36 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "trámites.html"
+[Method: GET, Route: tr%C3%A1mites.html]
+in SYSTEMPATH\Router\Router.php on line 741.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('trámites.html')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('trámites.html')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\proyectos\\RENAP\\public\\index.php')
+DEBUG - 2025-09-29 14:07:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 14:07:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 14:12:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 14:28:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 14:28:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 14:28:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 14:29:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-29 14:29:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

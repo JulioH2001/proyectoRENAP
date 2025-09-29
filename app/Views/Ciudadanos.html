@@ -15,20 +15,29 @@
     body {
       margin: 0;
       padding: 0;
-      height: 100vh;
-      overflow: hidden;
     }
 
-    .sidebar {
-      height: 100vh;
-      width: 250px;
+    /* Navbar fijo arriba */
+    .navbar {
       position: fixed;
-      top: 150;
+      top: 0;
       left: 0;
+      right: 0;
+      z-index: 1030; /* siempre encima */
+    }
+
+    /* Sidebar fija a la izquierda, debajo del navbar */
+    .sidebar {
+      position: fixed;
+      top: 70px; /* altura aproximada del navbar */
+      left: 0;
+      width: 250px;
+      height: calc(100vh - 70px); /* ocupa todo el alto menos el navbar */
       background-color: #ffffff;
       border-right: 1px solid #000000;
       display: flex;
       flex-direction: column;
+      overflow-y: auto; /* si la sidebar crece, tendrá scroll propio */
     }
 
     .nav-title {
@@ -58,29 +67,32 @@
       color: white !important;
     }
 
+    /* Contenido principal con scroll */
     .content {
-      margin-left: 250px;
+      margin-left: 250px; /* deja espacio para la sidebar */
+      margin-top: 80px;   /* deja espacio para el navbar */
       padding: 2rem;
+      height: calc(100vh - 80px); /* ocupa el resto de la pantalla */
+      overflow-y: auto; /* scroll vertical solo en el contenido */
     }
   </style>
 </head>
-
 <body>
 
+<!-- Navbar -->
 <nav class="navbar bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand">
-      <img src="./img/renaplogo.png" alt="renap logo" width="200" height="60">
+      <img src="/img/renaplogo.png" alt="renap logo" width="200" height="60">
     </a>
-
     <div class="dropdown">
       <button class="btn btn-outline-success dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-        <img src="./img/userinicio.png" alt="userlogo" width="40" height="40">
+        <img src="/img/userinicio.png" alt="userlogo" width="40" height="40">
       </button>
       <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
         <li><a class="dropdown-item" href="editarPerfil.html">Editar perfil</a></li>
         <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+        <li><a href="<?= site_url('logout') ?>" class="btn">Cerrar sesión</a>></li>
       </ul>
     </div>
   </div>
@@ -103,94 +115,150 @@
     <h2 class="text-center mb-4">Ciudadanos</h2>
 
     <!-- Tabla -->
-    <table class="table table-bordered text-center mb-0">
-      <thead class="table-dark">
-        <tr>
-          <th>Nombre</th>
-          <th>CUI</th>
-          <th>Correo</th>
-          <th>Fecha nacimiento</th>
-          <th>Género</th>
-          <th>Lugar de nacimiento</th>
-          <th>Teléfono</th>
-          <th>Dirección</th>
-          <th>Contraseña</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Pedro Pérez</td>
-          <td>121341314451</td>
-          <td>pedro@email.com</td>
-          <td>01/01/1990</td>
-          <td>Masculino</td>
-          <td>Guatemala</td>
-          <td>5555-1234</td>
-          <td>Zona 1, Mixco</td>
-          <td>••••••••</td>
-        </tr>
-      </tbody>
-    </table>
+   <!-- Tabla dinámica -->
+<table class="table table-bordered text-center mb-0">
+  <thead class="table-dark">
+    <tr>
+      <th>Nombre</th>
+      <th>CUI</th>
+      <th>Correo</th>
+      <th>Fecha nacimiento</th>
+      <th>Género</th>
+      <th>Lugar de nacimiento</th>
+      <th>Teléfono</th>
+      <th>Dirección</th>
+      <th>Contraseña</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Se llenará dinámicamente -->
+  </tbody>
+</table>
+
 
     <!-- Botón para abrir modal -->
-    <div class="row justify-content-center mt-2">
-      <div class="col-auto text-center">
-        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editModal">
-          <i class="bi bi-pencil-square me-1"></i> Editar
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal de edición -->
-  <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <form id="formEditar">
-          <div class="modal-header">
-            <h5 class="modal-title" id="editModalLabel">Editar datos del ciudadano</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-          </div>
-          <div class="modal-body">
-            <div class="row g-3">
-              <div class="col-md-6"><label class="form-label">Nombre</label><input type="text" class="form-control" value="Pedro Pérez"></div>
-              <div class="col-md-6"><label class="form-label">CUI</label><input type="text" class="form-control" value="121341314451"></div>
-              <div class="col-md-6"><label class="form-label">Correo</label><input type="email" class="form-control" value="pedro@email.com"></div>
-              <div class="col-md-6"><label class="form-label">Fecha nacimiento</label><input type="date" class="form-control" value="1990-01-01"></div>
-              <div class="col-md-6">
-                <label class="form-label">Género</label>
-                <select class="form-select">
-                  <option selected>Masculino</option>
-                  <option>Femenino</option>
-                  <option>Otro</option>
-                </select>
-              </div>
-              <div class="col-md-6"><label class="form-label">Lugar de nacimiento</label><input type="text" class="form-control" value="Guatemala"></div>
-              <div class="col-md-6"><label class="form-label">Teléfono</label><input type="text" class="form-control" value="5555-1234"></div>
-              <div class="col-md-6"><label class="form-label">Dirección</label><input type="text" class="form-control" value="Zona 1, Mixco"></div>
-              <div class="col-md-6"><label class="form-label">Contraseña</label><input type="password" class="form-control" value="12345678"></div>
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <form id="formEditar">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editModalLabel">Editar datos del ciudadano</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-md-6"><label class="form-label">Nombre</label><input type="text" name="nombre" class="form-control"></div>
+            <div class="col-md-6"><label class="form-label">CUI</label><input type="text" name="cui" class="form-control"></div>
+            <div class="col-md-6"><label class="form-label">Correo</label><input type="email" name="correo" class="form-control"></div>
+            <div class="col-md-6"><label class="form-label">Fecha nacimiento</label><input type="date" name="fecha_nacimiento" class="form-control"></div>
+            <div class="col-md-6">
+              <label class="form-label">Género</label>
+              <select class="form-select" name="genero">
+                <option>M</option>
+                <option>F</option>
+                <option>Otro</option>
+              </select>
             </div>
+            <div class="col-md-6"><label class="form-label">Lugar de nacimiento</label><input type="text" name="lugar_nacimiento" class="form-control"></div>
+            <div class="col-md-6"><label class="form-label">Teléfono</label><input type="text" name="telefono" class="form-control"></div>
+            <div class="col-md-6"><label class="form-label">Dirección</label><input type="text" name="direccion" class="form-control"></div>
+            <div class="col-md-6"><label class="form-label">Contraseña</label><input type="password" name="password" class="form-control"></div>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-            <button type="submit" class="btn btn-success">Guardar cambios</button>
-          </div>
-        </form>
-      </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-success">Guardar cambios</button>
+        </div>
+      </form>
     </div>
   </div>
+</div>
+
 
   <!-- Script para confirmar guardado -->
-  <script>
-    document.getElementById('formEditar').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const confirmar = confirm("¿Está seguro de guardar los cambios?");
-      if (confirmar) {
-        alert("Cambios guardados correctamente.");
-        const modal = bootstrap.Modal.getInstance(document.getElementById('editModal'));
-        modal.hide();
-      }
+<script>
+let usuarioActual = null;
+
+function cargarUsuarios() {
+  fetch('/api/usuarios')
+    .then(r => r.json())
+    .then(data => {
+      const tbody = document.querySelector('tbody');
+      tbody.innerHTML = '';
+      data.data.forEach(u => {
+        tbody.innerHTML += `
+          <tr>
+            <td>${u.nombre}</td>
+            <td>${u.cui}</td>
+            <td>${u.correo}</td>
+            <td>${formatearFecha(u.fecha_nacimiento)}</td>
+            <td>${u.genero}</td>
+            <td>${u.lugar_nacimiento}</td>
+            <td>${u.telefono}</td>
+            <td>${u.direccion}</td>
+            <td>••••••••</td>
+            <td>
+              <button class="btn btn-sm btn-primary" onclick='abrirModal(${JSON.stringify(u)})'>Editar</button>
+            </td>
+          </tr>
+        `;
+      });
     });
-  </script>
-</body>
-</html>
+}
+
+function formatearFecha(fecha) {
+  return fecha ? fecha.split('T')[0] : '';
+}
+
+function abrirModal(usuario) {
+  usuarioActual = usuario;
+  const form = document.getElementById('formEditar');
+  form.nombre.value = usuario.nombre;
+  form.cui.value = usuario.cui;
+  form.correo.value = usuario.correo;
+  form.fecha_nacimiento.value = formatearFecha(usuario.fecha_nacimiento);
+  form.genero.value = usuario.genero;
+  form.lugar_nacimiento.value = usuario.lugar_nacimiento;
+  form.telefono.value = usuario.telefono;
+  form.direccion.value = usuario.direccion;
+  form.password.value = '';
+  new bootstrap.Modal(document.getElementById('editModal')).show();
+}
+
+document.getElementById('formEditar').addEventListener('submit', function(e) {
+  e.preventDefault();
+  if (!usuarioActual) return;
+
+  const datos = {
+    nombre: this.nombre.value,
+    cui: this.cui.value,
+    correo: this.correo.value,
+    fecha_nacimiento: this.fecha_nacimiento.value,
+    genero: this.genero.value,
+    lugar_nacimiento: this.lugar_nacimiento.value,
+    telefono: this.telefono.value,
+    direccion: this.direccion.value,
+    password_hash: this.password.value
+  };
+
+  fetch(`/api/usuarios/actualizar/${usuarioActual.id_usuario}`, {
+    method: 'PUT',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(datos)
+  })
+  .then(r => r.json())
+  .then(res => {
+    if (res.status === 'ok') {
+      alert("Cambios guardados correctamente.");
+      bootstrap.Modal.getInstance(document.getElementById('editModal')).hide();
+      cargarUsuarios();
+    } else {
+      alert("Error al guardar.");
+    }
+  });
+});
+
+cargarUsuarios();
+</script>
+

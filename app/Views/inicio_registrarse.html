@@ -131,7 +131,8 @@
       <h2>Registro de Nuevo Usuario</h2>
       <p class="mb-4 text-center">Ingrese la información requerida</p>
 
-      <form id="registroForm">
+      <form id="registroForm" method="post" action="<?= site_url('registrarse') ?>">
+
         <label for="cui">CUI Usuario:</label>
         <input type="text" id="cui" name="cui" placeholder="Ingrese su CUI" required />
 
@@ -151,6 +152,18 @@
 
           <label for="fecha">Fecha de Nacimiento:</label>
           <input type="date" id="fecha" name="fecha" required />
+
+          <label for="genero">Género:</label>
+          <select id="genero" name="genero" required>
+          <option value="">Seleccione su género</option>
+          <option value="M">Masculino</option>
+          <option value="F">Femenino</option>
+           <option value="Otro">Otro</option>
+        </select>
+
+<label for="lugar_nacimiento">Lugar de Nacimiento:</label>
+<input type="text" id="lugar_nacimiento" name="lugar_nacimiento" required />
+
 
           <label for="email">Correo electrónico:</label>
           <input type="email" id="email" name="email" required />
@@ -231,37 +244,41 @@
   const registroForm = document.getElementById('registroForm');
 
   verificarBtn.addEventListener('click', () => {
-    const cui = cuiInput.value.trim();
-    const cuiValido = /^[0-9]{13}$/.test(cui);
+  const cui = cuiInput.value.trim();
+  const cuiValido = /^[0-9]{13}$/.test(cui);
 
-    if (!cuiValido) {
-      alert("❌ CUI inválido. Debe contener exactamente 13 dígitos numéricos.");
+  if (!cuiValido) {
+    alert("❌ CUI inválido. Debe contener exactamente 13 dígitos numéricos.");
+    extraFields.style.display = "none";
+    return;
+  }
+
+  // Verificación real contra backend
+  fetch("<?= site_url('verificar-cui') ?>", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: "cui=" + encodeURIComponent(cui)
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.existe) {
+      alert("⚠️ El CUI ya está registrado.");
       extraFields.style.display = "none";
-      return;
+    } else {
+      extraFields.style.display = "block";
     }
-
-    // Aquí podrías agregar una verificación real contra base de datos o API
-    extraFields.style.display = "block";
   });
+});
 
+ // 🔹 Confirmación antes de enviar el formulario
   registroForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    const clave = document.getElementById('clave').value;
-    const confirmar = document.getElementById('confirmar').value;
-
-    if (clave !== confirmar) {
-      alert("⚠️ Las contraseñas no coinciden.");
-      return;
+    const confirmar = confirm("¿Estás seguro que quieres registrarte?");
+    if (!confirmar) {
+      e.preventDefault(); // Cancela el envío si el usuario presiona "Cancelar"
     }
-
-    if (!document.getElementById('terminos').checked) {
-      alert("⚠️ Debe aceptar los Términos y Condiciones para continuar.");
-      return;
-    }
-
-    // Simulación de envío exitoso
-    alert("✅ Usuario registrado exitosamente.");
-    window.location.href = "iniciarsesion.html";
   });
+
+
 </script>
+</body>
+</html>
