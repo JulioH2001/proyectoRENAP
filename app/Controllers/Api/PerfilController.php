@@ -59,37 +59,40 @@ class PerfilController extends BaseController
         }
     }
     public function estadoDpi()
-{
-    $idUsuario = session()->get('id_usuario');
-    if (!$idUsuario) {
-        return $this->response->setJSON(['status'=>'error','message'=>'No hay sesión activa']);
+    {
+        $idUsuario = session()->get('id_usuario');
+        if (!$idUsuario) {
+            return $this->response->setJSON([
+                'status'=>'error',
+                'message'=>'No hay sesión activa'
+            ]);
+        }
+
+        $usuarioModel = new UsuarioModel();
+        $usuario = $usuarioModel->find($idUsuario);
+
+        // Calcular fecha de vencimiento (+10 años desde fecha_creacion)
+        $fechaCreacion = new \DateTime($usuario['fecha_creacion']);
+        $fechaVenc = (clone $fechaCreacion)->modify('+10 years');
+
+        // Verificar si está bloqueado
+        $db = \Config\Database::connect();
+        $bloqueo = $db->table('bloqueo_dpi')
+                      ->where('id_usuario',$idUsuario)
+                      ->get()
+                      ->getRow();
+        $bloqueado = $bloqueo ? 'Sí' : 'No';
+
+        return $this->response->setJSON([
+            'status' => 'ok',
+            'data' => [
+                'nombre_completo'   => $usuario['nombre'].' '.$usuario['primer_apellido'].' '.$usuario['segundo_apellido'],
+                'cui'               => $usuario['cui'],
+                'fecha_vencimiento' => $fechaVenc->format('Y-m-d'),
+                'bloqueado'         => $bloqueado
+            ]
+        ]);
     }
-
-    $usuarioModel = new \App\Models\UsuarioModel();
-    $usuario = $usuarioModel->find($idUsuario);
-
-    // Calcular fecha de vencimiento (+10 años desde fecha_creacion)
-    $fechaCreacion = new \DateTime($usuario['fecha_creacion']);
-    $fechaVenc = (clone $fechaCreacion)->modify('+10 years');
-    $hoy = new \DateTime();
-
-    $vigente = $hoy <= $fechaVenc ? 'Vigente' : 'Vencido';
-
-    // Verificar si está bloqueado
-    $db = \Config\Database::connect();
-    $bloqueo = $db->table('bloqueo_dpi')->where('id_usuario',$idUsuario)->get()->getRow();
-    $bloqueado = $bloqueo ? 'Sí' : 'No';
-
-    return $this->response->setJSON([
-        'status' => 'ok',
-        'data' => [
-            'nombre_completo' => $usuario['nombre'].' '.$usuario['primer_apellido'].' '.$usuario['segundo_apellido'],
-            'cui'             => $usuario['cui'],
-            'fecha_vencimiento' => $fechaVenc->format('Y-m-d'),
-            'estado_dpi'        => $vigente,
-            'bloqueado'         => $bloqueado
-        ]
-    ]);
 }
 
-}
+

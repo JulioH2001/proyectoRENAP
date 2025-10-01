@@ -2,35 +2,75 @@
 namespace App\Controllers\Api;
 
 use App\Controllers\BaseController;
-use App\Models\TramiteModel;
+use App\Models\ReposicionDpiModel;
+use App\Models\CertificadoModel;
 use App\Models\UsuarioModel;
 
-class TramitesController extends BaseController
+class TramiteController extends BaseController
 {
-    public function historial()
+    public function index()
     {
-        $idUsuario = session()->get('id_usuario');
-        if (!$idUsuario) {
-            return $this->response->setJSON(['status'=>'error','message'=>'No hay sesión activa']);
-        }
+        $tramites = [];
 
-        $tramiteModel = new TramiteModel();
+        // Reposiciones DPI
+        $reposModel = new ReposicionDpiModel();
         $usuarioModel = new UsuarioModel();
 
-        $usuario = $usuarioModel->find($idUsuario);
-        $tramites = $tramiteModel->where('id_usuario', $idUsuario)
-                                 ->orderBy('fecha_solicitud','DESC')
-                                 ->findAll();
-
-        $data = [];
-        foreach ($tramites as $t) {
-            $data[] = [
-                'cui'   => $usuario['cui'],
-                'fecha' => $t['fecha_solicitud'],
-                'tipo'  => $t['tipo']
+        $repos = $reposModel->findAll();
+        foreach ($repos as $r) {
+            $u = $usuarioModel->find($r['id_usuario']);
+            $tramites[] = [
+                'id'              => $r['id_reposicion'],
+                'ciudadano'       => $u ? $u['nombre'].' '.$u['primer_apellido'].' '.$u['segundo_apellido'] : 'N/A',
+                'tipo'            => 'Reposición DPI',
+                'fecha_solicitud' => $r['fecha_solicitud'],
+                'estado'          => $r['estado']
             ];
         }
 
-        return $this->response->setJSON($data);
+        // Certificados
+        $certModel = new CertificadoModel();
+        $certs = $certModel->findAll();
+        foreach ($certs as $c) {
+            $u = $usuarioModel->find($c['id_solicitante']);
+            $tramites[] = [
+                'id'              => $c['id_certificado'],
+                'ciudadano'       => $u ? $u['nombre'].' '.$u['primer_apellido'].' '.$u['segundo_apellido'] : 'N/A',
+                'tipo'            => 'Certificación',
+                'fecha_solicitud' => $c['fecha_emision'],
+                'estado'          => $c['estado_pago']
+            ];
+        }
+
+        return $this->response->setJSON(['data' => $tramites]);
+    }
+
+    // 👇 Nuevo método para eliminar
+    public function eliminar($id = null)
+    {
+        if (!$id) {
+            return $this->response->setStatusCode(400)
+                                  ->setJSON(['error' => 'ID requerido']);
+        }
+
+        // Primero intentamos eliminar en reposiciones
+        $reposModel = new ReposicionDpiModel();
+        if ($reposModel->find($id)) {
+            if ($reposModel->delete($id)) {
+                return $this->response->setJSON(['status' => 'ok']);
+            }
+            return $this->response->setStatusCode(500)->setJSON(['error' => 'No se pudo eliminar reposición']);
+        }
+
+        // Si no está en reposiciones, intentamos en certificados
+        $certModel = new CertificadoModel();
+        if ($certModel->find($id)) {
+            if ($certModel->delete($id)) {
+                return $this->response->setJSON(['status' => 'ok']);
+            }
+            return $this->response->setStatusCode(500)->setJSON(['error' => 'No se pudo eliminar certificado']);
+        }
+
+        return $this->response->setStatusCode(404)->setJSON(['error' => 'Trámite no encontrado']);
     }
 }

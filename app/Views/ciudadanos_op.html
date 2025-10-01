@@ -6,22 +6,32 @@
   <title>RENAP - Registro Nacional de las Personas</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
-      body {
+    body {
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f4f4;
     }
 
-    .sidebar {
-      height: 100vh;
-      width: 250px;
+    /* Navbar fijo arriba */
+    .navbar {
       position: fixed;
       top: 0;
       left: 0;
+      right: 0;
+      z-index: 1030; /* siempre encima */
+    }
+
+    /* Sidebar fija a la izquierda, debajo del navbar */
+    .sidebar {
+      position: fixed;
+      top: 70px; /* altura aproximada del navbar */
+      left: 0;
+      width: 250px;
+      height: calc(100vh - 70px); /* ocupa todo el alto menos el navbar */
       background-color: #ffffff;
       border-right: 1px solid #000000;
-      padding-top: 70px;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto; /* si la sidebar crece, tendrá scroll propio */
     }
 
     .nav-title {
@@ -51,67 +61,17 @@
       color: white !important;
     }
 
-
-    .ciudadanos-container {
-      margin-left: 250px;
-      padding: 120px 40px 40px;
-      background-color: #fff;
-      min-height: calc(100vh - 70px);
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-      font-weight: 600;
-      margin-bottom: 30px;
-      text-align: center;
-    }
-
-    .ciudadano-form {
-      width: 100%;
-      max-width: 600px;
-      background-color: #f9f9f9;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-
-    .ciudadano-form label {
-      font-weight: bold;
-      margin-bottom: 6px;
-      display: block;
-      color: #333;
-    }
-
-    .ciudadano-form input {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 14px;
-    }
-
-    .ciudadano-form button {
-      width: 100%;
-      padding: 10px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-weight: bold;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .ciudadano-form button:hover {
-      background-color: #0056b3;
+    /* Contenido principal con scroll */
+    .content {
+      margin-left: 250px; /* deja espacio para la sidebar */
+      margin-top: 80px;   /* deja espacio para el navbar */
+      padding: 2rem;
+      height: calc(100vh - 80px); /* ocupa el resto de la pantalla */
+      overflow-y: auto; /* scroll vertical solo en el contenido */
     }
   </style>
 </head>
+<body>
 
 <body>
  <!-- Encabezado -->
@@ -148,7 +108,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="trámites.html">
+        <a class="nav-link" href="tramites.html">
           <img src="./img/tramites.png" alt="Información DPI" /> Trámites
         </a>
       </li>
@@ -160,77 +120,82 @@
     </ul>
   </div>
 
-  <!-- Formulario de ciudadanos -->
-  <main class="ciudadanos-container">
-    <h2>CIUDADANOS</h2>
-    <form id="formBuscarCiudadano" class="ciudadano-form" novalidate>
-      <label for="dpi">DPI:</label>
-      <input type="text" id="dpi" name="dpi" required />
+  <!-- Contenido principal -->
+<div class="content mt-5">
+  <h2 class="text-center mb-4">Ciudadanos</h2>
+<div class="mb-3">
+  <input type="text" id="buscador" class="form-control" placeholder="🔍 Buscar...">
+</div>
 
-      <label for="nombre">Nombre completo:</label>
-      <input type="text" id="nombre" name="nombre" required />
+  <!-- Tabla dinámica -->
+  <table class="table table-bordered text-center mb-0">
+    <thead class="table-dark">
+      <tr>
+        <th>Nombre</th>
+        <th>CUI</th>
+        <th>Correo</th>
+        <th>Fecha nacimiento</th>
+        <th>Género</th>
+        <th>Lugar de nacimiento</th>
+        <th>Teléfono</th>
+        <th>Dirección</th>
+        <th>DPI bloqueado</th>
+      </tr>
+    </thead>
+    <tbody id="tablaCiudadanos">
+      <!-- Se llenará dinámicamente -->
+    </tbody>
+  </table>
+</div>
+<script>
+document.getElementById('buscador').addEventListener('keyup', function() {
+  const filtro = this.value.toLowerCase();
+  const filas = document.querySelectorAll('table tbody tr');
 
-      <label for="correo">Correo electrónico:</label>
-      <input type="email" id="correo" name="correo" required />
-
-      <button type="submit">Buscar ciudadano</button>
-    </form>
-  </main>
-
-  <script>
-function validarFormulario() {
-  const motivo = document.getElementById("motivo").value;
-  const entrega = document.getElementById("entrega").value;
-  const departamento = document.getElementById("departamento").value;
-  const fechaTramite = document.getElementById("fechaTramite").value;
-  const recibo = document.getElementById("recibo").value.trim();
-  const nota = document.getElementById("nota").value.trim();
-
-  if (!motivo || !entrega || !departamento || !fechaTramite || !recibo || !nota) {
-    document.getElementById("popupAdvertencia").style.display = "block";
-    return;
-  }
-
-  const payload = { motivo, entrega, departamento, fechaTramite, recibo, nota };
-
-  fetch("<?= base_url('api/reposicion/solicitar') ?>", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(payload)
-  })
-  .then(r => r.json())
-  .then(res => {
-    if (res.status === "ok") {
-      // Guardar datos en localStorage
-      localStorage.setItem("reposicionData", JSON.stringify({
-        id_reposicion: res.id,              // 👈 guardamos el ID que devuelve el backend
-        nombre: "<?= session()->get('nombre').' '.session()->get('primer_apellido').' '.session()->get('segundo_apellido') ?>",
-        cui: "<?= session()->get('cui') ?>",
-        correo: "<?= session()->get('correo') ?>",
-        telefono: "<?= session()->get('telefono') ?>",
-        motivo, departamento, sede: entrega,
-        fechaSolicitud: fechaTramite,
-        recibo, nota
-      }));
-
-      // Redirigir al comprobante
-      window.location.href = "ciudadanos_reposicion_confirmacion.html";
-    } else {
-      alert("❌ " + res.message);
-    }
-  })
-  .catch(err => {
-    console.error(err);
-    alert("❌ Error en la comunicación con el servidor.");
+  filas.forEach(fila => {
+    const textoFila = fila.textContent.toLowerCase();
+    fila.style.display = textoFila.includes(filtro) ? '' : 'none';
   });
-}
-
-function cerrarPopup() {
-  document.getElementById("popupAdvertencia").style.display = "none";
-}
+});
 </script>
 
+<script>
+async function cargarCiudadanos() {
+  try {
+    const res = await fetch('/api/usuarios/ciudadanos');
+    const data = await res.json();
+    const ciudadanos = data.data || [];
 
+    const tbody = document.getElementById("tablaCiudadanos");
+    tbody.innerHTML = "";
+
+    ciudadanos.forEach(u => {
+      tbody.innerHTML += `
+        <tr>
+          <td>${u.nombre} ${u.primer_apellido ?? ""} ${u.segundo_apellido ?? ""}</td>
+          <td>${u.cui}</td>
+          <td>${u.correo}</td>
+          <td>${u.fecha_nacimiento}</td>
+          <td>${u.genero}</td>
+          <td>${u.lugar_nacimiento}</td>
+          <td>${u.telefono}</td>
+          <td>${u.direccion}</td>
+          <td>${u.bloqueado ? "Sí" : "No"}</td>
+        </tr>
+      `;
+    });
+  } catch (err) {
+    console.error(err);
+    alert("Error al cargar ciudadanos");
+  }
+}
+
+// Cargar al inicio
+cargarCiudadanos();
+
+</script>
+
+<!-- Scripts de Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+
+

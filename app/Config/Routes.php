@@ -75,6 +75,9 @@ $routes->put('api/usuarios/actualizar/(:num)', 'Api\UsuarioController::actualiza
 $routes->get('api/usuarios', 'Api\UsuarioController::index');
 $routes->put('api/usuarios/actualizar/(:num)', 'Api\UsuarioController::actualizar/$1');
 
+$routes->delete('api/bloqueos/desbloquear/(:num)', 'Api\BloqueoController::desbloquear/$1');
+$routes->get('api/bloqueos/ids', 'Api\BloqueoController::ids');
+
 
 
 // Pantalla de login
@@ -162,6 +165,29 @@ $routes->group('api/perfil', function($routes) {
 
 //historial tramites y lo de dpi
 $routes->group('api', function($routes) {
-    $routes->get('tramites/historial', 'Api\TramitesController::historial');
     $routes->get('perfil/estado-dpi', 'Api\PerfilController::estadoDpi');
 });
+
+
+//ruta operador ciudadanos
+$routes->get('api/usuarios/ciudadanos', 'Api\UsuarioController::ciudadanos');
+
+
+//ruta tramites operador
+$routes->get('api/tramites', 'Api\TramiteController::index');
+$routes->delete('api/tramites/(:num)', 'Api\TramiteController::eliminar/$1');
+
+
+
+//certificados op
+$routes->post('api/certificacion/generar', 'Api\CertificacionController::generar');
+$routes->get('api/certificacion/descargar/(:num)', 'Api\CertificacionController::descargar/$1');
+
+
+//login info ADMINISTRADOR
+$routes->get('api/admin/perfil', 'Api\AdminController::perfil');
+$routes->put('api/admin/perfil', 'Api\AdminController::actualizarPerfil');
+
+//iniciar sesion OPERADOR
+$routes->get('api/operador/perfil', 'Api\OperadorController::perfil');
+$routes->put('api/operador/perfil', 'Api\OperadorController::actualizarPerfil');

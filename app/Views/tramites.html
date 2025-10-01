@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RENAP - Registro Nacional de las Personas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+    }
+
+    .sidebar {
+      height: 100vh;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #ffffff;
+      border-right: 1px solid #000000;
+      padding-top: 70px;
+    }
+
+    .nav-title {
+      font-weight: bold;
+      font-size: 1.5rem;
+      padding: 1rem;
+      border-bottom: 1px solid #dee2e6;
+    }
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      color: #212529;
+      text-decoration: none;
+      font-style: italic;
+    }
+
+    .nav-link img {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+    }
+
+    .nav-link.active {
+      background-color: #08c615;
+      color: white !important;
+    }
+
+    .navbar {
+      z-index: 1000;
+    }
+
+    .renap-tramites {
+      margin-left: 250px;
+      padding: 120px 40px 40px;
+      background-color: #fff;
+      min-height: calc(100vh - 60px);
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 30px;
+      text-align: center;
+      width: 100%;
+    }
+
+
+
+
+    .tabla-wrapper {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    .tabla-renap {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 900px;
+    }
+
+    .tabla-renap th,
+    .tabla-renap td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    .tabla-renap th {
+      background-color: #f4f4f4;
+      font-weight: 600;
+    }
+
+    .acciones {
+      display: flex;
+      gap: 8px;
+    }
+
+    .btn-aprobar,
+    .btn-rechazar {
+      padding: 6px 12px;
+      border: none;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+    .btn-aprobar {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .btn-rechazar {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .renap-tramites {
+        padding: 100px 20px 40px;
+      }
+
+      .tabla-renap th,
+      .tabla-renap td {
+        font-size: 13px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Encabezado -->
+  <nav class="navbar bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand">
+        <img src="./img/renaplogo.png" alt="renap logo" width="200" height="60">
+      </a>
+      <div class="dropdown">
+        <button class="btn btn-outline-success dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="./img/userinicio.png" alt="userlogo" width="40" height="40">
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+          <li><a class="dropdown-item" href="editarperfil_op.html">Editar perfil</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a href="<?= site_url('logout') ?>" class="btn">Cerrar sesión</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Barra lateral -->
+  <div class="sidebar">
+    <div class="nav-title">Navegación</div>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link" href="Index.html">
+          <img src="./img/inicio.png" alt="Inicio"> Inicio
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ciudadanos_op.html">
+          <img src="./img/ciudadanos.png" alt="Usuarios"> Ciudadanos
+        </a>
+      </li>
+      <li class="nav-item"> 
+        <a class="nav-link" href="tramites.html">
+          <img src="./img/tramites.png" alt="Información DPI"> Trámites
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="constancias.html">
+          <img src="./img/constancias.jpg" alt="Reportes"> Constancias
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Contenido principal -->
+  <main class="renap-tramites">
+    <h2>TRÁMITES</h2>
+
+<div class="mb-3">
+  <input type="text" id="buscador" class="form-control" placeholder="🔍 Buscar...">
+</div>
+
+
+    <div class="tabla-wrapper">
+      <table class="tabla-renap">
+        <thead>
+          <tr>
+            <th>Número de trámite</th>
+            <th>Ciudadano</th>
+            <th>Tipo de trámite</th>
+            <th>Fecha de solicitud</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+          <tbody id="tablaTramites">
+  <!-- Se llenará dinámicamente -->
+</tbody>
+
+      </table>
+    </div>
+  </main>
+
+  <script>
+document.getElementById('buscador').addEventListener('keyup', function() {
+  const filtro = this.value.toLowerCase();
+  const filas = document.querySelectorAll('table tbody tr');
+
+  filas.forEach(fila => {
+    const textoFila = fila.textContent.toLowerCase();
+    fila.style.display = textoFila.includes(filtro) ? '' : 'none';
+  });
+});
+
+async function cargarTramites() {
+  try {
+    const res = await fetch('/api/tramites');
+    const data = await res.json();
+    const tramites = data.data || [];
+
+    const tbody = document.getElementById("tablaTramites");
+    tbody.innerHTML = "";
+
+    tramites.forEach(t => {
+      tbody.innerHTML += `
+        <tr id="fila-${t.id}">
+          <td>${t.id}</td>
+          <td>${t.ciudadano}</td>
+          <td>${t.tipo}</td>
+          <td>${t.fecha_solicitud}</td>
+          <td>
+            <button class="btn btn-danger btn-sm" onclick="eliminarTramite(${t.id})">Eliminar</button>
+          </td>
+        </tr>
+      `;
+    });
+  } catch (err) {
+    console.error(err);
+    alert("Error al cargar trámites");
+  }
+}
+
+async function eliminarTramite(id) {
+  if (!confirm("¿Seguro que deseas eliminar este trámite?")) return;
+
+  try {
+    const res = await fetch(`/api/tramites/${id}`, {
+      method: 'DELETE'
+    });
+    const json = await res.json();
+
+    if (json.status === 'ok') {
+      // Quitar la fila de la tabla
+      const fila = document.getElementById(`fila-${id}`);
+      if (fila) fila.remove();
+      alert("✅ Trámite eliminado correctamente.");
+    } else {
+      alert(json.error || "No se pudo eliminar el trámite.");
+    }
+  } catch (err) {
+    console.error(err);
+    alert("Error de red al intentar eliminar.");
+  }
+}
+
+// Cargar trámites al inicio
+cargarTramites();
+</script>
+
+
+  <!-- Scripts de Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+

@@ -113,7 +113,9 @@
   <!-- Contenido principal -->
   <div class="content mt-5">
     <h2 class="text-center mb-4">Ciudadanos</h2>
-
+<div class="mb-3">
+  <input type="text" id="buscador" class="form-control" placeholder="🔍 Buscar...">
+</div>
     <!-- Tabla -->
    <!-- Tabla dinámica -->
 <table class="table table-bordered text-center mb-0">
@@ -174,6 +176,18 @@
     </div>
   </div>
 </div>
+
+<script>
+document.getElementById('buscador').addEventListener('keyup', function() {
+  const filtro = this.value.toLowerCase();
+  const filas = document.querySelectorAll('table tbody tr');
+
+  filas.forEach(fila => {
+    const textoFila = fila.textContent.toLowerCase();
+    fila.style.display = textoFila.includes(filtro) ? '' : 'none';
+  });
+});
+</script>
 
 
   <!-- Script para confirmar guardado -->
@@ -239,8 +253,14 @@ document.getElementById('formEditar').addEventListener('submit', function(e) {
     lugar_nacimiento: this.lugar_nacimiento.value,
     telefono: this.telefono.value,
     direccion: this.direccion.value,
-    password_hash: this.password.value
-  };
+      direccion: this.direccion.value
+};
+
+// Solo enviar contraseña si se escribió algo
+if (this.password.value.trim() !== "") {
+  datos.password = this.password.value;
+}
+
 
   fetch(`/api/usuarios/actualizar/${usuarioActual.id_usuario}`, {
     method: 'PUT',

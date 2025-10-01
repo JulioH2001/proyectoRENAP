@@ -31,4 +31,26 @@ class BloqueoController extends BaseController
         }
         return $this->response->setStatusCode(400)->setJSON(['status' => 'error']);
     }
+
+    public function ids()
+{
+    $model = new BloqueoModel();
+    $rows = $model->select('id_usuario')->findAll();
+    $ids = array_values(array_unique(array_map('intval', array_column($rows, 'id_usuario'))));
+    return $this->response->setJSON(['data' => $ids]);
+}
+
+
+    public function desbloquear($idUsuario)
+{
+    $model = new BloqueoModel();
+    // Elimina todos los bloqueos de ese usuario
+    if ($model->where('id_usuario', $idUsuario)->delete()) {
+        return $this->response->setJSON(['status' => 'ok']);
+    }
+    return $this->response->setStatusCode(400)->setJSON(['status' => 'error']);
+
+    
+}
+
 }

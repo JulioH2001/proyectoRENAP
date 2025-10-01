@@ -89,6 +89,20 @@
     margin-left: 250px;
     padding: 2rem;
   }
+
+  @media print {
+  body * {
+    visibility: hidden;
+  }
+  .content, .content * {
+    visibility: visible;
+  }
+  .content {
+    margin: 0;
+    padding: 0;
+  }
+}
+
 </style>
 </head>
 
@@ -128,6 +142,9 @@
 
 <div class="content">
   <h2 class="mb-4">Estadísticas por semana</h2>
+<div class="mb-3">
+  <input type="text" id="buscador" class="form-control" placeholder="🔍 Buscar...">
+</div>
 
   <div class="table-responsive">
     <table class="table table-bordered text-center align-middle">
@@ -143,8 +160,23 @@
       </tbody>
     </table>
   </div>
+<div class="d-flex justify-content-end mb-3">
+  <button class="btn btn-primary" onclick="imprimirTabla()">🖨️ Imprimir</button>
+</div>
 
 </div>
+
+<script>
+document.getElementById('buscador').addEventListener('keyup', function() {
+  const filtro = this.value.toLowerCase();
+  const filas = document.querySelectorAll('table tbody tr');
+
+  filas.forEach(fila => {
+    const textoFila = fila.textContent.toLowerCase();
+    fila.style.display = textoFila.includes(filtro) ? '' : 'none';
+  });
+});
+</script>
 
 <script>
 function cargarReportes() {
@@ -186,6 +218,11 @@ function formatearFecha(fecha) {
   const dias = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
   const f = new Date(fecha);
   return dias[f.getDay()] + ' (' + fecha + ')';
+
+  
+}
+function imprimirTabla() {
+  window.print();
 }
 
 

@@ -49,65 +49,29 @@
     <ul class="nav flex-column">
       <li class="nav-item"><a class="nav-link" href="ciudadano_inicio.html"><img src="./img/inicio.png" alt="Inicio"> Inicio</a></li>
       <li class="nav-item"><a class="nav-link" href="ciudadanos_misdatos.html"><img src="./img/usuario.jpg" alt="Usuarios"> Mis datos</a></li>
-      <li class="nav-item"><a class="nav-link" href="ciudadanos_mistramites.html"><img src="./img/tramites.png" alt="Trámites"> Mis trámites</a></li>
+      <li class="nav-item"><a class="nav-link" href="ciudadanos_mistramites.html"><img src="./img/tramites.png" alt="Trámites"> Estado DPI</a></li>
       <li class="nav-item"><a class="nav-link" href="ciudadano_mediosinterac.html"><img src="./img/mediosinterac.png" alt="Medios"> Medios Interactivos</a></li>
     </ul>
   </div>
 
   <!-- Contenido principal -->
   <div class="main-content">
-    <h2>Historial de Mis Trámites</h2>
-    <div class="subtitle">Acciones realizadas por el usuario</div>
 
-    <table id="tablaHistorial">
-      <thead>
-        <tr>
-          <th>No.</th>
-          <th>CUI</th>
-          <th>Fecha</th>
-          <th>Tipo Gestión</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Se llena dinámicamente -->
-      </tbody>
-    </table>
-
-    <h2>Estado de DPI</h2>
-    <table id="tablaDpi">
-      <thead>
-        <tr>
-          <th>Nombre</th>
-          <th>CUI</th>
-          <th>Fecha de vencimiento DPI</th>
-          <th>Vigente/Vencido</th>
-          <th>Bloqueado</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Se llena dinámicamente -->
-      </tbody>
-    </table>
-  </div>
+   <h2>Estado de DPI</h2>
+<table id="tablaDpi">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>CUI</th>
+      <th>Fecha de vencimiento DPI</th>
+      <th>Bloqueado</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
 
 <script>
-async function cargarDatos() {
-  // Historial
-  const resHist = await fetch('/api/tramites/historial');
-  const dataHist = await resHist.json();
-  const tbodyHist = document.querySelector("#tablaHistorial tbody");
-  tbodyHist.innerHTML = "";
-  dataHist.forEach((t, i) => {
-    tbodyHist.innerHTML += `
-      <tr>
-        <td>${i+1}</td>
-        <td>${t.cui}</td>
-        <td>${t.fecha}</td>
-        <td>${t.tipo}</td>
-      </tr>`;
-  });
-
-  // Estado DPI
+async function cargarEstadoDpi() {
   const resDpi = await fetch('/api/perfil/estado-dpi');
   const dataDpi = await resDpi.json();
   if (dataDpi.status === 'ok') {
@@ -117,10 +81,10 @@ async function cargarDatos() {
         <td>${u.nombre_completo}</td>
         <td>${u.cui}</td>
         <td>${u.fecha_vencimiento}</td>
-        <td>${u.estado_dpi}</td>
         <td>${u.bloqueado}</td>
       </tr>`;
   }
 }
-cargarDatos();
+cargarEstadoDpi();
 </script>
+

@@ -54,25 +54,64 @@
     </form>
   </div>
 
-  <script>
-    function guardarCambios() {
-      const nombre = document.getElementById('nombre').value.trim();
-      const correo = document.getElementById('correo').value.trim();
-      const nuevaPassword = document.getElementById('nuevaPassword').value.trim();
-      const actualPassword = document.getElementById('actualPassword').value.trim();
+<script>
+async function cargarPerfil() {
+  try {
+    const res = await fetch('/api/operador/perfil', { credentials: 'include' });
+    const json = await res.json();
 
-      if (!actualPassword) {
-        alert("Debes ingresar tu contraseña actual para confirmar los cambios.");
-        return;
-      }
-
-      // Aquí iría la verificación real contra el backend
-      console.log("Verificando contraseña actual...");
-      console.log("Actualizando perfil:", { nombre, correo, nuevaPassword });
-
-      alert("Perfil actualizado correctamente.");
+    if (!json.data) {
+      alert(json.error || 'No se pudo cargar el perfil');
+      return;
     }
-  </script>
+
+    const u = json.data;
+    document.getElementById('nombre').value = u.nombre || '';
+    document.getElementById('correo').value = u.correo || '';
+  } catch (e) {
+    console.error(e);
+    alert("Error cargando perfil");
+  }
+}
+
+async function guardarCambios() {
+  const nombre = document.getElementById('nombre').value.trim();
+  const correo = document.getElementById('correo').value.trim();
+  const nuevaPassword = document.getElementById('nuevaPassword').value.trim();
+  const actualPassword = document.getElementById('actualPassword').value.trim();
+
+  if (!actualPassword) {
+    alert("Debes ingresar tu contraseña actual para confirmar los cambios.");
+    return;
+  }
+
+  const payload = { nombre, correo, actualPassword };
+  if (nuevaPassword) payload.nuevaPassword = nuevaPassword;
+
+  try {
+    const res = await fetch('/api/operador/perfil', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'include',
+      body: JSON.stringify(payload)
+    });
+    const json = await res.json();
+
+    if (json.status === 'ok') {
+      alert("Perfil actualizado correctamente.");
+      document.getElementById('nuevaPassword').value = '';
+      document.getElementById('actualPassword').value = '';
+    } else {
+      alert(json.error || "Error al actualizar perfil.");
+    }
+  } catch (e) {
+    console.error(e);
+    alert("Error de red al actualizar perfil.");
+  }
+}
+
+document.addEventListener('DOMContentLoaded', cargarPerfil);
+</script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -9,16 +9,24 @@ class BloqueoModel extends Model
     protected $allowedFields = ['id_usuario', 'motivo', 'fecha_bloqueo'];
 
     // Traer bloqueos con datos del usuario
-    public function getBloqueosConUsuario()
-    {
-        return $this->select('
-                    bloqueo_dpi.id_bloqueo,
-                    bloqueo_dpi.motivo,
-                    bloqueo_dpi.fecha_bloqueo,
-                    CONCAT(usuarios.nombre, " ", usuarios.primer_apellido, " ", IFNULL(usuarios.segundo_apellido,"")) as nombre,
-                    usuarios.cui
-                ')
-                ->join('usuarios', 'usuarios.id_usuario = bloqueo_dpi.id_usuario', 'left')
-                ->findAll();
-    }
+   public function getBloqueosConUsuario()
+{
+    return $this->select('
+                bloqueo_dpi.id_bloqueo,
+                bloqueo_dpi.id_usuario,   -- 👈 IMPORTANTE
+                bloqueo_dpi.motivo,
+                bloqueo_dpi.fecha_bloqueo,
+                CONCAT(usuarios.nombre, " ", usuarios.primer_apellido, " ", IFNULL(usuarios.segundo_apellido,"")) as nombre,
+                usuarios.cui
+            ')
+            ->join('usuarios', 'usuarios.id_usuario = bloqueo_dpi.id_usuario', 'left')
+            ->findAll();
+}
+
+
+    public function isBloqueado($idUsuario)
+{
+    return $this->where('id_usuario', $idUsuario)->first() ? true : false;
+}
+
 }
