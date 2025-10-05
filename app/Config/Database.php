@@ -29,7 +29,7 @@ class Database extends Config
     'hostname' => 'localhost',
     'username' => 'root',
     'password' => '',
-    'database' => 'renap',   // 👈 pon el nombre de tu BD
+    'database' => 'renap',  
     'DBDriver' => 'MySQLi',
     'DBPrefix' => '',
     'pConnect' => false,
